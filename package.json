@@ -1,0 +1,12 @@
+{
+  "name": "cosmetology",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run copy && npm run scss",
+    "scss": "sass --embed-sources styles.scss dist/styles.css",
+    "copy": "cp -r images dist/images/ && cp index.html dist/"
+  },
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
