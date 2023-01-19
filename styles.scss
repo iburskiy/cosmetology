@@ -1,0 +1,93 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+$pink: #F1DDDF;
+
+$black2: #373737;
+
+.body {
+  line-height: 150%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1920px;
+  background-color: $pink;
+}
+
+.container-padding {
+  @extend .container;
+  padding: 0 140px;
+  box-sizing: border-box;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lora';
+  font-size: 60px;
+  line-height: 140%;
+  color: $black2;
+}
+
+.services {
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left-img {
+    width: 800px;
+    height: 844px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 44px;
+  }
+
+  &__top-img {
+    width: 800px;
+    height: 400px;
+  }
+
+  &__bottom-left-img, &__bottom-right-img {
+    width: 380px;
+    height: 400px;
+  }
+}
+
+.img-tile {
+  position: relative;
+
+  &__picture {
+    display: block;
+    object-fit: cover;
+  }
+  &__text {
+    position: absolute;
+    bottom: 0;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    padding-left: 30px;
+    box-sizing: border-box;
+
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+  }
+}

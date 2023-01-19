@@ -1,0 +1,133 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.body {
+  line-height: 150%;
+}
+
+.container, .container-padding {
+  margin: 0 auto;
+  max-width: 1920px;
+  background-color: #F1DDDF;
+}
+
+.container-padding {
+  padding: 0 140px;
+  box-sizing: border-box;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lora";
+  font-size: 60px;
+  line-height: 140%;
+  color: #373737;
+}
+
+.services__title {
+  margin-bottom: 50px;
+}
+.services__content {
+  display: flex;
+  justify-content: space-between;
+}
+.services__left-img {
+  width: 800px;
+  height: 844px;
+}
+.services__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+.services__top-img {
+  width: 800px;
+  height: 400px;
+}
+.services__bottom-left-img, .services__bottom-right-img {
+  width: 380px;
+  height: 400px;
+}
+
+.img-tile {
+  position: relative;
+}
+.img-tile__picture {
+  display: block;
+  object-fit: cover;
+}
+.img-tile__text {
+  position: absolute;
+  bottom: 0;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  padding-left: 30px;
+  box-sizing: border-box;
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+/*# sourceMappingURL=styles.css.map */
