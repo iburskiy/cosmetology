@@ -1,25 +1,117 @@
 @import "reset";
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
 $pink: #F1DDDF;
+$black1: #373737;
+$green1: #32BA7C;
 
-$black2: #373737;
 
-.body {
+@mixin fontMerriweather ($weight, $size) {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
   line-height: 150%;
 }
 
+@mixin fontLora ($weight, $size) {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  color: $black1;
+}
+
+.body {
+  line-height: 150%;
+
+  &__header {
+    padding-top: 64px;
+  }
+
+  &__main {
+    padding-top: 100px;
+  }
+
+  &__list {
+    padding-top: 70px;
+  }
+
+  &__services {
+    padding-top: 100px;
+  }
+
+  &__our-team {
+    padding-top: 100px;
+  }
+}
+
 .container {
+  box-sizing: border-box;
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 1440px;
   background-color: $pink;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .container-padding {
   @extend .container;
-  padding: 0 140px;
+  padding-left: 140px;
+  padding-right: 140px;
   box-sizing: border-box;
+}
+
+.top {
+  height: 895px;
+  background-image: url('./images/background-for-top.png');
+  background-repeat: no-repeat;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta {
+  &__btn {
+    border: 2px solid $green1;
+    padding: 20px 30px;
+
+    @include fontMerriweather(700, 18px);
+  }
+}
+
+.logo {
+  position: relative;
+
+  &__top {
+    @include fontMerriweather(700, 25px);
+  }
+
+  &__img {
+    position: absolute;
+    right: -29px;
+    top: -8px;
+  }
+
+  &__bottom {
+    @include fontMerriweather(400, 12px);
+    font-size: 12px;
+    margin-top: -3px;
+  }
+}
+
+.menu {
+  min-width: 721px;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    @include fontMerriweather(400, 18px);
+  }
 }
 
 .title {
@@ -27,24 +119,21 @@ $black2: #373737;
   justify-content: center;
   align-items: center;
   font-family: 'Lora';
-  font-size: 60px;
+  font-size: 36px;
+  font-style: normal;
   line-height: 140%;
-  color: $black2;
+  color: $black1;
 }
 
 .services {
-  &__title {
-    margin-bottom: 50px;
+  &__left, &__right {
+    width: 49%;
   }
 
   &__content {
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
-  }
-
-  &__left-img {
-    width: 800px;
-    height: 844px;
   }
 
   &__bottom {
@@ -53,14 +142,8 @@ $black2: #373737;
     margin-top: 44px;
   }
 
-  &__top-img {
-    width: 800px;
-    height: 400px;
-  }
-
-  &__bottom-left-img, &__bottom-right-img {
-    width: 380px;
-    height: 400px;
+  &__bottom-left, &__bottom-right {
+    width: 48%;
   }
 }
 
@@ -70,24 +153,79 @@ $black2: #373737;
   &__picture {
     display: block;
     object-fit: cover;
+    width: 100%;
   }
   &__text {
     position: absolute;
     bottom: 0;
-    height: 90px;
+    height: 60px;
     width: 100%;
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
-    padding-left: 30px;
+    padding-left: 15px;
     box-sizing: border-box;
 
-    font-family: 'Merriweather';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 150%;
+    @include fontMerriweather(400, 20px);
   }
+}
+
+.main {
+  display: flex;
+
+  &__socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 165px;
+    width: 30px;
+  }
+
+  &__block {
+    padding-left: 60px;
+    width: 45%;
+  }
+
+  &__title {
+    @include fontLora(600, 48px);
+    line-height: 140%;
+    letter-spacing: 0.02em;
+  }
+
+  &__text {
+    margin-top: 50px;
+    @include fontMerriweather(400, 18px);
+  }
+
+  &__cta {
+    margin-top: 100px;
+  }
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    background-image: url('./images/green-tick.svg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: 48px;
+    padding-left: 45px;
+
+    @include fontMerriweather(400, 18px);
+    max-width: 350px;
+  }
+}
+
+.button {
+  background-color: $green1;
+  padding: 20px 40px;
+  @include fontMerriweather(700, 28px);
+  color: white;
+  display: inline-block;
 }
