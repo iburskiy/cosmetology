@@ -72,14 +72,22 @@ table {
 .body__our-team {
   padding-top: 100px;
 }
+.body__form {
+  padding-top: 100px;
+}
 
-.container, .container-padding {
+.container, .container-padding, .container-full {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1440px;
   background-color: #F1DDDF;
   padding-left: 70px;
   padding-right: 70px;
+}
+
+.container-full {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .container-padding {
@@ -103,7 +111,7 @@ table {
 .cta__btn {
   border: 2px solid #32BA7C;
   padding: 20px 30px;
-  font-family: "Merriweather";
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -114,7 +122,7 @@ table {
   position: relative;
 }
 .logo__top {
-  font-family: "Merriweather";
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
@@ -126,12 +134,11 @@ table {
   top: -8px;
 }
 .logo__bottom {
-  font-family: "Merriweather";
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
-  font-size: 12px;
   margin-top: -3px;
 }
 
@@ -141,7 +148,7 @@ table {
   justify-content: space-between;
 }
 .menu__item {
-  font-family: "Merriweather";
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -149,13 +156,21 @@ table {
 }
 
 .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Lora";
+  text-align: center;
+  font-family: "Lora", serif;
   font-size: 36px;
   font-style: normal;
   line-height: 140%;
+  color: #373737;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
   color: #373737;
 }
 
@@ -196,11 +211,20 @@ table {
   backdrop-filter: blur(20px);
   padding-left: 15px;
   box-sizing: border-box;
-  font-family: "Merriweather";
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
+}
+.img-tile__text-bold {
+  font-weight: 700;
+}
+.img-tile__text-right {
+  margin-left: auto;
+  padding-right: 15px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .main {
@@ -219,7 +243,7 @@ table {
   width: 45%;
 }
 .main__title {
-  font-family: "Lora";
+  font-family: "Lora", serif;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
@@ -229,7 +253,7 @@ table {
 }
 .main__text {
   margin-top: 50px;
-  font-family: "Merriweather";
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -250,7 +274,7 @@ table {
   background-position: left top;
   height: 48px;
   padding-left: 45px;
-  font-family: "Merriweather";
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -261,13 +285,32 @@ table {
 .button {
   background-color: #32BA7C;
   padding: 20px 40px;
-  font-family: "Merriweather";
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 150%;
   color: white;
   display: inline-block;
+}
+
+.our-team__content {
+  display: flex;
+}
+.our-team__arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+}
+.our-team__gallery {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.our-team__subtitle {
+  margin-top: 20px;
+  margin-bottom: 55px;
 }
 
 /*# sourceMappingURL=styles.css.map */

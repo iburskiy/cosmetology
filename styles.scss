@@ -8,7 +8,7 @@ $green1: #32BA7C;
 
 
 @mixin fontMerriweather ($weight, $size) {
-  font-family: 'Merriweather';
+  font-family: 'Merriweather', serif;
   font-style: normal;
   font-weight: $weight;
   font-size: $size;
@@ -16,7 +16,7 @@ $green1: #32BA7C;
 }
 
 @mixin fontLora ($weight, $size) {
-  font-family: 'Lora';
+  font-family: 'Lora', serif;
   font-style: normal;
   font-weight: $weight;
   font-size: $size;
@@ -45,6 +45,10 @@ $green1: #32BA7C;
   &__our-team {
     padding-top: 100px;
   }
+
+  &__form {
+    padding-top: 100px;
+  }
 }
 
 .container {
@@ -54,6 +58,12 @@ $green1: #32BA7C;
   background-color: $pink;
   padding-left: 70px;
   padding-right: 70px;
+}
+
+.container-full {
+  @extend .container;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .container-padding {
@@ -99,7 +109,6 @@ $green1: #32BA7C;
 
   &__bottom {
     @include fontMerriweather(400, 12px);
-    font-size: 12px;
     margin-top: -3px;
   }
 }
@@ -115,13 +124,21 @@ $green1: #32BA7C;
 }
 
 .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Lora';
+  text-align: center;
+  font-family: 'Lora', serif;
   font-size: 36px;
   font-style: normal;
   line-height: 140%;
+  color: $black1;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
   color: $black1;
 }
 
@@ -169,6 +186,15 @@ $green1: #32BA7C;
     box-sizing: border-box;
 
     @include fontMerriweather(400, 20px);
+  }
+  &__text-bold {
+    font-weight: 700;
+  }
+  &__text-right {
+    margin-left: auto;
+    padding-right: 15px;
+    font-weight: 400;
+    font-size: 18px;
   }
 }
 
@@ -228,4 +254,25 @@ $green1: #32BA7C;
   @include fontMerriweather(700, 28px);
   color: white;
   display: inline-block;
+}
+
+.our-team {
+  &__content {
+    display: flex;
+  }
+  &__arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+  }
+  &__gallery {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__subtitle {
+    margin-top: 20px;
+    margin-bottom: 55px;
+  }
 }
