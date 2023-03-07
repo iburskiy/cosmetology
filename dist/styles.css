@@ -4,6 +4,7 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -72,7 +73,10 @@ table {
 .body__our-team {
   padding-top: 100px;
 }
-.body__form {
+.body__request {
+  padding-top: 100px;
+}
+.body__feedbacks {
   padding-top: 100px;
 }
 
@@ -158,8 +162,9 @@ table {
 .title {
   text-align: center;
   font-family: "Lora", serif;
-  font-size: 36px;
   font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
   line-height: 140%;
   color: #373737;
 }
@@ -247,8 +252,8 @@ table {
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
-  color: #373737;
   line-height: 140%;
+  color: #373737;
   letter-spacing: 0.02em;
 }
 .main__text {
@@ -311,6 +316,126 @@ table {
 .our-team__subtitle {
   margin-top: 20px;
   margin-bottom: 55px;
+}
+
+.request {
+  height: 680px;
+  background-image: url("images/request-block-background.jpg");
+  background-repeat: no-repeat;
+  background-position: top 100px right 0px;
+}
+.request__content {
+  display: flex;
+  padding-top: 108px;
+}
+.request__form {
+  flex: 420px 0 0;
+  background-color: white;
+  padding-top: 16px;
+  padding-bottom: 28px;
+}
+.request__info {
+  flex: 442px 0 0;
+}
+
+.form__line1, .form__line2 {
+  font-family: "Lora", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 140%;
+  color: #373737;
+  line-height: 46px;
+  text-align: center;
+}
+.form__name {
+  margin: 28px 57px 0;
+}
+.form__phone {
+  margin: 40px 57px 0;
+}
+.form__btn {
+  background-color: #32BA7C;
+  padding: 20px 74px;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #373737;
+  line-height: 19px;
+  margin: 40px 57px 0;
+  color: white;
+  display: inline-block;
+}
+.form__chkbox {
+  margin: 16px 57px 0;
+  text-align: center;
+}
+
+.field {
+  position: relative;
+}
+.field__input {
+  width: 100%;
+  height: 57px;
+  padding: 0 10px 0 50px;
+  box-sizing: border-box;
+}
+.field__input::placeholder {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #373737;
+  line-height: 19px;
+  opacity: 0.4;
+}
+.field__icon {
+  position: absolute;
+  top: 17px;
+  left: 30px;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox__label {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #373737;
+  line-height: 14px;
+  margin-left: 7px;
+}
+
+.info {
+  flex: 420px 0 0;
+  padding: 0 20px;
+}
+.info__text1 {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+}
+.info__text2 {
+  margin-top: 35px;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+}
+.info__list {
+  flex-direction: column;
+}
+.info .list__item {
+  max-width: none;
+  margin-top: 35px;
 }
 
 /*# sourceMappingURL=styles.css.map */
