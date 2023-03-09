@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -82,10 +82,8 @@ table {
 }
 .body__location {
   padding-top: 100px;
+  padding-bottom: 100px;
   position: relative;
-}
-.body__footer {
-  padding-top: 100px;
 }
 
 .container, .container-padding {
@@ -145,6 +143,7 @@ table {
 
 .logo {
   position: relative;
+  width: 154px;
 }
 .logo__top {
   font-family: "Merriweather", serif;
@@ -577,6 +576,65 @@ table {
   align-items: center;
   width: 380px;
   height: 73px;
+}
+
+.footer {
+  background: linear-gradient(90deg, #DAE2F8 0%, #D6A4A4 100%);
+}
+.footer__top {
+  padding-top: 41px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__menu {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+}
+.footer__menu-left {
+  display: flex;
+  flex: 66% 0 0;
+  justify-content: space-between;
+}
+.footer__menu-col {
+  flex: 240px 0 0;
+}
+.footer__menu-item:not(:first-child) {
+  margin-top: 25px;
+}
+.footer__phone {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 150%;
+}
+.footer__hr {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+.footer__bottom {
+  height: 116px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+}
+.footer__bottom-left {
+  display: flex;
+}
+.footer__bottom-left-item:not(:first-child) {
+  margin-left: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,6 +1,6 @@
 @import "reset";
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 $pink: #F1DDDF;
@@ -75,10 +75,8 @@ $gray1: #696969;
   }
   &__location {
     padding-top: 100px;
+    padding-bottom: 100px;
     position: relative;
-  }
-  &__footer {
-    padding-top: 100px;
   }
 }
 
@@ -122,6 +120,7 @@ $gray1: #696969;
 
 .logo {
   position: relative;
+  width: 154px;
 
   &__top {
     @include fontMerriweather(700, 25px);
@@ -481,5 +480,53 @@ $gray1: #696969;
   &__btn {
     @include fontRoboto(700, 18px);
     @include button(380px, 73px);
+  }
+}
+
+.footer {
+  background: linear-gradient(90deg, #DAE2F8 0%, #D6A4A4 100%);
+
+  &__top {
+    padding-top: 41px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    @include fontMerriweather(300, 18px);
+  }
+  &__menu-left {
+    display: flex;
+    flex: 66% 0 0;
+    justify-content: space-between;
+  }
+  &__menu-col {
+    flex: 240px 0 0;
+  }
+  &__menu-item:not(:first-child) {
+    margin-top: 25px;
+  }
+  &__phone {
+    @include fontMerriweather(900, 18px);
+  }
+  &__hr {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+  }
+  &__bottom {
+    height: 116px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include fontMerriweather(300, 18px);
+  }
+  &__bottom-left {
+    display: flex;
+  }
+  &__bottom-left-item:not(:first-child) {
+    margin-left: 50px;
   }
 }
