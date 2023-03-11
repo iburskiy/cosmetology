@@ -6,6 +6,7 @@
 $pink: #F1DDDF;
 $black1: #373737;
 $green1: #32BA7C;
+$green2: #69CF73;
 $gray1: #696969;
 
 @mixin container($indent: 70px){
@@ -54,12 +55,6 @@ $gray1: #696969;
   &__header {
     padding-top: 64px;
   }
-  &__main {
-    padding-top: 100px;
-  }
-  &__list {
-    padding-top: 70px;
-  }
   &__services {
     padding-top: 100px;
   }
@@ -101,6 +96,16 @@ $gray1: #696969;
   height: 895px;
   background-image: url('./images/background-for-top.jpg');
   background-repeat: no-repeat;
+
+  &__main {
+    padding-top: 100px;
+  }
+  &__list {
+    padding-top: 70px;
+  }
+  &__list-item {
+    max-width: 350px;
+  }
 }
 
 .header {
@@ -160,28 +165,33 @@ $gray1: #696969;
 }
 
 .services {
-  &__left, &__right {
-    width: 49%;
-  }
-
   &__content {
     margin-top: 60px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+  }
+  &__left, &__right {
+    flex: 1 1 50%;
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
-    margin-top: 44px;
+    margin-top: 20px;
+    gap: 20px;
   }
 
   &__bottom-left, &__bottom-right {
-    width: 48%;
+    flex: 1 1 50%;
+  }
+
+  &__left-img {
+    max-height: 670px;
   }
 }
 
-.img-tile {
+.tile {
   position: relative;
 
   &__picture {
@@ -201,7 +211,6 @@ $gray1: #696969;
     backdrop-filter: blur(20px);
     padding-left: 15px;
     box-sizing: border-box;
-
     @include fontMerriweather(400, 20px);
   }
   &__text-bold {
@@ -260,9 +269,7 @@ $gray1: #696969;
     background-position: left top;
     height: 48px;
     padding-left: 45px;
-
     @include fontMerriweather(400, 18px);
-    max-width: 350px;
   }
 }
 
@@ -274,6 +281,7 @@ $gray1: #696969;
     flex: 1 1 auto;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
   }
   &__subtitle {
     margin-top: 20px;
@@ -285,7 +293,7 @@ $gray1: #696969;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 70px 0 0;
+  flex: 0 0 70px;
 }
 
 .request {
@@ -296,19 +304,14 @@ $gray1: #696969;
   &__content {
     display: flex;
   }
-  &__form {
-    flex: 420px 0 0;
-    background-color: white;
-    padding-top: 16px;
-    padding-bottom: 28px;
-  }
-
-  &__info {
-    flex: 442px 0 0;
-  }
 }
 
 .form {
+  flex: 0 0 420px;
+  background-color: white;
+  padding-top: 16px;
+  padding-bottom: 28px;
+
   &__line1, &__line2 {
     @include fontLora(500, 36px);
     line-height: 46px;
@@ -362,6 +365,10 @@ $gray1: #696969;
   justify-content: center;
   align-items: center;
 
+  &__field {
+    width: 11px;
+    accent-color: $green1;
+  }
   &__label {
     @include fontRoboto(400, 12px);
     line-height: 14px;
@@ -370,7 +377,7 @@ $gray1: #696969;
 }
 
 .info {
-  flex: 420px 0 0;
+  flex: 0 0 420px;
   padding: 0 20px;
 
   &__text1 {
@@ -383,9 +390,7 @@ $gray1: #696969;
   &__list {
     flex-direction: column;
   }
-
-  .list__item {
-    max-width: none;
+  &__list-item {
     margin-top: 35px;
   }
 }
@@ -499,11 +504,11 @@ $gray1: #696969;
   }
   &__menu-left {
     display: flex;
-    flex: 66% 0 0;
+    flex: 0 0 66%;
     justify-content: space-between;
   }
   &__menu-col {
-    flex: 240px 0 0;
+    flex: 0 0 240px;
   }
   &__menu-item:not(:first-child) {
     margin-top: 25px;

@@ -61,12 +61,6 @@ table {
 .body__header {
   padding-top: 64px;
 }
-.body__main {
-  padding-top: 100px;
-}
-.body__list {
-  padding-top: 70px;
-}
 .body__services {
   padding-top: 100px;
 }
@@ -123,6 +117,15 @@ table {
   height: 895px;
   background-image: url("./images/background-for-top.jpg");
   background-repeat: no-repeat;
+}
+.top__main {
+  padding-top: 100px;
+}
+.top__list {
+  padding-top: 70px;
+}
+.top__list-item {
+  max-width: 350px;
 }
 
 .header {
@@ -199,32 +202,37 @@ table {
   color: #373737;
 }
 
-.services__left, .services__right {
-  width: 49%;
-}
 .services__content {
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+}
+.services__left, .services__right {
+  flex: 1 1 50%;
 }
 .services__bottom {
   display: flex;
   justify-content: space-between;
-  margin-top: 44px;
+  margin-top: 20px;
+  gap: 20px;
 }
 .services__bottom-left, .services__bottom-right {
-  width: 48%;
+  flex: 1 1 50%;
+}
+.services__left-img {
+  max-height: 670px;
 }
 
-.img-tile {
+.tile {
   position: relative;
 }
-.img-tile__picture {
+.tile__picture {
   display: block;
   object-fit: cover;
   width: 100%;
 }
-.img-tile__text {
+.tile__text {
   position: absolute;
   bottom: 0;
   height: 60px;
@@ -242,10 +250,10 @@ table {
   font-size: 20px;
   line-height: 150%;
 }
-.img-tile__text-bold {
+.tile__text-bold {
   font-weight: 700;
 }
-.img-tile__text-right {
+.tile__text-right {
   margin-left: auto;
   padding-right: 15px;
   font-weight: 400;
@@ -316,7 +324,6 @@ table {
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  max-width: 350px;
 }
 
 .our-team__content {
@@ -326,6 +333,7 @@ table {
   flex: 1 1 auto;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .our-team__subtitle {
   margin-top: 20px;
@@ -336,7 +344,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 70px 0 0;
+  flex: 0 0 70px;
 }
 
 .request {
@@ -347,16 +355,13 @@ table {
 .request__content {
   display: flex;
 }
-.request__form {
-  flex: 420px 0 0;
+
+.form {
+  flex: 0 0 420px;
   background-color: white;
   padding-top: 16px;
   padding-bottom: 28px;
 }
-.request__info {
-  flex: 442px 0 0;
-}
-
 .form__line1, .form__line2 {
   font-family: "Lora", serif;
   font-style: normal;
@@ -427,6 +432,10 @@ table {
   justify-content: center;
   align-items: center;
 }
+.checkbox__field {
+  width: 11px;
+  accent-color: #32BA7C;
+}
 .checkbox__label {
   font-family: "Roboto", serif;
   font-style: normal;
@@ -438,7 +447,7 @@ table {
 }
 
 .info {
-  flex: 420px 0 0;
+  flex: 0 0 420px;
   padding: 0 20px;
 }
 .info__text1 {
@@ -459,8 +468,7 @@ table {
 .info__list {
   flex-direction: column;
 }
-.info .list__item {
-  max-width: none;
+.info__list-item {
   margin-top: 35px;
 }
 
@@ -598,11 +606,11 @@ table {
 }
 .footer__menu-left {
   display: flex;
-  flex: 66% 0 0;
+  flex: 0 0 66%;
   justify-content: space-between;
 }
 .footer__menu-col {
-  flex: 240px 0 0;
+  flex: 0 0 240px;
 }
 .footer__menu-item:not(:first-child) {
   margin-top: 25px;
