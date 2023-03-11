@@ -484,12 +484,12 @@ table {
 
 .feedback {
   background-color: white;
+  padding: 55px 35px 55px 50px;
 }
 .feedback__title {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin: 55px 50px 30px;
 }
 .feedback__icon {
   margin-left: 30px;
@@ -506,7 +506,7 @@ table {
   line-height: 150%;
 }
 .feedback__text {
-  margin: 0 50px 35px 54px;
+  margin-top: 30px;
   font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
@@ -557,7 +557,7 @@ table {
   display: flex;
   margin-top: 40px;
 }
-.contacts__address-text, .contacts__phone-text, .contacts__hours-text {
+.contacts__text {
   font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
