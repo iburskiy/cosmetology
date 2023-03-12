@@ -502,19 +502,19 @@ $gray1: #696969;
     justify-content: space-between;
     @include fontMerriweather(300, 18px);
   }
-  &__menu-left {
-    display: flex;
-    flex: 0 0 66%;
-    justify-content: space-between;
-  }
   &__menu-col {
-    flex: 0 0 240px;
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
-  &__menu-item:not(:first-child) {
-    margin-top: 25px;
-  }
-  &__phone {
+  &__menu-col:last-child {
+    margin-left: auto;
+    text-align: right;
     @include fontMerriweather(900, 18px);
+  }
+  &__menu-item {
+    padding-right: 53px;
   }
   &__hr {
     width: 100%;
@@ -522,16 +522,12 @@ $gray1: #696969;
     margin-top: 20px;
   }
   &__bottom {
-    height: 116px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 50px;
+    padding: 39px 0 50px;
     @include fontMerriweather(300, 18px);
   }
-  &__bottom-left {
-    display: flex;
-  }
-  &__bottom-left-item:not(:first-child) {
-    margin-left: 50px;
+  &__bottom-item:last-child {
+    margin-left: auto;
   }
 }
