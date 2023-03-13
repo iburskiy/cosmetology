@@ -109,7 +109,7 @@ table {
 
 .top {
   height: 895px;
-  background-image: url("./images/background-for-top.jpg");
+  background-image: url("images/background-for-top.jpg");
   background-repeat: no-repeat;
 }
 .top__main {
@@ -308,7 +308,7 @@ table {
   justify-content: space-between;
 }
 .list__item {
-  background-image: url("./images/green-tick.svg");
+  background-image: url("images/green-tick.svg");
   background-repeat: no-repeat;
   background-position: left top;
   height: 48px;

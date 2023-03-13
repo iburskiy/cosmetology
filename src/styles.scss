@@ -87,7 +87,7 @@ $gray1: #696969;
 
 .top {
   height: 895px;
-  background-image: url('./images/background-for-top.jpg');
+  background-image: url('images/background-for-top.jpg');
   background-repeat: no-repeat;
 
   &__main {
@@ -255,7 +255,7 @@ $gray1: #696969;
   justify-content: space-between;
 
   &__item {
-    background-image: url('./images/green-tick.svg');
+    background-image: url('images/green-tick.svg');
     background-repeat: no-repeat;
     background-position: left top;
     height: 48px;

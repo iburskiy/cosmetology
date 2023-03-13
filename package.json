@@ -1,29 +1,16 @@
 {
   "name": "cosmetology",
   "version": "1.0.0",
-  "watch": {
-    "watch:scss": "styles.scss",
-    "watch:html": "index.html",
-    "watch:images": {
-        "patterns": [
-          "images"
-        ],
-        "extensions": "jpg,jpeg,png"
-      }
-    },
   "scripts": {
-    "build": "npm run copy && npm run scss",
-    "scss": "sass --embed-sources styles.scss dist/styles.css",
-    "copy": "cp -r images dist/ && cp index.html dist/",
-    "watch": "npm-watch",
-    "watch:scss": "npm run scss",
-    "watch:html": "cp index.html dist/",
-    "watch:images": "cp -r ./images dist/"
+    "build": "npm run scss && npm run copy",
+    "scss": "sass --embed-sources src/styles.scss dist/styles.css",
+    "copy": "npm run copy-html && npm run copy-images",
+    "copy-html": "cp src/index.html dist/",
+    "copy-images": "cp -r src/images dist/",
+    "watch": "nodemon -e scss,html --watch src/ --ignore dist/ --exec 'npm run scss && npm run copy'"
   },
   "devDependencies": {
+    "nodemon": "^2.0.21",
     "sass": "^1.57.1"
-  },
-  "dependencies": {
-    "npm-watch": "^0.11.0"
   }
 }
