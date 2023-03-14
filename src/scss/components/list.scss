@@ -1,0 +1,16 @@
+@import "../mixins/fontMerriweather";
+
+.list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    background-image: url('images/green-tick.svg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: 48px;
+    padding-left: 45px;
+    @include fontMerriweather(400, 18px);
+  }
+}

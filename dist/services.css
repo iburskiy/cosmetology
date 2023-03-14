@@ -151,4 +151,67 @@ table {
   color: #373737;
 }
 
+.footer {
+  background: linear-gradient(90deg, #DAE2F8 0%, #D6A4A4 100%);
+}
+.footer__top {
+  padding-top: 41px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__menu {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+}
+.footer__menu-col {
+  flex: 0 0 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.footer__menu-col:last-child {
+  margin-left: auto;
+  text-align: right;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 150%;
+}
+.footer__menu-item {
+  padding-right: 53px;
+}
+.footer__hr {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+.footer__bottom {
+  display: flex;
+  gap: 50px;
+  padding: 39px 0 50px;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+}
+.footer__bottom-item:last-child {
+  margin-left: auto;
+}
+
+.body__services-info {
+  padding-top: 100px;
+}
+
+.services-info {
+  height: 400px;
+}
+
 /*# sourceMappingURL=services.css.map */

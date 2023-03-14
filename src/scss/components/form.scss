@@ -1,0 +1,36 @@
+@import "../mixins/fontLora";
+@import "../mixins/fontRoboto";
+@import "../mixins/button";
+
+.form {
+  flex: 0 0 420px;
+  background-color: white;
+  padding-top: 16px;
+  padding-bottom: 28px;
+
+  &__line1, &__line2 {
+    @include fontLora(500, 36px);
+    line-height: 46px;
+    text-align: center;
+  }
+  &__name {
+    margin: 28px 57px 0;
+  }
+  &__phone {
+    margin: 40px 57px 0;
+  }
+  &__btn-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  &__btn {
+    @include fontRoboto(700, 16px);
+    @include button(305px, 61px);
+    line-height: 19px;
+  }
+  &__chkbox {
+    margin: 16px 57px 0;
+    text-align: center;
+  }
+}

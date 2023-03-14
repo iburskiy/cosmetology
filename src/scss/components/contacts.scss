@@ -1,0 +1,48 @@
+@import "../mixins/fontLora";
+@import "../mixins/fontMerriweather";
+@import "../mixins/fontRoboto";
+@import "../mixins/button";
+
+.contacts {
+  background-color: white;
+  width: 520px;
+  padding-top: 20px;
+
+  &__line1, &__line2 {
+    @include fontLora(500, 36px);
+    line-height: 46px;
+    text-align: center;
+  }
+  &__address {
+    display: flex;
+    margin-top: 45px;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 110px;
+  }
+  &__phone {
+    display: flex;
+    margin-top: 40px;
+  }
+  &__hours {
+    display: flex;
+    margin-top: 40px;
+  }
+  &__text {
+    @include fontMerriweather(400, 20px);
+    margin-left: 20px;
+  }
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  &__btn {
+    @include fontRoboto(700, 18px);
+    @include button(380px, 73px);
+  }
+}

@@ -1,0 +1,11 @@
+@import "../vars";
+
+@mixin button($width, $height) {
+  background-color: $green1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $width;
+  height: $height;
+}

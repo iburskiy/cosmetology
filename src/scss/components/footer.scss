@@ -1,0 +1,45 @@
+@import "../mixins/fontMerriweather";
+
+.footer {
+  background: linear-gradient(90deg, #DAE2F8 0%, #D6A4A4 100%);
+
+  &__top {
+    padding-top: 41px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    @include fontMerriweather(300, 18px);
+  }
+  &__menu-col {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  &__menu-col:last-child {
+    margin-left: auto;
+    text-align: right;
+    @include fontMerriweather(900, 18px);
+  }
+  &__menu-item {
+    padding-right: 53px;
+  }
+  &__hr {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+  }
+  &__bottom {
+    display: flex;
+    gap: 50px;
+    padding: 39px 0 50px;
+    @include fontMerriweather(300, 18px);
+  }
+  &__bottom-item:last-child {
+    margin-left: auto;
+  }
+}

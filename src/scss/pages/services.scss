@@ -9,3 +9,14 @@
 @import "../components/menu";
 @import "../components/cta";
 @import "../components/title";
+@import "../components/footer";
+
+.body {
+  &__services-info {
+    padding-top: 100px;
+  }
+}
+
+.services-info {
+  height: 400px;
+}
