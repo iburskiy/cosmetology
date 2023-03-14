@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "npm run scss && npm run copy",
-    "scss": "sass --embed-sources src/scss/styles.scss:dist/styles.css src/scss/pages/services.scss:dist/services.css",
+    "scss": "sass --embed-sources src/scss/pages/index.scss:dist/index.css src/scss/pages/services.scss:dist/services.css",
     "copy": "npm run copy-html && npm run copy-images",
     "copy-html": "cp src/*.html dist/",
     "copy-images": "cp -r src/images dist/",
