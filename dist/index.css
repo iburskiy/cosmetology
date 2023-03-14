@@ -82,6 +82,66 @@ table {
   padding-right: 87px;
 }
 
+.top {
+  height: 895px;
+  background-image: url("images/background-for-top.jpg");
+  background-repeat: no-repeat;
+}
+.top__main {
+  padding-top: 100px;
+  display: flex;
+}
+.top__socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 165px;
+  width: 30px;
+}
+.top__block {
+  padding-left: 60px;
+  width: 45%;
+}
+.top__title {
+  font-family: "Lora", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 140%;
+  color: #373737;
+  letter-spacing: 0.02em;
+}
+.top__text {
+  margin-top: 50px;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+.top__btn {
+  margin-top: 100px;
+  background-color: #32BA7C;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 389px;
+  height: 82px;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 150%;
+}
+.top__list {
+  padding-top: 70px;
+}
+.top__list-item {
+  max-width: 350px;
+}
+
 .header {
   padding-top: 64px;
   display: flex;
@@ -487,21 +547,6 @@ table {
   position: relative;
 }
 
-.top {
-  height: 895px;
-  background-image: url("images/background-for-top.jpg");
-  background-repeat: no-repeat;
-}
-.top__main {
-  padding-top: 100px;
-}
-.top__list {
-  padding-top: 70px;
-}
-.top__list-item {
-  max-width: 350px;
-}
-
 .services__content {
   margin-top: 60px;
   display: flex;
@@ -522,54 +567,6 @@ table {
 }
 .services__left-img {
   max-height: 670px;
-}
-
-.main {
-  display: flex;
-}
-.main__socials {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  height: 165px;
-  width: 30px;
-}
-.main__block {
-  padding-left: 60px;
-  width: 45%;
-}
-.main__title {
-  font-family: "Lora", serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 140%;
-  color: #373737;
-  letter-spacing: 0.02em;
-}
-.main__text {
-  margin-top: 50px;
-  font-family: "Merriweather", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
-}
-.main__btn {
-  margin-top: 100px;
-  background-color: #32BA7C;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 389px;
-  height: 82px;
-  font-family: "Merriweather", serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 150%;
 }
 
 .our-team__content {

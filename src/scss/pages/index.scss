@@ -7,6 +7,7 @@
 @import "../mixins/button";
 
 @import "../components/container";
+@import "../components/top";
 @import "../components/header";
 @import "../components/logo";
 @import "../components/menu";
@@ -50,22 +51,6 @@
   }
 }
 
-.top {
-  height: 895px;
-  background-image: url('images/background-for-top.jpg');
-  background-repeat: no-repeat;
-
-  &__main {
-    padding-top: 100px;
-  }
-  &__list {
-    padding-top: 70px;
-  }
-  &__list-item {
-    max-width: 350px;
-  }
-}
-
 .services {
   &__content {
     margin-top: 60px;
@@ -90,40 +75,6 @@
 
   &__left-img {
     max-height: 670px;
-  }
-}
-
-.main {
-  display: flex;
-
-  &__socials {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    height: 165px;
-    width: 30px;
-  }
-
-  &__block {
-    padding-left: 60px;
-    width: 45%;
-  }
-
-  &__title {
-    @include fontLora(600, 48px);
-    letter-spacing: 0.02em;
-  }
-
-  &__text {
-    margin-top: 50px;
-    @include fontMerriweather(400, 18px);
-  }
-
-  &__btn {
-    margin-top: 100px;
-    @include button(389px, 82px);
-    @include fontMerriweather(700, 28px);
   }
 }
 
