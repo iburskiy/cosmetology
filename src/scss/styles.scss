@@ -1,37 +1,21 @@
 @import "reset";
+@import "vars";
+
+@import "mixins/fontMerriweather";
+@import "mixins/fontLora";
+
+@import "components/container";
+@import "components/header";
+@import "components/logo";
+@import "components/menu";
+@import "components/cta";
+@import "components/title";
+
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-$pink: #F1DDDF;
-$black1: #373737;
-$green1: #32BA7C;
-$green2: #69CF73;
-$gray1: #696969;
 
-@mixin container($indent: 70px){
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 1440px;
-  background-color: $pink;
-  padding-left: $indent;
-  padding-right: $indent;
-}
-@mixin fontMerriweather ($weight, $size) {
-  font-family: 'Merriweather', serif;
-  font-style: normal;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: 150%;
-}
-@mixin fontLora ($weight, $size) {
-  font-family: 'Lora', serif;
-  font-style: normal;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: 140%;
-  color: $black1;
-}
 @mixin fontRoboto ($weight, $size) {
   font-family: 'Roboto', serif;
   font-style: normal;
@@ -52,9 +36,6 @@ $gray1: #696969;
 .body {
   line-height: 150%;
 
-  &__header {
-    padding-top: 64px;
-  }
   &__services {
     padding-top: 100px;
   }
@@ -75,16 +56,6 @@ $gray1: #696969;
   }
 }
 
-.container {
-  @include container();
-}
-.container-padding0 {
-  @include container(0px);
-}
-.container-padding87 {
-  @include container(87px);
-}
-
 .top {
   height: 895px;
   background-image: url('images/background-for-top.jpg');
@@ -99,54 +70,6 @@ $gray1: #696969;
   &__list-item {
     max-width: 350px;
   }
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.cta {
-  &__btn {
-    border: 2px solid $green1;
-    padding: 20px 30px;
-
-    @include fontMerriweather(700, 18px);
-  }
-}
-
-.logo {
-  position: relative;
-  width: 154px;
-
-  &__top {
-    @include fontMerriweather(700, 25px);
-  }
-  &__img {
-    position: absolute;
-    right: -29px;
-    top: -8px;
-  }
-  &__bottom {
-    @include fontMerriweather(400, 12px);
-    margin-top: -3px;
-  }
-}
-
-.menu {
-  min-width: 721px;
-  display: flex;
-  justify-content: space-between;
-
-  &__item {
-    @include fontMerriweather(400, 18px);
-  }
-}
-
-.title {
-  text-align: center;
-  @include fontLora(500, 36px);
 }
 
 .subtitle {

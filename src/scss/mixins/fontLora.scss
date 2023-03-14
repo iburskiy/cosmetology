@@ -1,0 +1,10 @@
+@import "../vars";
+
+@mixin fontLora ($weight, $size) {
+  font-family: 'Lora', serif;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: 140%;
+  color: $black1;
+}

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "build": "npm run scss && npm run copy",
-    "scss": "sass --embed-sources src/styles.scss dist/styles.css",
+    "scss": "sass --embed-sources src/scss/styles.scss:dist/styles.css src/scss/pages/services.scss:dist/services.css",
     "copy": "npm run copy-html && npm run copy-images",
-    "copy-html": "cp src/index.html dist/",
+    "copy-html": "cp src/*.html dist/",
     "copy-images": "cp -r src/images dist/",
     "watch": "nodemon -e scss,html --watch src/ --ignore dist/ --exec 'npm run scss && npm run copy'"
   },

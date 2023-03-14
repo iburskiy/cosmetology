@@ -1,0 +1,6 @@
+@import "../mixins/fontLora";
+
+.title {
+  text-align: center;
+  @include fontLora(500, 36px);
+}

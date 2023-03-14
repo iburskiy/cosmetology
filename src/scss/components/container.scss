@@ -1,0 +1,20 @@
+@import "../vars";
+
+@mixin container($indent: 70px){
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1440px;
+  background-color: $pink;
+  padding-left: $indent;
+  padding-right: $indent;
+}
+
+.container {
+  @include container();
+}
+.container-padding0 {
+  @include container(0px);
+}
+.container-padding87 {
+  @include container(87px);
+}

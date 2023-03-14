@@ -1,0 +1,19 @@
+@import "../mixins/fontMerriweather";
+
+.logo {
+  position: relative;
+  width: 154px;
+
+  &__top {
+    @include fontMerriweather(700, 25px);
+  }
+  &__img {
+    position: absolute;
+    right: -29px;
+    top: -8px;
+  }
+  &__bottom {
+    @include fontMerriweather(400, 12px);
+    margin-top: -3px;
+  }
+}

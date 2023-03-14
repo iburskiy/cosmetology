@@ -1,0 +1,9 @@
+@import "../vars";
+
+@mixin fontMerriweather ($weight, $size) {
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: 150%;
+}

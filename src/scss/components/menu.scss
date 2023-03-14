@@ -1,0 +1,18 @@
+@import "../mixins/fontMerriweather";
+
+.menu {
+  min-width: 721px;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    @include fontMerriweather(400, 18px);
+  }
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
