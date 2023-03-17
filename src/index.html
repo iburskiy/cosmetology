@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cosmetology</title>
   <link rel="stylesheet" href="./index.css">
 </head>
@@ -22,6 +23,11 @@
       </div>
       <div class="cta">
         <div class="cta__btn">CALL ME BACK</div>
+      </div>
+      <div class="burger-icon">
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.75 15.5H23.25V13H0.75V15.5ZM0.75 9.25H23.25V6.75H0.75V9.25ZM0.75 0.5V3H23.25V0.5H0.75Z" fill="black"/>
+        </svg>
       </div>
     </header>
     <div class="top__main">
@@ -50,27 +56,22 @@
   </div>
   <div class="services body__services container">
     <div class="title">Our Services</div>
-    <div class="services__content">
-      <div class="services__left tile">
-        <img class="services__left-img tile__picture" src="images/our-services-left.png" alt="">
+    <div class="services__grid grid">
+      <div class="grid__item tile">
+        <img class="tile__picture" src="images/our-services-left.png" alt="">
         <div class="tile__text">Hardware cosmetology</div>
       </div>
-
-      <div class="services__right">
-        <div class="tile">
-          <img src="images/our-services-right-top.png" alt="" class="services__top-img tile__picture">
-          <div class="tile__text">Injection cosmetology</div>
-        </div>
-        <div class="services__bottom">
-          <div class="services__bottom-left tile">
-            <img src="images/our-services-right-bottom-left.png" alt="" class="services__bottom-left-img tile__picture">
-            <div class="tile__text">Aesthetic cosmetology</div>
-          </div>
-          <div class="services__bottom-right tile">
-            <img src="images/our-services-right-bottom-right.png" alt="" class="services__bottom-right-img tile__picture">
-            <div class="tile__text">Men's cosmetology</div>
-          </div>
-        </div>
+      <div class="grid__item tile">
+        <img class="tile__picture" src="images/our-services-right-top.png" alt="">
+        <div class="tile__text">Injection cosmetology</div>
+      </div>
+      <div class="grid__item tile">
+        <img class="tile__picture" src="images/our-services-right-bottom-left.png" alt="">
+        <div class="tile__text">Aesthetic cosmetology</div>
+      </div>
+      <div class="grid__item tile">
+        <img class="tile__picture" src="images/our-services-right-bottom-right.png" alt="">
+        <div class="tile__text">Men's cosmetology</div>
       </div>
     </div>
   </div>
@@ -198,7 +199,7 @@
       </div>
     </div>
   </div>
-  <div class="location body__location container-padding87">
+  <div class="location body__location container">
     <img class="location__img" src="images/map.jpg" alt="">
     <div class="location__contacts contacts">
       <div class="contacts__line1">We are always</div>

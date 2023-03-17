@@ -15,4 +15,8 @@
       text-decoration: underline;
     }
   }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    display: none;
+  }
 }

@@ -1,12 +1,17 @@
 @import "../vars";
 
-@mixin container($indent: 70px){
+@mixin container($indent: $indent-container-desktop){
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1440px;
   background-color: $pink;
   padding-left: $indent;
   padding-right: $indent;
+
+  @media (max-width: $breakpoint-tablet-max) {
+    padding-left: $indent-container-mobile;
+    padding-right: $indent-container-mobile;
+  }
 }
 
 .container {
@@ -14,7 +19,4 @@
 }
 .container-padding0 {
   @include container(0px);
-}
-.container-padding87 {
-  @include container(87px);
 }

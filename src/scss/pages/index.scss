@@ -8,12 +8,14 @@
 
 @import "../components/container";
 @import "../components/top";
+@import "../components/burger-icon";
 @import "../components/header";
 @import "../components/logo";
 @import "../components/menu";
 @import "../components/cta";
 @import "../components/title";
 @import "../components/subtitle";
+@import "../components/grid";
 @import "../components/tile";
 @import "../components/form";
 @import "../components/list";
@@ -52,29 +54,14 @@
 }
 
 .services {
-  &__content {
+  &__grid {
     margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  &__left, &__right {
-    flex: 1 1 50%;
   }
 
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    gap: 20px;
-  }
-
-  &__bottom-left, &__bottom-right {
-    flex: 1 1 50%;
-  }
-
-  &__left-img {
-    max-height: 670px;
+  @media (max-width: $breakpoint-tablet-max) {
+    &__grid {
+      margin-top: 50px;
+    }
   }
 }
 
@@ -92,6 +79,10 @@
     margin-top: 20px;
     margin-bottom: 55px;
   }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    display: none;
+  }
 }
 
 .request {
@@ -101,6 +92,10 @@
 
   &__content {
     display: flex;
+  }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    display: none;
   }
 }
 
@@ -133,15 +128,36 @@
     flex: 1 1 auto;
     gap: 20px;
   }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    display: none;
+  }
 }
 
 .location {
   &__img {
     display: block;
+    max-width: 100%;
+    height: auto;
   }
   &__contacts {
     position: absolute;
     top: 220px;
-    right: 87px;
+    right: $indent-container-desktop;
+  }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    &__contacts {
+      right: $indent-container-mobile;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet-middle) {
+    &__contacts {
+      position: static;
+      margin-left: -$indent-container-mobile;
+      width: calc(100% + #{2 * $indent-container-mobile});
+      margin-top: 66px;
+    }
   }
 }

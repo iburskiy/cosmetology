@@ -1,0 +1,10 @@
+@import "../vars";
+
+.burger-icon {
+  @media (min-width: $breakpoint-desktop-min) {
+    display: none;
+  }
+  @media (max-width: $breakpoint-tablet-max) {
+    display: block;
+  }
+}

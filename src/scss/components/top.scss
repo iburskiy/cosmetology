@@ -6,6 +6,7 @@
   height: 895px;
   background-image: url('images/background-for-top.jpg');
   background-repeat: no-repeat;
+  background-position: top center;
 
   &__main {
     padding-top: 100px;
@@ -41,5 +42,41 @@
   }
   &__list-item {
     max-width: 350px;
+  }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    &__main {
+      padding-top: 50px;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet-middle) {
+    height: 476px;
+    background-image: url('images/background-for-top-tablet.jpg');
+
+    &__main {
+      padding-top: 25px;
+    }
+    &__socials {
+      display: none;
+    }
+    &__block {
+      padding-left: 0;
+      width: 66%;
+    }
+    &__title {
+      @include fontLora(600, 30px);
+    }
+    &__text {
+      margin-top: 14px;
+    }
+    &__btn {
+      margin-top: 21px;
+      @include button(262px, 61px);
+      @include fontMerriweather(700, 14px);
+    }
+    &__list {
+      padding-top: 40px;
+    }
   }
 }

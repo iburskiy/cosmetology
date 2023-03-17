@@ -7,6 +7,7 @@
   background-color: white;
   width: 520px;
   padding-top: 20px;
+  padding-bottom: 40px;
 
   &__line1, &__line2 {
     @include fontLora(500, 36px);
@@ -39,7 +40,6 @@
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    margin-bottom: 40px;
   }
   &__btn {
     @include fontRoboto(700, 18px);
