@@ -59,7 +59,6 @@ table {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1440px;
-  background-color: #F1DDDF;
   padding-left: 70px;
   padding-right: 70px;
 }
@@ -69,12 +68,15 @@ table {
     padding-right: 20px;
   }
 }
+.container_full {
+  background: linear-gradient(90deg, #DAE2F8 0%, #D6A4A4 100%);
+  width: 100%;
+}
 
 .container-padding0 {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1440px;
-  background-color: #F1DDDF;
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -85,14 +87,11 @@ table {
   }
 }
 
-.top {
-  height: 895px;
-  background-image: url("images/background-for-top.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
+.top__content {
+  padding-top: 55px;
+  padding-bottom: 110px;
 }
 .top__main {
-  padding-top: 100px;
   display: flex;
 }
 .top__socials {
@@ -105,13 +104,12 @@ table {
 }
 .top__block {
   padding-left: 60px;
-  width: 45%;
 }
-.top__title {
+.top__title1, .top__title2 {
   font-family: "Lora", serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 47px;
   line-height: 140%;
   color: #373737;
   letter-spacing: 0.02em;
@@ -139,21 +137,53 @@ table {
   font-size: 28px;
   line-height: 150%;
 }
+.top__picture-wrapper {
+  margin-left: auto;
+}
+.top__picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .top__list {
-  padding-top: 70px;
+  padding-top: 75px;
 }
 .top__list-item {
   max-width: 350px;
 }
 @media (max-width: 1279px) {
-  .top__main {
+  .top__content {
+    padding-top: 24px;
+    padding-bottom: 60px;
+  }
+  .top__block {
+    padding-left: 135px;
+  }
+  .top__title1, .top__title2 {
+    font-family: "Lora", serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 140%;
+    color: #373737;
+  }
+  .top__text {
+    margin-top: 30px;
+  }
+  .top__btn {
+    margin-top: 50px;
+  }
+  .top__picture-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .top__list {
     padding-top: 50px;
   }
 }
 @media (max-width: 990px) {
-  .top {
-    height: 476px;
-    background-image: url("images/background-for-top-tablet.jpg");
+  .top__content {
+    padding-top: 0;
   }
   .top__main {
     padding-top: 25px;
@@ -163,7 +193,6 @@ table {
   }
   .top__block {
     padding-left: 0;
-    width: 66%;
   }
   .top__title {
     font-family: "Lora", serif;
@@ -174,10 +203,10 @@ table {
     color: #373737;
   }
   .top__text {
-    margin-top: 14px;
+    margin-top: 20px;
   }
   .top__btn {
-    margin-top: 21px;
+    margin-top: 20px;
     background-color: #32BA7C;
     color: white;
     display: flex;
@@ -191,31 +220,34 @@ table {
     font-size: 14px;
     line-height: 150%;
   }
+  .top__picture-wrapper {
+    padding-left: 30px;
+  }
   .top__list {
-    padding-top: 40px;
+    padding-top: 55px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 991px) {
   .burger-icon {
     display: none;
   }
 }
-@media (max-width: 1279px) {
+@media (max-width: 990px) {
   .burger-icon {
     display: block;
   }
 }
 
-.header {
-  padding-top: 64px;
+.header__content {
+  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 990px) {
-  .header {
-    padding-top: 32px;
+  .header__content {
+    height: 94px;
   }
 }
 
@@ -245,11 +277,12 @@ table {
 }
 
 .menu {
-  min-width: 721px;
+  margin: 0 -25px;
   display: flex;
   justify-content: space-between;
 }
 .menu__item {
+  margin: 0 25px;
   font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
@@ -265,6 +298,14 @@ table {
 }
 @media (max-width: 1279px) {
   .menu {
+    margin: 0 -15px;
+  }
+  .menu__item {
+    margin: 0 15px;
+  }
+}
+@media (max-width: 990px) {
+  .menu {
     display: none;
   }
 }
@@ -278,7 +319,7 @@ table {
   font-size: 18px;
   line-height: 150%;
 }
-@media (max-width: 1279px) {
+@media (max-width: 767px) {
   .cta {
     display: none;
   }
@@ -428,7 +469,7 @@ table {
   background-repeat: no-repeat;
   background-position: left top;
   height: 48px;
-  padding-left: 45px;
+  padding-left: 50px;
   font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
@@ -637,6 +678,7 @@ table {
 }
 
 .body {
+  background-color: #F1DDDF;
   line-height: 150%;
 }
 .body__services {

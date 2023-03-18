@@ -1,11 +1,12 @@
 @import "../mixins/fontMerriweather";
 
 .menu {
-  min-width: 721px;
+  margin: 0 -25px;
   display: flex;
   justify-content: space-between;
 
   &__item {
+    margin: 0 25px;
     @include fontMerriweather(400, 18px);
   }
   &__link {
@@ -17,6 +18,13 @@
   }
 
   @media (max-width: $breakpoint-tablet-max) {
+    margin: 0 -15px;
+
+    &__item {
+      margin: 0 15px;
+    }
+  }
+  @media (max-width: $breakpoint-tablet-middle) {
     display: none;
   }
 }

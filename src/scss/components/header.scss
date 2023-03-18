@@ -1,12 +1,16 @@
 @import "../vars";
 
 .header {
-  padding-top: 64px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &__content {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   @media (max-width: $breakpoint-tablet-middle) {
-    padding-top: 32px;
+    &__content {
+      height: 94px;
+    }
   }
 }

@@ -3,13 +3,11 @@
 @import "../mixins/button";
 
 .top {
-  height: 895px;
-  background-image: url('images/background-for-top.jpg');
-  background-repeat: no-repeat;
-  background-position: top center;
-
+  &__content {
+    padding-top: 55px;
+    padding-bottom: 110px;
+  }
   &__main {
-    padding-top: 100px;
     display: flex;
   }
   &__socials {
@@ -22,10 +20,9 @@
   }
   &__block {
     padding-left: 60px;
-    width: 45%;
   }
-  &__title {
-    @include fontLora(600, 48px);
+  &__title1, &__title2 {
+    @include fontLora(600, 47px);
     letter-spacing: 0.02em;
   }
   &__text {
@@ -37,23 +34,51 @@
     @include button(389px, 82px);
     @include fontMerriweather(700, 28px);
   }
+  &__picture-wrapper {
+    margin-left: auto;
+  }
+  &__picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
   &__list {
-    padding-top: 70px;
+    padding-top: 75px;
   }
   &__list-item {
     max-width: 350px;
   }
 
   @media (max-width: $breakpoint-tablet-max) {
-    &__main {
+    &__content {
+      padding-top: 24px;
+      padding-bottom: 60px;
+    }
+    &__block {
+      padding-left: 135px;
+    }
+    &__title1, &__title2 {
+      @include fontLora(600, 30px);
+    }
+    &__text {
+      margin-top: 30px;
+    }
+    &__btn {
+      margin-top: 50px;
+    }
+    &__picture-wrapper {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    &__list {
       padding-top: 50px;
     }
   }
 
   @media (max-width: $breakpoint-tablet-middle) {
-    height: 476px;
-    background-image: url('images/background-for-top-tablet.jpg');
-
+    &__content {
+      padding-top: 0;
+    }
     &__main {
       padding-top: 25px;
     }
@@ -62,21 +87,23 @@
     }
     &__block {
       padding-left: 0;
-      width: 66%;
     }
     &__title {
       @include fontLora(600, 30px);
     }
     &__text {
-      margin-top: 14px;
+      margin-top: 20px;
     }
     &__btn {
-      margin-top: 21px;
+      margin-top: 20px;
       @include button(262px, 61px);
       @include fontMerriweather(700, 14px);
     }
+    &__picture-wrapper {
+      padding-left: 30px;
+    }
     &__list {
-      padding-top: 40px;
+      padding-top: 55px;
     }
   }
 }
