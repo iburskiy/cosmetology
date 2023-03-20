@@ -91,4 +91,16 @@
       padding-top: 55px;
     }
   }
+  @media (max-width: $breakpoint-mobile-max) {
+    &__btn {
+      width: 100%;
+    }
+    &__list {
+      padding-top: 30px;
+      flex-direction: column;
+    }
+    &__list-item {
+      margin-bottom: 30px;
+    }
+  }
 }

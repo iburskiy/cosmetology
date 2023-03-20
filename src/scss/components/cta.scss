@@ -7,8 +7,4 @@
 
     @include fontMerriweather(700, 18px);
   }
-
-  @media (max-width: $breakpoint-mobile-max) {
-    display: none;
-  }
 }

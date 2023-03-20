@@ -42,4 +42,20 @@
   &__bottom-item:last-child {
     margin-left: auto;
   }
+
+  @media (max-width: $breakpoint-mobile-max) {
+    &__menu {
+      flex-direction: column;
+    }
+    &__menu-col {
+      margin-bottom: 25px;
+    }
+    &__bottom {
+      gap: 25px;
+      flex-direction: column;
+    }
+    &__bottom-item:last-child {
+      margin-left: 0;
+    }
+  }
 }

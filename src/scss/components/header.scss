@@ -13,4 +13,9 @@
       height: 94px;
     }
   }
+  @media (max-width: $breakpoint-mobile-max) {
+    &__cta {
+      display: none;
+    }
+  }
 }

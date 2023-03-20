@@ -24,4 +24,11 @@
       grid-column: 2 / 3;
     }
   }
+  @media (max-width: $breakpoint-mobile-max) {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    &__item:nth-child(2) {
+      grid-column: unset;
+    }
+  }
 }

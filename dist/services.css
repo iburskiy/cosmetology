@@ -81,6 +81,11 @@ table {
     height: 94px;
   }
 }
+@media (max-width: 767px) {
+  .header__cta {
+    display: none;
+  }
+}
 
 .logo {
   position: relative;
@@ -150,11 +155,6 @@ table {
   font-size: 18px;
   line-height: 150%;
 }
-@media (max-width: 767px) {
-  .cta {
-    display: none;
-  }
-}
 
 .title {
   text-align: center;
@@ -219,6 +219,21 @@ table {
 }
 .footer__bottom-item:last-child {
   margin-left: auto;
+}
+@media (max-width: 767px) {
+  .footer__menu {
+    flex-direction: column;
+  }
+  .footer__menu-col {
+    margin-bottom: 25px;
+  }
+  .footer__bottom {
+    gap: 25px;
+    flex-direction: column;
+  }
+  .footer__bottom-item:last-child {
+    margin-left: 0;
+  }
 }
 
 .body__services-info {
