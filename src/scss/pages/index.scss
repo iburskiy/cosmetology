@@ -17,6 +17,7 @@
 @import "../components/subtitle";
 @import "../components/grid";
 @import "../components/tile";
+@import "../components/gallery";
 @import "../components/form";
 @import "../components/list";
 @import "../components/arrow-container";
@@ -37,7 +38,7 @@
   &__services {
     padding-top: 100px;
   }
-  &__our-team {
+  &__team {
     padding-top: 100px;
     padding-bottom: 100px;
   }
@@ -66,23 +67,18 @@
   }
 }
 
-.our-team {
-  &__content {
-    display: flex;
-  }
-  &__gallery {
-    flex: 1 1 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
+.team {
   &__subtitle {
     margin-top: 20px;
-    margin-bottom: 55px;
+  }
+  &__gallery {
+    margin-top: 60px;
   }
 
   @media (max-width: $breakpoint-tablet-max) {
-    display: none;
+    &__gallery {
+      margin-top: 50px;
+    }
   }
 }
 
