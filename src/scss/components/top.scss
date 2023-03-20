@@ -34,14 +34,6 @@
     @include button(389px, 82px);
     @include fontMerriweather(700, 28px);
   }
-  &__picture-wrapper {
-    margin-left: auto;
-  }
-  &__picture {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
   &__list {
     padding-top: 75px;
   }
@@ -65,10 +57,6 @@
     }
     &__btn {
       margin-top: 50px;
-    }
-    &__picture-wrapper {
-      padding-left: 30px;
-      padding-right: 30px;
     }
     &__list {
       padding-top: 50px;
@@ -98,9 +86,6 @@
       margin-top: 20px;
       @include button(262px, 61px);
       @include fontMerriweather(700, 14px);
-    }
-    &__picture-wrapper {
-      padding-left: 30px;
     }
     &__list {
       padding-top: 55px;

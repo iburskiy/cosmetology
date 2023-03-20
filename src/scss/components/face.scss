@@ -1,0 +1,13 @@
+@import "../vars";
+
+.face {
+  &__picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: $breakpoint-mobile-max) {
+    display: none;
+  }
+}

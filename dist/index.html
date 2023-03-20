@@ -51,8 +51,8 @@
           <div class="top__text">Sign up and get a free consultation of a cosmetologist and a 15% discount on the first visit</div>
           <div class="top__btn">Make an appointment</div>
         </div>
-        <div class="top__picture-wrapper">
-          <img class="top__picture" src="images/picture-on-top.png" alt="">
+        <div class="face">
+          <img class="face__picture" src="images/picture-on-top.png" alt="">
         </div>
       </div>
       <ul class="top__list list">
@@ -117,9 +117,9 @@
       </div>
     </div>
   </div>
-  <div class="request body__request container">
-    <div class="request__content">
-      <div class="form">
+  <div class="request container_full">
+    <div class="request__content container">
+      <div class="request__form form">
         <div class="form__line1">Leave a request and</div>
         <div class="form__line2">we will call you back</div>
         <div class="form__name field">
@@ -147,16 +147,50 @@
         </div>
       </div>
       <div class="info">
-        <div class="info__text1">Why people come to us again and advise the clinic to their loved ones</div>
-        <div class="info__text2">About 700 clients are regular visitors</div>
+        <div class="info__text1">Why people come to us again</div>
+        <div class="info__text2">and advise the clinic to their loved ones</div>
+        <div class="info__text3">About 700 clients are regular visitors</div>
         <ul class="info__list list">
           <li class="info__list-item list__item">We have only high-quality equipment with a license certificate</li>
           <li class="info__list-item list__item">We use advanced equipment: TermaCool, Hydra Facial, Vela Shape</li>
           <li class="info__list-item list__item">All specialists improve their qualifications and take courses</li>
         </ul>
       </div>
+      <div class="face">
+        <img class="face__picture" src="images/request-picture.png" alt="">
+      </div>
     </div>
   </div>
+  <div class="form-wrapper">
+    <div class="form">
+      <div class="form__line1">Leave a request and</div>
+      <div class="form__line2">we will call you back</div>
+      <div class="form__name field">
+        <input type="text" id="username" name="username" class="field__input" placeholder="Enter your name"/>
+        <div class="field__icon">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.3937 12.392C1.3937 12.392 0.388672 12.392 0.388672 11.387C0.388672 10.3819 1.3937 7.36685 6.41883 7.36685C11.444 7.36685 12.449 10.3819 12.449 11.387C12.449 12.392 11.444 12.392 11.444 12.392H1.3937ZM6.41883 6.36182C7.21848 6.36182 7.98538 6.04416 8.55081 5.47873C9.11625 4.91329 9.43391 4.14639 9.43391 3.34674C9.43391 2.5471 9.11625 1.7802 8.55081 1.21476C7.98538 0.649324 7.21848 0.331665 6.41883 0.331665C5.61918 0.331665 4.85228 0.649324 4.28685 1.21476C3.72141 1.7802 3.40375 2.5471 3.40375 3.34674C3.40375 4.14639 3.72141 4.91329 4.28685 5.47873C4.85228 6.04416 5.61918 6.36182 6.41883 6.36182Z" fill="#9F9F9F"/>
+          </svg>
+        </div>
+      </div>
+      <div class="form__phone field">
+        <input type="tel" class="field__input" placeholder="Enter your phone">
+        <div class="field__icon">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.08904 3.77235C8.49808 3.77235 9.09909 4.37335 9.09909 5.7824H10.4391C10.4391 3.62159 9.24984 2.43231 7.08904 2.43231V3.77235ZM9.38184 7.41925C9.25309 7.30223 9.08391 7.23983 8.91001 7.2452C8.73612 7.25058 8.57111 7.32332 8.44984 7.44806L6.84649 9.09697C6.46056 9.02327 5.68468 8.7814 4.88602 7.98475C4.08736 7.18541 3.84548 6.40752 3.77379 6.02427L5.42136 4.42025C5.54626 4.29906 5.61911 4.13404 5.62449 3.96009C5.62986 3.78614 5.56735 3.61693 5.45017 3.48826L2.97446 0.765977C2.85723 0.636902 2.69431 0.558609 2.52029 0.547725C2.34627 0.536841 2.17486 0.594223 2.04246 0.707685L0.588526 1.95459C0.472688 2.07085 0.403547 2.22558 0.394221 2.38943C0.384171 2.55693 0.192546 6.52478 3.26927 9.60284C5.95336 12.2863 9.3155 12.4826 10.2415 12.4826C10.3768 12.4826 10.4599 12.4786 10.482 12.4772C10.6458 12.468 10.8005 12.3986 10.9162 12.2822L12.1624 10.8276C12.276 10.6953 12.3335 10.524 12.3227 10.3499C12.3119 10.1759 12.2338 10.013 12.1048 9.89564L9.38184 7.41925Z" fill="#9F9F9F"/>
+          </svg>
+        </div>
+      </div>
+      <div class="form__btn-container">
+        <div class="form__btn">Make an appointment</div>
+      </div>
+      <div class="form__chkbox checkbox">
+        <input id="agreement" type="checkbox" class="checkbox__field"/>
+        <label for="agreement" class="checkbox__label"> I agree to the processing of personal data</label>
+      </div>
+    </div>
+  </div>
+
   <div class="feedbacks body__feedbacks container-padding0">
     <div class="title">Feedbacks</div>
     <div class="feedbacks__content">
