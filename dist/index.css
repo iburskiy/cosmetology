@@ -749,7 +749,6 @@ table {
 .body__location {
   padding-top: 100px;
   padding-bottom: 100px;
-  position: relative;
 }
 @media (max-width: 1279px) {
   .body__team {
@@ -866,6 +865,9 @@ table {
   }
 }
 
+.location__content {
+  position: relative;
+}
 .location__img {
   display: block;
   max-width: 100%;
@@ -873,7 +875,7 @@ table {
 }
 .location__contacts {
   position: absolute;
-  top: 220px;
+  top: 15%;
   right: 70px;
 }
 @media (max-width: 1279px) {
