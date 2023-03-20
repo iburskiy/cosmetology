@@ -1,58 +1,13 @@
 @import "../vars";
 
-$gallery-height: 515px;
-
-@mixin arrow() {
-  position: absolute;
-  display: flex;
-  align-items: center;
-}
-@mixin arrow-desktop() {
-  @include arrow();
-  justify-content: center;
-  top: 0;
-  height: $gallery-height;
-  width: 70px;
-}
-@mixin arrow-tablet() {
-  @include arrow();
-  top: unset;
-  bottom: -$arrow-container-height-tablet;
-  height: $arrow-container-height-tablet;
-  width: 50%;
-}
-
 .gallery {
   position: relative;
   display: flex;
   justify-content: center;
   gap: 20px;
-  height: $gallery-height;
+  height: $arrow-container-height-desktop;
 
-  &__arrow-left {
-    @include arrow-desktop();
-    left: -70px;
-  }
-  &__arrow-right {
-    @include arrow-desktop();
-    right: -70px;
-  }
 
-  @media (max-width: $breakpoint-tablet-max) {
-    &__arrow-left {
-      @include arrow-tablet();
-      left: 0;
-      justify-content: end;
-      margin-left: -30px;
-      opacity: 0.7;
-    }
-    &__arrow-right {
-      @include arrow-tablet();
-      right: 0;
-      justify-content: start;
-      margin-right: -30px;
-    }
-  }
   @media (max-width: 1100px) {
     &__item:nth-child(3) {
       display: none;

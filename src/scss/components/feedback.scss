@@ -3,6 +3,7 @@
 .feedback {
   background-color: white;
   padding: 55px 35px 55px 50px;
+  flex-basis: 100%; //to make items the same width
 
   &__title {
     display: flex;
@@ -23,5 +24,11 @@
     margin-top: 30px;
     @include fontMerriweather(400, 20px);
     color: $black1;
+  }
+
+  @media (max-width: $breakpoint-mobile-max) {
+    &:nth-child(2) {
+      display: none;
+    }
   }
 }
