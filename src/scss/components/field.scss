@@ -1,4 +1,4 @@
-@import "../mixins/fontRoboto";
+@import "../mixins/fontMerriweather";
 
 .field {
   position: relative;
@@ -9,8 +9,8 @@
     box-sizing: border-box;
 
     &::placeholder {
-      @include fontRoboto(500, 16px);
-      line-height: 19px;
+      @include fontMerriweather(300, 16px);
+      line-height: 20px;
       opacity: 0.4;
     }
   }

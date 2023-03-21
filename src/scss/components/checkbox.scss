@@ -1,4 +1,4 @@
-@import "../mixins/fontRoboto";
+@import "../mixins/fontMerriweather";
 
 .checkbox {
   display: flex;
@@ -10,8 +10,8 @@
     accent-color: $green1;
   }
   &__label {
-    @include fontRoboto(400, 12px);
-    line-height: 14px;
+    @include fontMerriweather(400, 12px);
+    line-height: 15px;
     margin-left: 7px;
   }
 }

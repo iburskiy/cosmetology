@@ -1,9 +1,0 @@
-@import "../vars";
-
-@mixin fontRoboto ($weight, $size) {
-  font-family: 'Roboto', serif;
-  font-style: normal;
-  font-weight: $weight;
-  font-size: $size;
-  color: $black1;
-}
