@@ -150,6 +150,7 @@ table {
   }
   .top__btn {
     margin-top: 50px;
+    font-size: 20px;
   }
   .top__list {
     padding-top: 50px;
@@ -186,13 +187,8 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 262px;
+    width: 310px;
     height: 61px;
-    font-family: "Merriweather", serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 150%;
   }
   .top__list {
     padding-top: 55px;
@@ -290,6 +286,7 @@ table {
   }
   .menu__item {
     margin: 0 15px;
+    font-size: 16px;
   }
 }
 @media (max-width: 990px) {
@@ -306,6 +303,12 @@ table {
   font-weight: 700;
   font-size: 18px;
   line-height: 150%;
+}
+@media (max-width: 1279px) {
+  .cta__btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
 }
 
 .face__picture {

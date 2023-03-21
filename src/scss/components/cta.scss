@@ -4,7 +4,13 @@
   &__btn {
     border: 2px solid $green1;
     padding: 20px 30px;
-
     @include fontMerriweather(700, 18px);
+  }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    &__btn {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
   }
 }

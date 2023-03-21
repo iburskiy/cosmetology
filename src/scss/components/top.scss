@@ -57,6 +57,7 @@
     }
     &__btn {
       margin-top: 50px;
+      font-size: 20px;
     }
     &__list {
       padding-top: 50px;
@@ -84,8 +85,7 @@
     }
     &__btn {
       margin-top: 20px;
-      @include button(262px, 61px);
-      @include fontMerriweather(700, 14px);
+      @include button(310px, 61px);
     }
     &__list {
       padding-top: 55px;
