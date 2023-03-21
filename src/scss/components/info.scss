@@ -1,0 +1,31 @@
+@import "../mixins/fontMerriweather";
+
+.info {
+  &__text1, &__text2 {
+    @include fontMerriweather(400, 24px);
+  }
+  &__text3 {
+    margin-top: 35px;
+    @include fontMerriweather(400, 24px);
+  }
+  &__list {
+    flex-direction: column;
+  }
+  &__list-item {
+    margin-top: 35px;
+  }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    &__text3 {
+      max-width: 350px;
+    }
+    &__list-item {
+      max-width: 350px;
+    }
+  }
+  @media (max-width: $breakpoint-mobile-max) {
+    &__list-item {
+      max-width: none;
+    }
+  }
+}

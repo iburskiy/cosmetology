@@ -206,7 +206,7 @@ table {
     padding-top: 30px;
     flex-direction: column;
   }
-  .top__list-item {
+  .top__list-item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -539,6 +539,41 @@ table {
   }
 }
 
+.info__text1, .info__text2 {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+}
+.info__text3 {
+  margin-top: 35px;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+}
+.info__list {
+  flex-direction: column;
+}
+.info__list-item {
+  margin-top: 35px;
+}
+@media (max-width: 1279px) {
+  .info__text3 {
+    max-width: 350px;
+  }
+  .info__list-item {
+    max-width: 350px;
+  }
+}
+@media (max-width: 767px) {
+  .info__list-item {
+    max-width: none;
+  }
+}
+
 .list {
   list-style-type: none;
   display: flex;
@@ -548,20 +583,19 @@ table {
   background-image: url("images/green-tick.svg");
   background-repeat: no-repeat;
   background-position: left top;
-  height: 48px;
+  margin-left: 5px;
   padding-left: 50px;
+  min-height: 31px;
   font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
 }
-
-.arrow-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 70px;
+@media (max-width: 990px) {
+  .list__item {
+    padding-left: 40px;
+  }
 }
 
 .field {
@@ -861,41 +895,6 @@ table {
     padding-top: 37px;
     padding-bottom: 37px;
     background-color: white;
-  }
-}
-
-.info__text1, .info__text2 {
-  font-family: "Merriweather", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 150%;
-}
-.info__text3 {
-  margin-top: 35px;
-  font-family: "Merriweather", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 150%;
-}
-.info__list {
-  flex-direction: column;
-}
-.info__list-item {
-  margin-top: 35px;
-}
-@media (max-width: 1279px) {
-  .info__text3 {
-    max-width: 350px;
-  }
-  .info__list-item {
-    max-width: 350px;
-  }
-}
-@media (max-width: 767px) {
-  .info__list-item {
-    max-width: none;
   }
 }
 

@@ -99,7 +99,7 @@
       padding-top: 30px;
       flex-direction: column;
     }
-    &__list-item {
+    &__list-item:not(:last-child) {
       margin-bottom: 30px;
     }
   }

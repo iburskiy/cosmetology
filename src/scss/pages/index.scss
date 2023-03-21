@@ -21,8 +21,8 @@
 @import "../components/gallery";
 @import "../components/arrows";
 @import "../components/form";
+@import "../components/info";
 @import "../components/list";
-@import "../components/arrow-container";
 @import "../components/field";
 @import "../components/checkbox";
 @import "../components/feedback";
@@ -125,36 +125,6 @@
     padding-top: 37px;
     padding-bottom: 37px;
     background-color: white;
-  }
-}
-
-.info {
-  &__text1, &__text2 {
-    @include fontMerriweather(400, 24px);
-  }
-  &__text3 {
-    margin-top: 35px;
-    @include fontMerriweather(400, 24px);
-  }
-  &__list {
-    flex-direction: column;
-  }
-  &__list-item {
-    margin-top: 35px;
-  }
-
-  @media (max-width: $breakpoint-tablet-max) {
-    &__text3 {
-      max-width: 350px;
-    }
-    &__list-item {
-      max-width: 350px;
-    }
-  }
-  @media (max-width: $breakpoint-mobile-max) {
-    &__list-item {
-      max-width: none;
-    }
   }
 }
 
