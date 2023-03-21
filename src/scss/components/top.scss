@@ -29,10 +29,11 @@
     margin-top: 50px;
     @include fontMerriweather(400, 18px);
   }
-  &__btn {
+  &__btn-wrapper {
     margin-top: 100px;
-    @include button(389px, 82px);
-    @include fontMerriweather(700, 28px);
+  }
+  &__btn {
+    @include button(20px 40px, 28px);
   }
   &__list {
     padding-top: 75px;
@@ -55,8 +56,10 @@
     &__text {
       margin-top: 30px;
     }
-    &__btn {
+    &__btn-wrapper {
       margin-top: 50px;
+    }
+    &__btn {
       font-size: 20px;
     }
     &__list {
@@ -83,9 +86,8 @@
     &__text {
       margin-top: 20px;
     }
-    &__btn {
+    &__btn-wrapper {
       margin-top: 20px;
-      @include button(310px, 61px);
     }
     &__list {
       padding-top: 55px;

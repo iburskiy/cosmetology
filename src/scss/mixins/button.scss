@@ -1,11 +1,13 @@
-@import "../vars";
+@import "../mixins/fontMerriweather";
 
-@mixin button($width, $height) {
+@mixin button($padding, $fontSize) {
+  border: none;
   background-color: $green1;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: $width;
-  height: $height;
+  padding: $padding;
+  line-height: 150%;
+  @include fontMerriweather(700, $fontSize);
 }

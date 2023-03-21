@@ -36,13 +36,12 @@
     @include fontMerriweather(400, 20px);
     margin-left: 20px;
   }
-  &__btn-container {
+  &__btn-wrapper {
     display: flex;
     justify-content: center;
     margin-top: 50px;
   }
   &__btn {
-    @include fontRoboto(700, 18px);
-    @include button(380px, 73px);
+    @include button(20px 80px, 18px);
   }
 }

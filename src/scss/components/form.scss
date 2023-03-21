@@ -19,15 +19,13 @@
   &__phone {
     margin: 40px 57px 0;
   }
-  &__btn-container {
+  &__btn-wrapper {
     margin-top: 40px;
     display: flex;
     justify-content: center;
   }
   &__btn {
-    @include fontRoboto(700, 16px);
-    @include button(305px, 61px);
-    line-height: 19px;
+    @include button(20px 62px, 18px);
   }
   &__chkbox {
     margin: 16px 57px 0;

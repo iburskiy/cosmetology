@@ -108,15 +108,18 @@ table {
   font-size: 18px;
   line-height: 150%;
 }
-.top__btn {
+.top__btn-wrapper {
   margin-top: 100px;
+}
+.top__btn {
+  border: none;
   background-color: #32BA7C;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 389px;
-  height: 82px;
+  padding: 20px 40px;
+  line-height: 150%;
   font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 700;
@@ -148,8 +151,10 @@ table {
   .top__text {
     margin-top: 30px;
   }
-  .top__btn {
+  .top__btn-wrapper {
     margin-top: 50px;
+  }
+  .top__btn {
     font-size: 20px;
   }
   .top__list {
@@ -180,15 +185,8 @@ table {
   .top__text {
     margin-top: 20px;
   }
-  .top__btn {
+  .top__btn-wrapper {
     margin-top: 20px;
-    background-color: #32BA7C;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 310px;
-    height: 61px;
   }
   .top__list {
     padding-top: 55px;
@@ -512,25 +510,25 @@ table {
 .form__phone {
   margin: 40px 57px 0;
 }
-.form__btn-container {
+.form__btn-wrapper {
   margin-top: 40px;
   display: flex;
   justify-content: center;
 }
 .form__btn {
-  font-family: "Roboto", serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  color: #373737;
+  border: none;
   background-color: #32BA7C;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 305px;
-  height: 61px;
-  line-height: 19px;
+  padding: 20px 62px;
+  line-height: 150%;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
 }
 .form__chkbox {
   margin: 16px 57px 0;
@@ -725,24 +723,25 @@ table {
   line-height: 150%;
   margin-left: 20px;
 }
-.contacts__btn-container {
+.contacts__btn-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 .contacts__btn {
-  font-family: "Roboto", serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  color: #373737;
+  border: none;
   background-color: #32BA7C;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 380px;
-  height: 73px;
+  padding: 20px 80px;
+  line-height: 150%;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
 }
 
 .footer {
