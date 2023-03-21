@@ -185,12 +185,12 @@
   &__contacts {
     position: absolute;
     top: 15%;
-    right: $indent-container-desktop;
+    right: 0;
   }
 
   @media (max-width: $breakpoint-tablet-max) {
     &__contacts {
-      right: $indent-container-mobile;
+      right: 0;
     }
   }
 

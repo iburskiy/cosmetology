@@ -95,7 +95,7 @@ table {
   font-family: "Lora", serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 47px;
+  font-size: 48px;
   line-height: 140%;
   color: #373737;
   letter-spacing: 0.02em;
@@ -922,11 +922,11 @@ table {
 .location__contacts {
   position: absolute;
   top: 15%;
-  right: 70px;
+  right: 0;
 }
 @media (max-width: 1279px) {
   .location__contacts {
-    right: 20px;
+    right: 0;
   }
 }
 @media (max-width: 990px) {

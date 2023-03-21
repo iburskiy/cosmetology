@@ -22,7 +22,7 @@
     padding-left: 60px;
   }
   &__title1, &__title2 {
-    @include fontLora(600, 47px);
+    @include fontLora(600, 48px);
     letter-spacing: 0.02em;
   }
   &__text {
