@@ -10,4 +10,8 @@
   padding: $padding;
   line-height: 150%;
   @include fontMerriweather(700, $fontSize);
+
+  &:hover {
+    cursor: pointer;
+  }
 }

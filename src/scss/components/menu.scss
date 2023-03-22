@@ -9,13 +9,6 @@
     margin: 0 25px;
     @include fontMerriweather(400, 18px);
   }
-  &__link {
-    text-decoration: none;
-    color: inherit;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 
   @media (max-width: $breakpoint-tablet-max) {
     margin: 0 -15px;

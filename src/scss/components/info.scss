@@ -1,10 +1,10 @@
 @import "../mixins/fontMerriweather";
 
 .info {
-  &__text1, &__text2 {
+  &__text1 {
     @include fontMerriweather(400, 24px);
   }
-  &__text3 {
+  &__text2 {
     margin-top: 35px;
     @include fontMerriweather(400, 24px);
   }
@@ -16,7 +16,7 @@
   }
 
   @media (max-width: $breakpoint-tablet-max) {
-    &__text3 {
+    &__text2 {
       max-width: 350px;
     }
     &__list-item {

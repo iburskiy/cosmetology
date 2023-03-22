@@ -2,21 +2,32 @@
 @import "../vars";
 
 @import "../mixins/fontMerriweather";
+@import "../mixins/fontLora";
+@import "../mixins/button";
 
 @import "../components/container";
+@import "../components/top";
+@import "../components/burger-icon";
 @import "../components/header";
+@import "../components/link";
 @import "../components/logo";
 @import "../components/menu";
 @import "../components/cta";
 @import "../components/title";
 @import "../components/footer";
 
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
 .body {
-  &__services-info {
+  background-color: $pink;
+  line-height: 150%;
+
+  &__services {
     padding-top: 100px;
   }
 }
 
-.services-info {
+.services {
   height: 400px;
 }

@@ -1,6 +1,9 @@
 @import "../mixins/fontMerriweather";
 
 .cta {
+  text-decoration: none;
+  color: inherit;
+
   &__btn {
     border: 2px solid $green1;
     padding: 20px 30px;

@@ -7,7 +7,7 @@
   padding-top: 16px;
   padding-bottom: 28px;
 
-  &__line1, &__line2 {
+  &__title {
     @include fontLora(500, 36px);
     line-height: 46px;
     text-align: center;

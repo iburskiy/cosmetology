@@ -18,10 +18,13 @@
     height: 165px;
     width: 30px;
   }
+  &__social-link {
+    display: flex;
+  }
   &__block {
     padding-left: 60px;
   }
-  &__title1, &__title2 {
+  &__title {
     @include fontLora(600, 48px);
     letter-spacing: 0.02em;
   }
@@ -50,8 +53,8 @@
     &__block {
       padding-left: 135px;
     }
-    &__title1, &__title2 {
-      @include fontLora(600, 30px);
+    &__title {
+      font-size: 30px;
     }
     &__text {
       margin-top: 30px;
@@ -79,9 +82,6 @@
     }
     &__block {
       padding-left: 0;
-    }
-    &__title {
-      @include fontLora(600, 30px);
     }
     &__text {
       margin-top: 20px;

@@ -2,6 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -70,6 +72,142 @@ table {
   width: 100%;
 }
 
+.top__content {
+  padding-top: 55px;
+  padding-bottom: 110px;
+}
+.top__main {
+  display: flex;
+}
+.top__socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 165px;
+  width: 30px;
+}
+.top__social-link {
+  display: flex;
+}
+.top__block {
+  padding-left: 60px;
+}
+.top__title {
+  font-family: "Lora", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 140%;
+  color: #373737;
+  letter-spacing: 0.02em;
+}
+.top__text {
+  margin-top: 50px;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+.top__btn-wrapper {
+  margin-top: 100px;
+}
+.top__btn {
+  border: none;
+  background-color: #32BA7C;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  line-height: 150%;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 150%;
+}
+.top__btn:hover {
+  cursor: pointer;
+}
+.top__list {
+  padding-top: 75px;
+}
+.top__list-item {
+  max-width: 350px;
+}
+@media (max-width: 1279px) {
+  .top__content {
+    padding-top: 24px;
+    padding-bottom: 60px;
+  }
+  .top__block {
+    padding-left: 135px;
+  }
+  .top__title {
+    font-size: 30px;
+  }
+  .top__text {
+    margin-top: 30px;
+  }
+  .top__btn-wrapper {
+    margin-top: 50px;
+  }
+  .top__btn {
+    font-size: 20px;
+  }
+  .top__list {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 990px) {
+  .top__content {
+    padding-top: 0;
+  }
+  .top__main {
+    padding-top: 25px;
+  }
+  .top__socials {
+    display: none;
+  }
+  .top__block {
+    padding-left: 0;
+  }
+  .top__text {
+    margin-top: 20px;
+  }
+  .top__btn-wrapper {
+    margin-top: 20px;
+  }
+  .top__list {
+    padding-top: 55px;
+  }
+}
+@media (max-width: 767px) {
+  .top__btn {
+    width: 100%;
+  }
+  .top__list {
+    padding-top: 30px;
+    flex-direction: column;
+  }
+  .top__list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 991px) {
+  .burger-icon {
+    display: none;
+  }
+}
+@media (max-width: 990px) {
+  .burger-icon {
+    display: block;
+  }
+}
+
 .header__content {
   height: 120px;
   display: flex;
@@ -87,9 +225,19 @@ table {
   }
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
 .logo {
   position: relative;
   width: 154px;
+  text-decoration: none;
+  color: inherit;
 }
 .logo__top {
   font-family: "Merriweather", serif;
@@ -125,13 +273,6 @@ table {
   font-size: 18px;
   line-height: 150%;
 }
-.menu__link {
-  text-decoration: none;
-  color: inherit;
-}
-.menu__link:hover {
-  text-decoration: underline;
-}
 @media (max-width: 1279px) {
   .menu {
     margin: 0 -15px;
@@ -147,6 +288,10 @@ table {
   }
 }
 
+.cta {
+  text-decoration: none;
+  color: inherit;
+}
 .cta__btn {
   border: 2px solid #32BA7C;
   padding: 20px 30px;
@@ -196,9 +341,13 @@ table {
   flex-direction: column;
   gap: 25px;
 }
-.footer__contact {
+.footer__contact-wrapper {
   text-align: right;
   font-weight: 900;
+}
+.footer__contact {
+  text-decoration: none;
+  color: inherit;
 }
 .footer__menu-item {
   padding-right: 53px;
@@ -243,11 +392,15 @@ table {
   }
 }
 
-.body__services-info {
+.body {
+  background-color: #F1DDDF;
+  line-height: 150%;
+}
+.body__services {
   padding-top: 100px;
 }
 
-.services-info {
+.services {
   height: 400px;
 }
 

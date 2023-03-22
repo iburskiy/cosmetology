@@ -19,9 +19,13 @@
     flex-direction: column;
     gap: 25px;
   }
-  &__contact {
+  &__contact-wrapper {
     text-align: right;
     font-weight: 900;
+  }
+  &__contact {
+    text-decoration: none;
+    color: inherit;
   }
   &__menu-item {
     padding-right: 53px;
