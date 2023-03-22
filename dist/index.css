@@ -754,10 +754,9 @@ table {
 .footer__menu {
   margin-top: 25px;
   display: flex;
-  justify-content: space-between;
   font-family: "Merriweather", serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   line-height: 150%;
 }
@@ -767,14 +766,9 @@ table {
   flex-direction: column;
   gap: 25px;
 }
-.footer__menu-col:last-child {
-  margin-left: auto;
+.footer__contact {
   text-align: right;
-  font-family: "Merriweather", serif;
-  font-style: normal;
   font-weight: 900;
-  font-size: 18px;
-  line-height: 150%;
 }
 .footer__menu-item {
   padding-right: 53px;
@@ -786,30 +780,36 @@ table {
 }
 .footer__bottom {
   display: flex;
-  gap: 50px;
-  padding: 39px 0 50px;
+  padding: 40px 0;
   font-family: "Merriweather", serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   line-height: 150%;
 }
-.footer__bottom-item:last-child {
-  margin-left: auto;
+.footer__bottom-item {
+  flex: 0 0 25%;
 }
 @media (max-width: 767px) {
   .footer__menu {
     flex-direction: column;
   }
+  .footer__menu-item {
+    padding-right: 0;
+  }
   .footer__menu-col {
     margin-bottom: 25px;
   }
   .footer__bottom {
-    gap: 25px;
     flex-direction: column;
+    gap: 25px;
+    padding: 25px 0;
   }
-  .footer__bottom-item:last-child {
-    margin-left: 0;
+  .footer__bottom-item:nth-child(3) {
+    display: none;
+  }
+  .footer__bottom-item {
+    flex: none;
   }
 }
 
