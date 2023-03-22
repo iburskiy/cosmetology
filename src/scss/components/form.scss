@@ -4,19 +4,19 @@
 .form {
   flex: 0 0 420px;
   background-color: white;
-  padding-top: 16px;
+  padding-top: 20px;
   padding-bottom: 28px;
 
   &__title {
-    @include fontLora(500, 36px);
+    @include fontLora(500, 30px);
     line-height: 46px;
     text-align: center;
   }
   &__name {
-    margin: 28px 57px 0;
+    margin: 40px 60px 0;
   }
   &__phone {
-    margin: 40px 57px 0;
+    margin: 20px 60px 0;
   }
   &__btn-wrapper {
     margin-top: 40px;
@@ -24,7 +24,7 @@
     justify-content: center;
   }
   &__btn {
-    @include button(20px 62px, 18px);
+    @include button(20px 61.5px, 16px);
   }
   &__chkbox {
     margin: 16px 57px 0;
