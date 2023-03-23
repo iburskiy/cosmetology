@@ -1,6 +1,10 @@
 @import "../vars";
 
 .face {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
   &__picture {
     max-width: 100%;
     height: auto;

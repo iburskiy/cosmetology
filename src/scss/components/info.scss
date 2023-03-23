@@ -1,6 +1,10 @@
 @import "../mixins/fontMerriweather";
 
 .info {
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+
   &__text1 {
     @include fontMerriweather(400, 24px);
   }
@@ -13,15 +17,6 @@
   }
   &__list-item {
     margin-top: 35px;
-  }
-
-  @media (max-width: $breakpoint-tablet-max) {
-    &__text2 {
-      max-width: 350px;
-    }
-    &__list-item {
-      max-width: 350px;
-    }
   }
   @media (max-width: $breakpoint-mobile-max) {
     &__list-item {
