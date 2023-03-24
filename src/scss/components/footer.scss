@@ -1,12 +1,14 @@
 @import "../mixins/fontMerriweather";
 
+$indent-internal-footer-desktop: 40px;
+$indent-internal-footer-tablet: 30px;
+
 .footer {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: $indent-internal-footer-desktop;
+  padding-bottom: $indent-internal-footer-desktop;
   background: linear-gradient(90deg, #DAE2F8 0%, #D6A4A4 100%);
 
   &__top {
-    padding-top: 41px;
     display: flex;
     justify-content: space-between;
   }
@@ -39,13 +41,21 @@
   }
   &__bottom {
     display: flex;
-    padding: 40px 0;
+    padding-top: $indent-internal-footer-desktop;
     @include fontMerriweather(400, 18px);
   }
   &__bottom-item {
     flex: 0 0 25%;
   }
 
+  @media (max-width: $breakpoint-tablet-max) {
+    padding-top: $indent-internal-footer-tablet;
+    padding-bottom: $indent-internal-footer-tablet;
+
+    &__bottom {
+      padding-top: $indent-internal-footer-tablet;
+    }
+  }
   @media (max-width: $breakpoint-mobile-max) {
     &__menu {
       flex-direction: column;
@@ -59,7 +69,6 @@
     &__bottom {
       flex-direction: column;
       gap: 25px;
-      padding: 25px 0;
     }
     &__bottom-item:nth-child(3) {
       display: none;

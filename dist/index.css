@@ -800,12 +800,11 @@ table {
 }
 
 .footer {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background: linear-gradient(90deg, #DAE2F8 0%, #D6A4A4 100%);
 }
 .footer__top {
-  padding-top: 41px;
   display: flex;
   justify-content: space-between;
 }
@@ -843,7 +842,7 @@ table {
 }
 .footer__bottom {
   display: flex;
-  padding: 40px 0;
+  padding-top: 40px;
   font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
@@ -853,6 +852,15 @@ table {
 }
 .footer__bottom-item {
   flex: 0 0 25%;
+}
+@media (max-width: 1279px) {
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .footer__bottom {
+    padding-top: 30px;
+  }
 }
 @media (max-width: 767px) {
   .footer__menu {
@@ -867,7 +875,6 @@ table {
   .footer__bottom {
     flex-direction: column;
     gap: 25px;
-    padding: 25px 0;
   }
   .footer__bottom-item:nth-child(3) {
     display: none;
