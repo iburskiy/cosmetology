@@ -73,8 +73,8 @@ table {
 }
 
 .top__content {
-  padding-top: 55px;
-  padding-bottom: 110px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .top__main {
   display: flex;
@@ -109,6 +109,7 @@ table {
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
+  color: #373737;
 }
 .top__btn-wrapper {
   margin-top: 100px;
@@ -116,7 +117,6 @@ table {
 .top__btn {
   border: none;
   background-color: #32BA7C;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,6 +127,8 @@ table {
   font-weight: 700;
   font-size: 28px;
   line-height: 150%;
+  color: #373737;
+  color: white;
 }
 .top__btn:hover {
   cursor: pointer;
@@ -161,7 +163,7 @@ table {
     padding-top: 50px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 1023px) {
   .top__content {
     padding-top: 0;
   }
@@ -197,12 +199,12 @@ table {
   }
 }
 
-@media (min-width: 991px) {
+@media (min-width: 1024px) {
   .burger-icon {
     display: none;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 1023px) {
   .burger-icon {
     display: block;
   }
@@ -214,9 +216,9 @@ table {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 990px) {
+@media (max-width: 1023px) {
   .header__content {
-    height: 94px;
+    height: 90px;
   }
 }
 @media (max-width: 767px) {
@@ -245,6 +247,7 @@ table {
   font-weight: 700;
   font-size: 25px;
   line-height: 150%;
+  color: #373737;
 }
 .logo__img {
   position: absolute;
@@ -257,6 +260,7 @@ table {
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
+  color: #373737;
   margin-top: -3px;
 }
 
@@ -272,6 +276,7 @@ table {
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
+  color: #373737;
 }
 @media (max-width: 1279px) {
   .menu {
@@ -282,7 +287,7 @@ table {
     font-size: 16px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 1023px) {
   .menu {
     display: none;
   }
@@ -300,6 +305,7 @@ table {
   font-weight: 700;
   font-size: 18px;
   line-height: 150%;
+  color: #373737;
 }
 @media (max-width: 1279px) {
   .cta__btn {
@@ -341,6 +347,7 @@ table {
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
+  color: #373737;
   color: #373737;
 }
 
@@ -404,6 +411,7 @@ table {
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
+  color: #373737;
 }
 .tile__text-bold {
   font-weight: 700;
@@ -521,7 +529,6 @@ table {
 .form__btn {
   border: none;
   background-color: #32BA7C;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -532,6 +539,8 @@ table {
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
+  color: #373737;
+  color: white;
 }
 .form__btn:hover {
   cursor: pointer;
@@ -557,6 +566,7 @@ table {
   font-weight: 400;
   font-size: 24px;
   line-height: 150%;
+  color: #373737;
 }
 .info__text2 {
   margin-top: 35px;
@@ -565,6 +575,7 @@ table {
   font-weight: 400;
   font-size: 24px;
   line-height: 150%;
+  color: #373737;
 }
 .info__list {
   flex-direction: column;
@@ -595,8 +606,9 @@ table {
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
+  color: #373737;
 }
-@media (max-width: 990px) {
+@media (max-width: 1023px) {
   .list__item {
     padding-left: 40px;
   }
@@ -617,6 +629,7 @@ table {
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
+  color: #373737;
   line-height: 20px;
   opacity: 0.4;
 }
@@ -644,6 +657,7 @@ table {
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
+  color: #373737;
   line-height: 15px;
   margin-left: 7px;
 }
@@ -671,6 +685,7 @@ table {
   font-weight: 700;
   font-size: 20px;
   line-height: 150%;
+  color: #373737;
 }
 .feedback__text {
   margin-top: 30px;
@@ -679,6 +694,7 @@ table {
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
+  color: #373737;
   color: #373737;
 }
 @media (max-width: 767px) {
@@ -727,6 +743,7 @@ table {
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
+  color: #373737;
   margin-left: 20px;
 }
 .contacts__btn-wrapper {
@@ -737,7 +754,6 @@ table {
 .contacts__btn {
   border: none;
   background-color: #32BA7C;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -748,6 +764,8 @@ table {
   font-weight: 700;
   font-size: 18px;
   line-height: 150%;
+  color: #373737;
+  color: white;
 }
 .contacts__btn:hover {
   cursor: pointer;
@@ -769,6 +787,7 @@ table {
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
+  color: #373737;
 }
 .footer__menu-col {
   flex: 0 0 25%;
@@ -800,6 +819,7 @@ table {
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
+  color: #373737;
 }
 .footer__bottom-item {
   flex: 0 0 25%;
@@ -950,7 +970,7 @@ table {
     right: 0;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 1023px) {
   .location__contacts {
     position: static;
     margin-left: -20px;

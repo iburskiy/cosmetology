@@ -5,11 +5,19 @@ $green2: #69CF73;
 $gray1: #696969;
 
 $breakpoint-tablet-max: 1279px;
-$breakpoint-tablet-middle: 990px;
+$breakpoint-tablet-middle: 1023px;
 $breakpoint-mobile-max: 767px;
 
 $indent-container-desktop: 70px;
 $indent-container-mobile: 20px;
+
+$indent-between-blocks-desktop: 100px;
+$indent-between-blocks-tablet: 60px;
+$indent-between-blocks-mobile: 50px;
+
+$indent-internal-for-100width-blocks-desktop: 80px;
+$indent-internal-for-100width-blocks-tablet: 60px;
+$indent-internal-for-100width-blocks-mobile: 40px;
 
 $arrow-container-height-desktop: 515px;
 $arrow-container-height-tablet: 140px;

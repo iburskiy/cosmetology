@@ -4,8 +4,8 @@
 
 .top {
   &__content {
-    padding-top: 55px;
-    padding-bottom: 110px;
+    padding-top: $indent-internal-for-100width-blocks-desktop;
+    padding-bottom: $indent-internal-for-100width-blocks-desktop;
   }
   &__main {
     display: flex;
@@ -19,6 +19,7 @@
     width: 30px;
   }
   &__social-link {
+    //opacity: 0.7;
     display: flex;
   }
   &__block {
