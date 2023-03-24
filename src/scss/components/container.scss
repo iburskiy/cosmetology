@@ -1,5 +1,9 @@
 @import "../vars";
 
+$indent-internal-for-100width-blocks-desktop: 80px;
+$indent-internal-for-100width-blocks-tablet: 60px;
+$indent-internal-for-100width-blocks-mobile: 40px;
+
 @mixin container($indent: $indent-container-desktop){
   box-sizing: border-box;
   margin: 0 auto;
@@ -19,5 +23,26 @@
   &_full {
     background: linear-gradient(90deg, #DAE2F8 0%, #D6A4A4 100%);
     width: 100%;
+    padding-top: $indent-internal-for-100width-blocks-desktop;
+    padding-bottom: $indent-internal-for-100width-blocks-desktop;
+
+    @media (max-width: $breakpoint-tablet-max) {
+      padding-top: $indent-internal-for-100width-blocks-tablet;
+      padding-bottom: $indent-internal-for-100width-blocks-tablet;
+    }
+    @media (max-width: $breakpoint-mobile-max) {
+      padding-top: $indent-internal-for-100width-blocks-mobile;
+      padding-bottom: $indent-internal-for-100width-blocks-mobile;
+    }
+  }
+  &_indent-top {
+    padding-top: $indent-between-blocks-desktop;
+
+    @media (max-width: $breakpoint-tablet-max) {
+      padding-top: $indent-between-blocks-tablet;
+    }
+    @media (max-width: $breakpoint-mobile-max) {
+      padding-top: $indent-between-blocks-mobile;
+    }
   }
 }

@@ -1,6 +1,9 @@
 @import "../vars";
 
 .header {
+  padding-top: 0;
+  padding-bottom: 0;
+
   &__content {
     height: 120px;
     display: flex;

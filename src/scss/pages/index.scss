@@ -36,44 +36,47 @@
   background-color: $pink;
   line-height: 150%;
 
-  &__services {
-    padding-top: 100px;
-  }
   &__team {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  &__feedbacks {
-    padding-top: 100px;
+    padding-bottom: $indent-between-blocks-desktop;
   }
   &__location {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: $indent-between-blocks-desktop;
+    padding-bottom: $indent-between-blocks-desktop;
   }
 
   @media (max-width: $breakpoint-tablet-max) {
     &__team {
-      padding-top: 50px;
       padding-bottom: $arrow-container-height-tablet;
     }
     &__feedbacks {
-      padding-top: 50px;
       padding-bottom: $arrow-container-height-tablet;
     }
     &__location {
       padding-top: 0;
+      padding-bottom: $indent-between-blocks-tablet;
+    }
+  }
+  @media (max-width: $breakpoint-mobile-max) {
+    &__location {
+      padding-bottom: $indent-between-blocks-mobile;
     }
   }
 }
 
 .services {
   &__grid {
-    margin-top: 60px;
+    margin-top: $indent-between-title-and-content-desktop;
   }
 
   @media (max-width: $breakpoint-tablet-max) {
     &__grid {
-      margin-top: 50px;
+      margin-top: $indent-between-title-and-content-tablet;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile-max) {
+    &__grid {
+      margin-top: $indent-between-title-and-content-mobile;
     }
   }
 }
@@ -95,8 +98,6 @@
 
 .request {
   &__content {
-    padding-top: 120px;
-    padding-bottom: 140px;
     display: flex;
     justify-content: space-between;
   }
@@ -105,9 +106,12 @@
   }
 
   @media (max-width: $breakpoint-tablet-max) {
+    padding-bottom: 0;
+
     &__content {
       flex-wrap: wrap;
-      padding: 40px 0 0;
+      padding-left: 0;
+      padding-right: 0;
     }
     &__form {
       order: 3;
