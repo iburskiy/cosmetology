@@ -1,7 +1,0 @@
-@import "../mixins/fontMerriweather";
-
-.subtitle {
-  text-align: center;
-  @include fontMerriweather(400, 18px);
-  color: $black1;
-}

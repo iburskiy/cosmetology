@@ -15,7 +15,6 @@
 @import "../components/cta";
 @import "../components/face";
 @import "../components/title";
-@import "../components/subtitle";
 @import "../components/grid";
 @import "../components/tile";
 @import "../components/gallery";
@@ -59,39 +58,6 @@
   @media (max-width: $breakpoint-mobile-max) {
     &__location {
       padding-bottom: $indent-between-blocks-mobile;
-    }
-  }
-}
-
-.services {
-  &__grid {
-    margin-top: $indent-between-title-and-content-desktop;
-  }
-
-  @media (max-width: $breakpoint-tablet-max) {
-    &__grid {
-      margin-top: $indent-between-title-and-content-tablet;
-    }
-  }
-
-  @media (max-width: $breakpoint-mobile-max) {
-    &__grid {
-      margin-top: $indent-between-title-and-content-mobile;
-    }
-  }
-}
-
-.team {
-  &__subtitle {
-    margin-top: 20px;
-  }
-  &__gallery {
-    margin-top: 60px;
-  }
-
-  @media (max-width: $breakpoint-tablet-max) {
-    &__gallery {
-      margin-top: 50px;
     }
   }
 }
@@ -145,13 +111,6 @@
     position: relative;
     display: flex;
     gap: 20px;
-    margin-top: 60px;
-  }
-
-  @media (max-width: $breakpoint-tablet-max) {
-    &__content {
-      margin-top: 50px;
-    }
   }
 }
 

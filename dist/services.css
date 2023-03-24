@@ -333,12 +333,34 @@ table {
 
 .title {
   text-align: center;
+  margin-bottom: 60px;
+}
+.title__text1 {
   font-family: "Lora", serif;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
   line-height: 140%;
   color: #373737;
+}
+.title__text2 {
+  margin-top: 20px;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #373737;
+}
+@media (max-width: 1279px) {
+  .title {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .title {
+    margin-bottom: 30px;
+  }
 }
 
 .footer {

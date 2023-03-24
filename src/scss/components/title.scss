@@ -1,6 +1,26 @@
 @import "../mixins/fontLora";
+@import "../mixins/fontMerriweather";
+
+$indent-between-title-and-content-desktop: 60px;
+$indent-between-title-and-content-tablet: 40px;
+$indent-between-title-and-content-mobile: 30px;
 
 .title {
   text-align: center;
-  @include fontLora(500, 36px);
+  margin-bottom: $indent-between-title-and-content-desktop;
+
+  &__text1 {
+    @include fontLora(500, 36px);
+  }
+  &__text2 {
+    margin-top: 20px;
+    @include fontMerriweather(400, 18px);
+  }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    margin-bottom: $indent-between-title-and-content-tablet;
+  }
+  @media (max-width: $breakpoint-mobile-max) {
+    margin-bottom: $indent-between-title-and-content-mobile;
+  }
 }
