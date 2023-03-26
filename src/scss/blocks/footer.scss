@@ -1,4 +1,7 @@
 @import "../mixins/fontMerriweather";
+@import "../components/logo";
+@import "../components/cta";
+@import "../components/link";
 
 $indent-internal-footer-desktop: 40px;
 $indent-internal-footer-tablet: 30px;
@@ -6,7 +9,6 @@ $indent-internal-footer-tablet: 30px;
 .footer {
   padding-top: $indent-internal-footer-desktop;
   padding-bottom: $indent-internal-footer-desktop;
-  background: linear-gradient(90deg, #DAE2F8 0%, #D6A4A4 100%);
 
   &__top {
     display: flex;

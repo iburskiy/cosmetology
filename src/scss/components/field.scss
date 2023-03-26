@@ -1,26 +1,46 @@
 @import "../mixins/fontMerriweather";
 
+@mixin inputWrapperBefore {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  left: 10px;
+  z-index: 1;
+}
+
 .field {
-  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__name-wrapper {
+    position: relative;
+    &:before {
+      @include inputWrapperBefore();
+      background-image: url("images/icons/user.png");
+    }
+  }
+  &__phone-wrapper {
+    position: relative;
+    &:before {
+      @include inputWrapperBefore();
+      background-image: url("images/icons/phone.png");
+    }
+  }
+
   &__input {
-    width: 100%;
+    width: 300px;
     height: 60px;
     padding: 0 10px 0 50px;
     box-sizing: border-box;
+    position: relative;
+    @include fontMerriweather(400, 18px);
 
     &::placeholder {
       @include fontMerriweather(300, 16px);
       line-height: 20px;
       opacity: 0.4;
     }
-  }
-  &__icon-wrapper {
-    position: absolute;
-    top: 20px;
-    left: 10px;
-  }
-  &__icon {
-    width: 20px;
-    height: 20px;
   }
 }

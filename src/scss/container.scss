@@ -1,4 +1,4 @@
-@import "../vars";
+@import "vars";
 
 $indent-internal-for-100width-blocks-desktop: 80px;
 $indent-internal-for-100width-blocks-tablet: 60px;
@@ -15,6 +15,11 @@ $indent-internal-for-100width-blocks-mobile: 40px;
     padding-left: $indent-container-mobile;
     padding-right: $indent-container-mobile;
   }
+}
+
+.body {
+  background-color: $pink;
+  line-height: 150%;
 }
 
 .container {

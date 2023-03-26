@@ -1,5 +1,3 @@
-@import "../vars";
-
 @mixin arrow() {
   position: absolute;
   display: flex;
@@ -15,7 +13,7 @@
 @mixin arrow-tablet() {
   @include arrow();
   top: unset;
-  bottom: -$arrow-container-height-tablet;
+  bottom: 0;
   height: $arrow-container-height-tablet;
   width: 50%;
 }

@@ -1,0 +1,33 @@
+@import "../vars";
+@import "../components/contacts";
+
+.location {
+  &__content {
+    position: relative;
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__contacts {
+    position: absolute;
+    top: 15%;
+    right: 0;
+  }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    &__contacts {
+      right: 0;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet-middle) {
+    &__contacts {
+      position: static;
+      margin-left: -$indent-container-mobile;
+      width: calc(100% + #{2 * $indent-container-mobile});
+      margin-top: 66px;
+    }
+  }
+}

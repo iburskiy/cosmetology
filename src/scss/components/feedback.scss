@@ -25,10 +25,4 @@
     @include fontMerriweather(400, 20px);
     color: $black1;
   }
-
-  @media (max-width: $breakpoint-mobile-max) {
-    &:nth-child(2) {
-      display: none;
-    }
-  }
 }
