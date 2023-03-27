@@ -654,10 +654,9 @@ table {
     top: unset;
     bottom: 0;
     height: 140px;
-    width: 50%;
+    width: calc(50% - 20px);
     left: 0;
     justify-content: end;
-    margin-left: -30px;
     opacity: 0.7;
   }
   .arrow-right {
@@ -667,10 +666,9 @@ table {
     top: unset;
     bottom: 0;
     height: 140px;
-    width: 50%;
+    width: calc(50% - 20px);
     right: 0;
     justify-content: start;
-    margin-right: -30px;
   }
 }
 .link {
@@ -1051,10 +1049,9 @@ table {
     top: unset;
     bottom: 0;
     height: 140px;
-    width: 50%;
+    width: calc(50% - 20px);
     left: 0;
     justify-content: end;
-    margin-left: -30px;
     opacity: 0.7;
   }
   .arrow-right {
@@ -1064,10 +1061,9 @@ table {
     top: unset;
     bottom: 0;
     height: 140px;
-    width: 50%;
+    width: calc(50% - 20px);
     right: 0;
     justify-content: start;
-    margin-right: -30px;
   }
 }
 .link {
