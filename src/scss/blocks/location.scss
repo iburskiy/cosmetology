@@ -25,8 +25,7 @@
   @media (max-width: $breakpoint-tablet-middle) {
     &__contacts {
       position: static;
-      margin-left: -$indent-container-mobile;
-      width: calc(100% + #{2 * $indent-container-mobile});
+      width: 100%;
       margin-top: 66px;
     }
   }

@@ -25,29 +25,44 @@ $indent-internal-for-100width-blocks-mobile: 40px;
 .container {
   @include container();
 
-  &_full {
-    background: linear-gradient(90deg, #DAE2F8 0%, #D6A4A4 100%);
-    width: 100%;
-    padding-top: $indent-internal-for-100width-blocks-desktop;
-    padding-bottom: $indent-internal-for-100width-blocks-desktop;
-
-    @media (max-width: $breakpoint-tablet-max) {
-      padding-top: $indent-internal-for-100width-blocks-tablet;
-      padding-bottom: $indent-internal-for-100width-blocks-tablet;
-    }
-    @media (max-width: $breakpoint-mobile-max) {
-      padding-top: $indent-internal-for-100width-blocks-mobile;
-      padding-bottom: $indent-internal-for-100width-blocks-mobile;
-    }
+  @media (max-width: $breakpoint-mobile-max) {
+    padding-left: 0;
+    padding-right: 0;
   }
-  &_indent-top {
-    padding-top: $indent-between-blocks-desktop;
+}
 
-    @media (max-width: $breakpoint-tablet-max) {
-      padding-top: $indent-between-blocks-tablet;
-    }
+.container_indent-top {
+  padding-top: $indent-between-blocks-desktop;
+
+  @media (max-width: $breakpoint-tablet-max) {
+    padding-top: $indent-between-blocks-tablet;
+  }
+  @media (max-width: $breakpoint-mobile-max) {
+    padding-top: $indent-between-blocks-mobile;
+  }
+}
+
+.container-full {
+  background: linear-gradient(90deg, #DAE2F8 0%, #D6A4A4 100%);
+  width: 100%;
+  padding-top: $indent-internal-for-100width-blocks-desktop;
+  padding-bottom: $indent-internal-for-100width-blocks-desktop;
+
+  @media (max-width: $breakpoint-tablet-max) {
+    padding-top: $indent-internal-for-100width-blocks-tablet;
+    padding-bottom: $indent-internal-for-100width-blocks-tablet;
+  }
+  @media (max-width: $breakpoint-mobile-max) {
+    padding-top: $indent-internal-for-100width-blocks-mobile;
+    padding-bottom: $indent-internal-for-100width-blocks-mobile;
+  }
+
+  &__inner {
+    @include container();
+
     @media (max-width: $breakpoint-mobile-max) {
-      padding-top: $indent-between-blocks-mobile;
+      padding-left: $indent-container-mobile;
+      padding-right: $indent-container-mobile;
     }
   }
 }
