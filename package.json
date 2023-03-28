@@ -2,12 +2,13 @@
   "name": "cosmetology",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run scss && npm run copy",
+    "build": "npm run clear && npm run scss && npm run copy",
+    "clear": "rm -r dist/ && mkdir dist && mkdir dist/images",
     "scss": "sass --embed-sources src/scss/pages/index.scss:dist/index.css src/scss/pages/our-services.scss:dist/our-services.css",
     "copy": "npm run copy-html && npm run copy-images",
     "copy-html": "cp src/*.html dist/",
     "copy-images": "rm -r dist/images/ && cp -r src/images dist/",
-    "watch": "nodemon -e scss,html --watch src/ --ignore dist/ --exec 'npm run build'"
+    "watch": "nodemon -e scss,html --watch src/ --ignore dist/ --exec 'npm run scss && npm run copy-html'"
   },
   "devDependencies": {
     "nodemon": "^2.0.21",

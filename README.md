@@ -10,7 +10,9 @@ Run `npm run build` to build the project.
 
 Run `npm run watch` to do the development in watch mode: adding changes in html and scss files will build the project locally to `dist` folder. 
 Open `dist/index.html` in browser. `-e` flag is used to look for scss and html files. `--watch` watches for changes only in `src/` folder. 
-`--exec` executes `scss` and `copy` NPM scripts. Use `nodemon --help` or Nodemon Documentation for the full reference.
+`--exec` executes `scss` and `copy-html` NPM scripts. Use `nodemon --help` or Nodemon Documentation for the full reference.
+
+Run `npm run clear` to remove all the content in `dist` folder.
 
 Run `npm run scss` to compile `index.scss` to `dist/index.css` and `services.scss` to `dist/services.css`.
 
