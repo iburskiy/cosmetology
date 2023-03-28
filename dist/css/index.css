@@ -413,7 +413,7 @@ table {
   justify-content: space-between;
 }
 .list__item {
-  background-image: url("images/green-tick.svg");
+  background-image: url("../images/green-tick.svg");
   background-repeat: no-repeat;
   background-position: left top;
   margin-left: 5px;
@@ -763,7 +763,7 @@ table {
   top: 20px;
   left: 10px;
   z-index: 1;
-  background-image: url("images/icons/user.png");
+  background-image: url("../images/icons/user.png");
 }
 .field__phone-wrapper {
   position: relative;
@@ -776,7 +776,7 @@ table {
   top: 20px;
   left: 10px;
   z-index: 1;
-  background-image: url("images/icons/phone.png");
+  background-image: url("../images/icons/phone.png");
 }
 .field__input {
   width: 300px;
@@ -861,7 +861,7 @@ table {
   justify-content: space-between;
 }
 .list__item {
-  background-image: url("images/green-tick.svg");
+  background-image: url("../images/green-tick.svg");
   background-repeat: no-repeat;
   background-position: left top;
   margin-left: 5px;

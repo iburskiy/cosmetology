@@ -18,14 +18,14 @@
     position: relative;
     &:before {
       @include inputWrapperBefore();
-      background-image: url("images/icons/user.png");
+      background-image: url("../images/icons/user.png");
     }
   }
   &__phone-wrapper {
     position: relative;
     &:before {
       @include inputWrapperBefore();
-      background-image: url("images/icons/phone.png");
+      background-image: url("../images/icons/phone.png");
     }
   }
 
