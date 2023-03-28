@@ -1,5 +1,8 @@
 @import "vars";
 
+$indent-container-desktop: 70px;
+$indent-container-mobile: 20px;
+
 $indent-internal-for-100width-blocks-desktop: 80px;
 $indent-internal-for-100width-blocks-tablet: 60px;
 $indent-internal-for-100width-blocks-mobile: 40px;
@@ -59,10 +62,5 @@ $indent-internal-for-100width-blocks-mobile: 40px;
 
   &__inner {
     @include container();
-
-    @media (max-width: $breakpoint-mobile-max) {
-      padding-left: $indent-container-mobile;
-      padding-right: $indent-container-mobile;
-    }
   }
 }
