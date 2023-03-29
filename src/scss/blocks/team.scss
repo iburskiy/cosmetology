@@ -3,6 +3,6 @@
 @import "../components/tile";
 @import "../components/link";
 
-.team-slider.splide{
+.team-slider {
   @include slider();
 }

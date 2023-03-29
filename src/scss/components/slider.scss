@@ -1,6 +1,5 @@
 @mixin slider() {
   .splide {
-    //it will mean `.feedback-slider.splide .splide__arrow`
     &__arrow {
       opacity: 1;
       width: 40px;

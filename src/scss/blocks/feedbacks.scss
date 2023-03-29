@@ -3,6 +3,6 @@
 @import "../components/feedback";
 @import "../components/link";
 
-.feedback-slider.splide {
+.feedback-slider {
   @include slider();
 }

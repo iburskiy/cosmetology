@@ -614,32 +614,32 @@ table {
   text-decoration: underline;
 }
 
-.team-slider.splide .splide__arrow {
+.team-slider .splide__arrow {
   opacity: 1;
   width: 40px;
   height: 40px;
 }
-.team-slider.splide .splide__arrow:hover {
+.team-slider .splide__arrow:hover {
   opacity: 0.7;
 }
-.team-slider.splide .splide__arrow--prev {
+.team-slider .splide__arrow--prev {
   left: -55px;
   background: url(../images/arrow-left.svg);
 }
-.team-slider.splide .splide__arrow--next {
+.team-slider .splide__arrow--next {
   right: -55px;
   background: url(../images/arrow-right.svg);
 }
 @media (max-width: 1279px) {
-  .team-slider.splide .splide__arrows {
+  .team-slider .splide__arrows {
     height: 140px;
     position: relative;
   }
-  .team-slider.splide .splide__arrow--prev {
+  .team-slider .splide__arrow--prev {
     top: 70px;
     left: calc(50% - 70px);
   }
-  .team-slider.splide .splide__arrow--next {
+  .team-slider .splide__arrow--next {
     top: 70px;
     right: calc(50% - 70px);
   }
@@ -976,32 +976,32 @@ table {
   text-decoration: underline;
 }
 
-.feedback-slider.splide .splide__arrow {
+.feedback-slider .splide__arrow {
   opacity: 1;
   width: 40px;
   height: 40px;
 }
-.feedback-slider.splide .splide__arrow:hover {
+.feedback-slider .splide__arrow:hover {
   opacity: 0.7;
 }
-.feedback-slider.splide .splide__arrow--prev {
+.feedback-slider .splide__arrow--prev {
   left: -55px;
   background: url(../images/arrow-left.svg);
 }
-.feedback-slider.splide .splide__arrow--next {
+.feedback-slider .splide__arrow--next {
   right: -55px;
   background: url(../images/arrow-right.svg);
 }
 @media (max-width: 1279px) {
-  .feedback-slider.splide .splide__arrows {
+  .feedback-slider .splide__arrows {
     height: 140px;
     position: relative;
   }
-  .feedback-slider.splide .splide__arrow--prev {
+  .feedback-slider .splide__arrow--prev {
     top: 70px;
     left: calc(50% - 70px);
   }
-  .feedback-slider.splide .splide__arrow--next {
+  .feedback-slider .splide__arrow--next {
     top: 70px;
     right: calc(50% - 70px);
   }
