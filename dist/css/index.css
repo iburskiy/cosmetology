@@ -568,33 +568,6 @@ table {
   }
 }
 
-.gallery {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  height: 515px;
-}
-@media (max-width: 1279px) {
-  .gallery {
-    padding-bottom: 140px;
-  }
-}
-@media (max-width: 1100px) {
-  .gallery__item:nth-child(3) {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .gallery {
-    display: block;
-    height: auto;
-  }
-  .gallery__item:nth-child(2) {
-    display: none;
-  }
-}
-
 .tile {
   position: relative;
 }
@@ -633,59 +606,43 @@ table {
   font-size: 18px;
 }
 
-.arrow-left {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  height: 100%;
-  width: 70px;
-  left: -70px;
-}
-
-.arrow-right {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  height: 100%;
-  width: 70px;
-  right: -70px;
-}
-
-@media (max-width: 1279px) {
-  .arrow-left {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    top: unset;
-    bottom: 0;
-    height: 140px;
-    width: calc(50% - 20px);
-    left: 0;
-    justify-content: end;
-    opacity: 0.7;
-  }
-  .arrow-right {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    top: unset;
-    bottom: 0;
-    height: 140px;
-    width: calc(50% - 20px);
-    right: 0;
-    justify-content: start;
-  }
-}
 .link {
   text-decoration: none;
   color: inherit;
 }
 .link:hover {
   text-decoration: underline;
+}
+
+.team-slider.splide .splide__arrow {
+  opacity: 1;
+  width: 40px;
+  height: 40px;
+}
+.team-slider.splide .splide__arrow:hover {
+  opacity: 0.7;
+}
+.team-slider.splide .splide__arrow--prev {
+  left: -55px;
+  background: url(../images/arrow-left.svg);
+}
+.team-slider.splide .splide__arrow--next {
+  right: -55px;
+  background: url(../images/arrow-right.svg);
+}
+@media (max-width: 1279px) {
+  .team-slider.splide .splide__arrows {
+    height: 140px;
+    position: relative;
+  }
+  .team-slider.splide .splide__arrow--prev {
+    top: 70px;
+    left: calc(50% - 70px);
+  }
+  .team-slider.splide .splide__arrow--next {
+    top: 70px;
+    right: calc(50% - 70px);
+  }
 }
 
 .form {
@@ -976,26 +933,9 @@ table {
   }
 }
 
-.feedbacks-gallery {
-  position: relative;
-  display: flex;
-  gap: 20px;
-}
-@media (max-width: 1279px) {
-  .feedbacks-gallery {
-    padding-bottom: 140px;
-  }
-}
-@media (max-width: 767px) {
-  .feedbacks-gallery__item:nth-child(2) {
-    display: none;
-  }
-}
-
 .feedback {
   background-color: white;
   padding: 55px 35px 55px 50px;
-  flex-basis: 100%;
 }
 .feedback__title {
   display: flex;
@@ -1028,59 +968,43 @@ table {
   color: #373737;
 }
 
-.arrow-left {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  height: 100%;
-  width: 70px;
-  left: -70px;
-}
-
-.arrow-right {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  height: 100%;
-  width: 70px;
-  right: -70px;
-}
-
-@media (max-width: 1279px) {
-  .arrow-left {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    top: unset;
-    bottom: 0;
-    height: 140px;
-    width: calc(50% - 20px);
-    left: 0;
-    justify-content: end;
-    opacity: 0.7;
-  }
-  .arrow-right {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    top: unset;
-    bottom: 0;
-    height: 140px;
-    width: calc(50% - 20px);
-    right: 0;
-    justify-content: start;
-  }
-}
 .link {
   text-decoration: none;
   color: inherit;
 }
 .link:hover {
   text-decoration: underline;
+}
+
+.feedback-slider.splide .splide__arrow {
+  opacity: 1;
+  width: 40px;
+  height: 40px;
+}
+.feedback-slider.splide .splide__arrow:hover {
+  opacity: 0.7;
+}
+.feedback-slider.splide .splide__arrow--prev {
+  left: -55px;
+  background: url(../images/arrow-left.svg);
+}
+.feedback-slider.splide .splide__arrow--next {
+  right: -55px;
+  background: url(../images/arrow-right.svg);
+}
+@media (max-width: 1279px) {
+  .feedback-slider.splide .splide__arrows {
+    height: 140px;
+    position: relative;
+  }
+  .feedback-slider.splide .splide__arrow--prev {
+    top: 70px;
+    left: calc(50% - 70px);
+  }
+  .feedback-slider.splide .splide__arrow--next {
+    top: 70px;
+    right: calc(50% - 70px);
+  }
 }
 
 .contacts {

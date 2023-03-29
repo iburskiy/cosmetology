@@ -1,0 +1,37 @@
+@mixin slider() {
+  .splide {
+    //it will mean `.feedback-slider.splide .splide__arrow`
+    &__arrow {
+      opacity: 1;
+      width: 40px;
+      height: 40px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &__arrow--prev {
+      left: -55px;
+      background: url(../images/arrow-left.svg);
+    }
+    &__arrow--next {
+      right: -55px;
+      background: url(../images/arrow-right.svg);
+    }
+
+    @media (max-width: $breakpoint-tablet-max) {
+      &__arrows {
+        height: $arrow-container-height-tablet;
+        position: relative;
+      }
+      &__arrow--prev {
+        top: 70px;
+        left: calc(50% - 70px);
+      }
+      &__arrow--next {
+        top: 70px;
+        right: calc(50% - 70px);
+      }
+    }
+  }
+}

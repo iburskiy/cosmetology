@@ -1,0 +1,6 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.5">
+        <circle cx="20" cy="20" r="19" transform="matrix(-1 0 0 1 40 0)" stroke="#101820" stroke-width="2"/>
+        <path d="M17.7058 20.4285L23.5293 14.6049L21.8658 12.9414L14.3787 20.4285L21.8658 27.9155L23.5293 26.252L17.7058 20.4285Z" fill="black"/>
+    </g>
+</svg>

@@ -1,5 +1,8 @@
 @import "../components/title";
-@import "../components/feedbacks-gallery";
+@import "../components/slider";
 @import "../components/feedback";
-@import "../components/arrows";
 @import "../components/link";
+
+.feedback-slider.splide {
+  @include slider();
+}

@@ -1,5 +1,8 @@
 @import "../components/title";
-@import "../components/gallery";
+@import "../components/slider";
 @import "../components/tile";
-@import "../components/arrows";
 @import "../components/link";
+
+.team-slider.splide{
+  @include slider();
+}
