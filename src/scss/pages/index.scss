@@ -2,6 +2,8 @@
 @import "../reset";
 @import "../vars";
 @import "../container";
+//import 3rd party css
+@import "../../../node_modules/@splidejs/splide/dist/css/splide.min";
 // scss blocks
 @import "../blocks/header";
 @import "../blocks/top-block";

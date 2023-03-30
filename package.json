@@ -2,17 +2,24 @@
   "name": "cosmetology",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run clear && npm run scss && npm run copy",
+    "build": "npm run clear && npm run scss && npm run build-js && npm run copy",
     "clear": "rm -r dist/ && mkdir dist && mkdir dist/css && mkdir dist/images && mkdir dist/js",
-    "scss": "sass --embed-sources src/scss/pages/index.scss:dist/css/index.css src/scss/pages/our-services.scss:dist/css/our-services.css",
-    "copy": "npm run copy-html && npm run copy-images && npm run copy-js",
+    "scss": "sass --embed-sources src/scss/pages/index.scss:dist/css/index.bundle.css src/scss/pages/our-services.scss:dist/css/our-services.bundle.css",
+    "build-js": "browserify src/js/index.js -o dist/js/index.bundle.js -t babelify",
+    "copy": "npm run copy-html && npm run copy-images",
     "copy-html": "cp src/*.html dist/",
     "copy-images": "cp -r src/images dist",
-    "copy-js": "cp -r src/js dist",
-    "watch": "nodemon -e scss,html,js --watch src/ --ignore dist/ --exec 'npm run scss && npm run copy-html && npm run copy-js'"
+    "watch": "nodemon -e scss,html,js --watch src/ --ignore dist/ --exec 'npm run scss && npm run build-js && npm run copy-html'"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
     "nodemon": "^2.0.21",
     "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4"
   }
 }

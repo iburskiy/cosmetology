@@ -15,6 +15,23 @@ Open `dist/index.html` in browser. `-e` flag is used to look for scss and html f
 Run `npm run clear` to remove all the content in `dist` folder.
 
 Run `npm run scss` to compile `index.scss` to `dist/index.css` and `services.scss` to `dist/services.css`.
+To import 3rd party css from SplideJS node module, I had to use ```@imprort "../../../node_modules/@splidejs/splide/dist/css/splide.min"``` without .css extension.
+So all file is injected in the final CSS bundle. Otherwise it would leave the import statement without changes because CSS has also @import syntax.
+Also, it's possible to add `--load-path=node_modules/@splidejs/splide/dist/css` to `sass --embed-sources` command in `package.json` 
+and use `@import "splide.min"`  to make import statement shorter.
+
+Run `npm run build-js` to build JS bundle. Browserify is used as a bundler to create a single JS file for the page. 
+By default, Browserify uses CommonJS Module system which is default for NodeJS.
+I used ES Modules in the project, so I needed to add Babelify with some of its presets to make Browserify understand the ES6 syntax.
+1. `npm i --save-dev @babel/core @babel/preset-env babelify`
+2. Create a new file named `babel.config.json` and paste following content:
+```
+   {
+    "presets": ["@babel/preset-env"]
+    }
+```
+3. Run `browserify main.js -o bundle.js -t babelify`
+See https://weblianz.com/blog/use-nodejs-modules-in-web-browsers-using-browserify for the reference.
 
 Run `npm run copy` to copy html files and image files to `dist` folder.
 

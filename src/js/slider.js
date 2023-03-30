@@ -1,3 +1,5 @@
+import Splide from '@splidejs/splide';
+
 export function initTeamSlider() {
   const teamSplide = new Splide( '.team-slider', {
     type   : 'loop',
