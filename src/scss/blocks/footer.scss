@@ -13,9 +13,11 @@ $indent-internal-footer-tablet: 30px;
   &__top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 90px;
   }
   &__menu {
-    margin-top: 25px;
+    margin-top: 40px;
     display: flex;
     @include fontMerriweather(400, 18px);
   }
@@ -54,8 +56,16 @@ $indent-internal-footer-tablet: 30px;
     padding-top: $indent-internal-footer-tablet;
     padding-bottom: $indent-internal-footer-tablet;
 
+    &__menu {
+      margin-top: 30px;
+    }
     &__bottom {
       padding-top: $indent-internal-footer-tablet;
+    }
+  }
+  @media (max-width: $breakpoint-tablet-middle) {
+    &__top {
+      height: 74px;
     }
   }
   @media (max-width: $breakpoint-mobile-max) {

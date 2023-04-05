@@ -151,32 +151,36 @@ table {
 }
 
 .logo {
-  position: relative;
-  width: 154px;
+  width: 78px;
+  height: 90px;
   text-decoration: none;
   color: inherit;
+  align-self: center;
 }
-.logo__top {
+.logo__img {
+  width: 76px;
+  height: 76px;
+}
+.logo__text {
   font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 14px;
   line-height: 150%;
   color: #373737;
+  line-height: 0;
 }
-.logo__img {
-  position: absolute;
-  right: -29px;
-  top: -8px;
-}
-.logo__bottom {
-  font-family: "Merriweather", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 150%;
-  color: #373737;
-  margin-top: -3px;
+@media (max-width: 1023px) {
+  .logo {
+    height: 74px;
+  }
+  .logo__img {
+    width: 60px;
+    height: 60px;
+  }
+  .logo__text {
+    font-size: 11px;
+  }
 }
 
 .menu {
@@ -287,32 +291,36 @@ table {
 }
 
 .logo {
-  position: relative;
-  width: 154px;
+  width: 78px;
+  height: 90px;
   text-decoration: none;
   color: inherit;
+  align-self: center;
 }
-.logo__top {
+.logo__img {
+  width: 76px;
+  height: 76px;
+}
+.logo__text {
   font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 14px;
   line-height: 150%;
   color: #373737;
+  line-height: 0;
 }
-.logo__img {
-  position: absolute;
-  right: -29px;
-  top: -8px;
-}
-.logo__bottom {
-  font-family: "Merriweather", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 150%;
-  color: #373737;
-  margin-top: -3px;
+@media (max-width: 1023px) {
+  .logo {
+    height: 74px;
+  }
+  .logo__img {
+    width: 60px;
+    height: 60px;
+  }
+  .logo__text {
+    font-size: 11px;
+  }
 }
 
 .cta {
@@ -351,9 +359,11 @@ table {
 .footer__top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 90px;
 }
 .footer__menu {
-  margin-top: 25px;
+  margin-top: 40px;
   display: flex;
   font-family: "Merriweather", serif;
   font-style: normal;
@@ -402,8 +412,16 @@ table {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+  .footer__menu {
+    margin-top: 30px;
+  }
   .footer__bottom {
     padding-top: 30px;
+  }
+}
+@media (max-width: 1023px) {
+  .footer__top {
+    height: 74px;
   }
 }
 @media (max-width: 767px) {
