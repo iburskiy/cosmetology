@@ -1,0 +1,5 @@
+@import "../mixins/slider";
+
+.feedbacks__slider {
+  @include slider();
+}

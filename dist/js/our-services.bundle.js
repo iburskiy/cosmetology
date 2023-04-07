@@ -112,15 +112,15 @@ exports["default"] = Logo;
 },{"../utils":5}],4:[function(require,module,exports){
 "use strict";
 
-var _header = _interopRequireDefault(require("./blocks/header"));
-var _footer = _interopRequireDefault(require("./blocks/footer"));
+var _header = _interopRequireDefault(require("../blocks/header"));
+var _footer = _interopRequireDefault(require("../blocks/footer"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 document.addEventListener('DOMContentLoaded', function () {
   new _header["default"]().render();
   new _footer["default"]().render();
 });
 
-},{"./blocks/footer":1,"./blocks/header":2}],5:[function(require,module,exports){
+},{"../blocks/footer":1,"../blocks/header":2}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

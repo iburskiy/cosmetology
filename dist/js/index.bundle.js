@@ -3794,7 +3794,7 @@ var Footer = /*#__PURE__*/function () {
 }();
 exports["default"] = Footer;
 
-},{"../components/logo":4,"../utils":7}],3:[function(require,module,exports){
+},{"../components/logo":5,"../utils":8}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3832,7 +3832,47 @@ var Header = /*#__PURE__*/function () {
 }();
 exports["default"] = Header;
 
-},{"../components/logo":4,"../utils":7}],4:[function(require,module,exports){
+},{"../components/logo":5,"../utils":8}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _splide = _interopRequireDefault(require("@splidejs/splide"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var FeedbacksSlider = /*#__PURE__*/function () {
+  function FeedbacksSlider() {
+    _classCallCheck(this, FeedbacksSlider);
+  }
+  _createClass(FeedbacksSlider, [{
+    key: "render",
+    value: function render() {
+      var feedbacksSlider = new _splide["default"]('.feedbacks__slider', {
+        type: 'loop',
+        perPage: 2,
+        gap: '20px',
+        pagination: false,
+        breakpoints: {
+          767: {
+            perPage: 1
+          }
+        }
+      });
+      feedbacksSlider.mount();
+    }
+  }]);
+  return FeedbacksSlider;
+}();
+exports["default"] = FeedbacksSlider;
+
+},{"@splidejs/splide":1}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3867,63 +3907,65 @@ var Logo = /*#__PURE__*/function () {
 }();
 exports["default"] = Logo;
 
-},{"../utils":7}],5:[function(require,module,exports){
-"use strict";
-
-var _slider = require("./slider.js");
-var _header = _interopRequireDefault(require("./blocks/header"));
-var _footer = _interopRequireDefault(require("./blocks/footer"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-document.addEventListener('DOMContentLoaded', function () {
-  (0, _slider.initTeamSlider)();
-  (0, _slider.initFeedbackSlider)();
-  new _header["default"]().render();
-  new _footer["default"]().render();
-});
-
-},{"./blocks/footer":2,"./blocks/header":3,"./slider.js":6}],6:[function(require,module,exports){
+},{"../utils":8}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.initFeedbackSlider = initFeedbackSlider;
-exports.initTeamSlider = initTeamSlider;
+exports["default"] = void 0;
 var _splide = _interopRequireDefault(require("@splidejs/splide"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-function initTeamSlider() {
-  var teamSplide = new _splide["default"]('.team-slider', {
-    type: 'loop',
-    perPage: 3,
-    gap: '20px',
-    pagination: false,
-    breakpoints: {
-      1100: {
-        perPage: 2
-      },
-      767: {
-        perPage: 1
-      }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var TeamSlider = /*#__PURE__*/function () {
+  function TeamSlider() {
+    _classCallCheck(this, TeamSlider);
+  }
+  _createClass(TeamSlider, [{
+    key: "render",
+    value: function render() {
+      var teamSlider = new _splide["default"]('.team__slider', {
+        type: 'loop',
+        perPage: 3,
+        gap: '20px',
+        pagination: false,
+        breakpoints: {
+          1100: {
+            perPage: 2
+          },
+          767: {
+            perPage: 1
+          }
+        }
+      });
+      teamSlider.mount();
     }
-  });
-  teamSplide.mount();
-}
-function initFeedbackSlider() {
-  var feedbackSplide = new _splide["default"]('.feedback-slider', {
-    type: 'loop',
-    perPage: 2,
-    gap: '20px',
-    pagination: false,
-    breakpoints: {
-      767: {
-        perPage: 1
-      }
-    }
-  });
-  feedbackSplide.mount();
-}
+  }]);
+  return TeamSlider;
+}();
+exports["default"] = TeamSlider;
 
 },{"@splidejs/splide":1}],7:[function(require,module,exports){
+"use strict";
+
+var _header = _interopRequireDefault(require("../blocks/header"));
+var _footer = _interopRequireDefault(require("../blocks/footer"));
+var _feedbacksSlider = _interopRequireDefault(require("../components/feedbacks-slider"));
+var _teamSlider = _interopRequireDefault(require("../components/team-slider"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+document.addEventListener('DOMContentLoaded', function () {
+  new _header["default"]().render();
+  new _footer["default"]().render();
+  new _teamSlider["default"]().render();
+  new _feedbacksSlider["default"]().render();
+});
+
+},{"../blocks/footer":2,"../blocks/header":3,"../components/feedbacks-slider":4,"../components/team-slider":6}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3942,4 +3984,4 @@ function replace(componentName, parentElSelector, template) {
   parentEl.innerHTML = parentEl.innerHTML.replace(regex, template);
 }
 
-},{}]},{},[5]);
+},{}]},{},[7]);
