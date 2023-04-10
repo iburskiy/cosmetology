@@ -21,6 +21,7 @@
     padding-left: 60px;
   }
   &__title {
+    margin: 0;
     @include fontLora(600, 48px);
     letter-spacing: 0.02em;
   }

@@ -8,15 +8,24 @@
   &__text1 {
     @include fontMerriweather(400, 24px);
   }
+  &__text1-strong {
+    font: inherit;
+  }
   &__text2 {
     margin-top: 35px;
     @include fontMerriweather(400, 24px);
+  }
+  &__text2-strong {
+    font: inherit;
   }
   &__list {
     flex-direction: column;
   }
   &__list-item {
     margin-top: 35px;
+  }
+  &__list-item-strong {
+    font: inherit;
   }
   @media (max-width: $breakpoint-mobile-max) {
     &__list-item {

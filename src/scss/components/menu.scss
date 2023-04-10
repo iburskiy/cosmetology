@@ -1,6 +1,8 @@
 @import "../mixins/fontMerriweather";
 
 .menu {
+  list-style: none;
+  padding: 0;
   margin: 0 -25px;
   display: flex;
   justify-content: space-between;

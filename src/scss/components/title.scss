@@ -10,10 +10,12 @@ $indent-between-title-and-content-mobile: 30px;
   margin-bottom: $indent-between-title-and-content-desktop;
 
   &__text1 {
+    margin: 0;
     @include fontLora(500, 36px);
   }
   &__text2 {
     margin-top: 20px;
+    margin-bottom: 0;
     @include fontMerriweather(400, 18px);
   }
 
