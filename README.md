@@ -35,7 +35,7 @@ See https://weblianz.com/blog/use-nodejs-modules-in-web-browsers-using-browserif
 
 Run `npm run copy` to copy html files and image files to `dist` folder.
 
-## To publish the changes to Github public URL:
+## To publish changes to Github public URL:
 Build the project locally and commit changes including `dist/` folder. A build happens on each commit that publishes content to the link above.
 
 What I did: Found the following info: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow 
@@ -46,3 +46,8 @@ and then went to Settings > Pages > Build and deployment > Github Actions. Then 
 It produced .github/workflows/static.yml in the project asked to commit it right into Github web interface. 
 I changed the following line: path: `'./dist'` to make Github take static content from dist folder. Then I pulled the change in IDE. 
 Then after each commit I could see that a new workflow (or build) appears in my project in `Actions` tab of the project in Github.
+
+## Rendering Header and Footer with JS
+Templates for Header and Footer are placed in JS. They replace placeholders in HTML such as <!--header--> and <!--footer-->.
+Logo is inner part of Header and Footer and its placeholder <!--logo--> is also replaced with Logo HTML template while rendering.
+In this way we have Logo, Header and Footer in one place without any repeat.
