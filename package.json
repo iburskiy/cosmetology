@@ -4,10 +4,10 @@
   "scripts": {
     "build": "npm run clear && npm run scss && npm run build-js && npm run copy",
     "clear": "rm -r dist/ && mkdir dist && mkdir dist/css && mkdir dist/images && mkdir dist/js",
-    "scss": "sass --embed-sources src/scss/pages/index.scss:dist/css/index.bundle.css src/scss/pages/our-services.scss:dist/css/our-services.bundle.css",
-    "build-js": "npm run build-index && npm run build-our-services",
+    "scss": "sass --embed-sources src/scss/pages/index.scss:dist/css/index.bundle.css src/scss/pages/universal.scss:dist/css/universal.bundle.css",
+    "build-js": "npm run build-index && npm run build-universal",
     "build-index": "browserify src/js/pages/index.js -o dist/js/index.bundle.js -t babelify",
-    "build-our-services": "browserify src/js/pages/our-services.js -o dist/js/our-services.bundle.js -t babelify",
+    "build-universal": "browserify src/js/pages/universal.js -o dist/js/universal.bundle.js -t babelify",
     "copy": "npm run copy-html && npm run copy-images",
     "copy-html": "cp src/*.html dist/",
     "copy-images": "cp -r src/images dist",

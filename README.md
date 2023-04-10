@@ -2,8 +2,8 @@
 
 The project has been published to Github Pages, namely to https://iburskiy.github.io/cosmetology.
 The purpose of the project was to practice with markup using BEM methodology in SCSS version and use Github Pages build process to deploy it on the web.
-It represents the design of Cosmetology Home Page and Services Page for a demo how multiple page website may look like on Github Pages 
-The first item `SERVICES` in the header is a link that leads to Services Page.
+It represents the design of Cosmetology Home Page and Universal Page for a demo how multiple page website may look like on Github Pages 
+If you press any link of Header or Footer you are redirected to universal.html page with dynamicaly generated text.
 
 ## Build
 Run `npm run build` to build the project.
@@ -14,7 +14,7 @@ Open `dist/index.html` in browser. `-e` flag is used to look for scss and html f
 
 Run `npm run clear` to remove all the content in `dist` folder.
 
-Run `npm run scss` to compile `index.scss` to `dist/index.css` and `services.scss` to `dist/services.css`.
+Run `npm run scss` to compile `index.scss` to `dist/index.css` and `universal.scss` to `dist/universal.css`.
 To import 3rd party css from SplideJS node module, I had to use ```@imprort "../../../node_modules/@splidejs/splide/dist/css/splide.min"``` without .css extension.
 So all file is injected in the final CSS bundle. Otherwise it would leave the import statement without changes because CSS has also @import syntax.
 Also, it's possible to add `--load-path=node_modules/@splidejs/splide/dist/css` to `sass --embed-sources` command in `package.json` 

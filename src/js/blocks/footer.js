@@ -19,7 +19,7 @@ export default class Footer {
                 <div class="footer__menu">
                   <ul class="footer__menu-col">
                     <li class="footer__menu-item">
-                      <a class="link" href="our-services.html">Services</a>
+                      <a class="link" href="universal.html">Services</a>
                     </li>
                     <li class="footer__menu-item">
                       <a class="link" href="#">Our team</a>

@@ -14,19 +14,19 @@ export default class Header {
                 <!--logo-->
                 <ul class="menu">
                   <li class="menu__item">
-                    <a class="menu__link link" href="our-services.html" data-text="Services">SERVICES</a>
+                    <a class="menu__link link" href="universal.html" data-text="Services">SERVICES</a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link link" href="our-services.html" data-text="Our Team">OUR TEAM</a>
+                    <a class="menu__link link" href="universal.html" data-text="Our Team">OUR TEAM</a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link link" href="our-services.html" data-text="Advantages">ADVANTAGES</a>
+                    <a class="menu__link link" href="universal.html" data-text="Advantages">ADVANTAGES</a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link link" href="our-services.html" data-text="Feedbacks">FEEDBACKS</a>
+                    <a class="menu__link link" href="universal.html" data-text="Feedbacks">FEEDBACKS</a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link link" href="our-services.html" data-text="Contacts">CONTACTS</a>
+                    <a class="menu__link link" href="universal.html" data-text="Contacts">CONTACTS</a>
                   </li>
                 </ul>
                 <a href="./" class="header__cta cta">
