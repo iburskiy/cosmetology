@@ -1,6 +1,5 @@
-import {replace} from '../utils';
+import { initListenersToSetUniversalPageTitle, replace } from '../utils';
 import Logo from '../components/logo';
-import { UNIVERSAL_PAGE_TITLE_KEY } from '../constants';
 
 const componentName = 'header';
 
@@ -45,13 +44,7 @@ export default class Header {
     new Logo('.header').render();
 
     setTimeout(() => {
-      document.querySelectorAll('.menu__link').forEach((link) => {
-        link.addEventListener('click', (event) => {
-          const $target = event.target;
-          const text = $target.getAttribute('data-text');
-          sessionStorage.setItem(UNIVERSAL_PAGE_TITLE_KEY, text)
-        })
-      });
+      initListenersToSetUniversalPageTitle('.menu__link');
     }, 0);
   }
 }

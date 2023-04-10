@@ -23,13 +23,16 @@ var Footer = /*#__PURE__*/function () {
   _createClass(Footer, [{
     key: "template",
     get: function get() {
-      return "<footer class=\"footer container-full\">\n              <nav class=\"footer__content container-full__inner\">\n                <div class=\"footer__top\">\n                  <!--logo-->\n                  <a href=\"./\" class=\"cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                </div>\n                <div class=\"footer__menu\">\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"link\" href=\"universal.html\">Services</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"link\" href=\"#\">Our team</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"link\" href=\"#\">Advantage</a>\n                    </li>\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"link\" href=\"#\">Feedbacks</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"link\" href=\"#\">Contacts</a>\n                    </li>\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"link\" href=\"#\">Privacy Policy</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"link\" href=\"#\">Personal data processing agreement</a>\n                    </li>\n                  </ul>\n                  <div class=\"footer__menu-col footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"tel:+17186149511\">+1 718-614-9511</a>\n                  </div>\n                </div>\n                <div class=\"footer__hr\"></div>\n                <ul class=\"footer__bottom\">\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"link\" href=\"#\">Franchising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"link\" href=\"#\">Advertising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\"></li>\n                  <li class=\"footer__bottom-item footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"mailto:hello@beautymed.com\">hello@beautymed.com</a>\n                  </li>\n                </ul>\n              </nav>\n            </footer>";
+      return "<footer class=\"footer container-full\">\n              <nav class=\"footer__content container-full__inner\">\n                <div class=\"footer__top\">\n                  <!--logo-->\n                  <a href=\"./\" class=\"cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                </div>\n                <div class=\"footer__menu\">\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Services\">Services</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Our Team\">Our team</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Advantage\">Advantage</a>\n                    </li>\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Feedbacks\">Feedbacks</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Contacts\">Contacts</a>\n                    </li>\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Privacy Policy\">Privacy Policy</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Personal data processing agreement\">Personal data processing agreement</a>\n                    </li>\n                  </ul>\n                  <div class=\"footer__menu-col footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"tel:+17186149511\">+1 718-614-9511</a>\n                  </div>\n                </div>\n                <div class=\"footer__hr\"></div>\n                <ul class=\"footer__bottom\">\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Franchising\">Franchising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Advertising\">Advertising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\"></li>\n                  <li class=\"footer__bottom-item footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"mailto:hello@beautymed.com\">hello@beautymed.com</a>\n                  </li>\n                </ul>\n              </nav>\n            </footer>";
     }
   }, {
     key: "render",
     value: function render() {
       (0, _utils.replace)(componentName, this.parentEl, this.template);
       new _logo["default"]('.footer').render();
+      setTimeout(function () {
+        (0, _utils.initListenersToSetUniversalPageTitle)('.footer__link');
+      }, 0);
     }
   }]);
   return Footer;
@@ -45,7 +48,6 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _utils = require("../utils");
 var _logo = _interopRequireDefault(require("../components/logo"));
-var _constants = require("../constants");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -70,13 +72,7 @@ var Header = /*#__PURE__*/function () {
       (0, _utils.replace)(componentName, this.parentEl, this.template);
       new _logo["default"]('.header').render();
       setTimeout(function () {
-        document.querySelectorAll('.menu__link').forEach(function (link) {
-          link.addEventListener('click', function (event) {
-            var $target = event.target;
-            var text = $target.getAttribute('data-text');
-            sessionStorage.setItem(_constants.UNIVERSAL_PAGE_TITLE_KEY, text);
-          });
-        });
+        (0, _utils.initListenersToSetUniversalPageTitle)('.menu__link');
       }, 0);
     }
   }]);
@@ -84,7 +80,7 @@ var Header = /*#__PURE__*/function () {
 }();
 exports["default"] = Header;
 
-},{"../components/logo":3,"../constants":4,"../utils":6}],3:[function(require,module,exports){
+},{"../components/logo":3,"../utils":6}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -158,7 +154,9 @@ function setPageTitle() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.initListenersToSetUniversalPageTitle = initListenersToSetUniversalPageTitle;
 exports.replace = replace;
+var _constants = require("./constants");
 /**
  * Replaces comment in HTML file such as <!--header--> with template from JS file
  * @param componentName
@@ -170,5 +168,14 @@ function replace(componentName, parentElSelector, template) {
   var regex = new RegExp("<!--".concat(componentName, "-->"), "g");
   parentEl.innerHTML = parentEl.innerHTML.replace(regex, template);
 }
+function initListenersToSetUniversalPageTitle(linkSelector) {
+  document.querySelectorAll(linkSelector).forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      var $target = event.target;
+      var text = $target.getAttribute('data-text');
+      sessionStorage.setItem(_constants.UNIVERSAL_PAGE_TITLE_KEY, text);
+    });
+  });
+}
 
-},{}]},{},[5]);
+},{"./constants":4}]},{},[5]);

@@ -2,8 +2,7 @@
 
 The project has been published to Github Pages, namely to https://iburskiy.github.io/cosmetology.
 The purpose of the project was to practice with markup using BEM methodology in SCSS version and use Github Pages build process to deploy it on the web.
-It represents the design of Cosmetology Home Page and Universal Page for a demo how multiple page website may look like on Github Pages 
-If you press any link of Header or Footer you are redirected to universal.html page with dynamicaly generated text.
+It represents the design of Cosmetology Home Page and Universal Page (see point about this page below) for a demo how multiple page website may look like on Github Pages 
 
 ## Build
 Run `npm run build` to build the project.
@@ -51,3 +50,8 @@ Then after each commit I could see that a new workflow (or build) appears in my 
 Templates for Header and Footer are placed in JS. They replace placeholders in HTML such as <!--header--> and <!--footer-->.
 Logo is inner part of Header and Footer and its placeholder <!--logo--> is also replaced with Logo HTML template while rendering.
 In this way we have Logo, Header and Footer in one place without any repeat.
+
+## Universal page
+If you press any link in Header or Footer you are redirected to universal.html page with dynamically generated text.
+Link click runs JS which reads value from link's `data-text` attribute and sets it to `sessionStorage` variable.
+When `universal.html` page is open, another JS reads that variable and generates dynamic text depending on the previously clicked link.

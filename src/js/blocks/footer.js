@@ -1,4 +1,4 @@
-import {replace} from '../utils';
+import { initListenersToSetUniversalPageTitle, replace } from '../utils';
 import Logo from '../components/logo';
 
 const componentName = 'footer';
@@ -19,29 +19,29 @@ export default class Footer {
                 <div class="footer__menu">
                   <ul class="footer__menu-col">
                     <li class="footer__menu-item">
-                      <a class="link" href="universal.html">Services</a>
+                      <a class="footer__link link" href="universal.html" data-text="Services">Services</a>
                     </li>
                     <li class="footer__menu-item">
-                      <a class="link" href="#">Our team</a>
+                      <a class="footer__link link" href="universal.html" data-text="Our Team">Our team</a>
                     </li>
                     <li class="footer__menu-item">
-                      <a class="link" href="#">Advantage</a>
-                    </li>
-                  </ul>
-                  <ul class="footer__menu-col">
-                    <li class="footer__menu-item">
-                      <a class="link" href="#">Feedbacks</a>
-                    </li>
-                    <li class="footer__menu-item">
-                      <a class="link" href="#">Contacts</a>
+                      <a class="footer__link link" href="universal.html" data-text="Advantage">Advantage</a>
                     </li>
                   </ul>
                   <ul class="footer__menu-col">
                     <li class="footer__menu-item">
-                      <a class="link" href="#">Privacy Policy</a>
+                      <a class="footer__link link" href="universal.html" data-text="Feedbacks">Feedbacks</a>
                     </li>
                     <li class="footer__menu-item">
-                      <a class="link" href="#">Personal data processing agreement</a>
+                      <a class="footer__link link" href="universal.html" data-text="Contacts">Contacts</a>
+                    </li>
+                  </ul>
+                  <ul class="footer__menu-col">
+                    <li class="footer__menu-item">
+                      <a class="footer__link link" href="universal.html" data-text="Privacy Policy">Privacy Policy</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a class="footer__link link" href="universal.html" data-text="Personal data processing agreement">Personal data processing agreement</a>
                     </li>
                   </ul>
                   <div class="footer__menu-col footer__contact-wrapper">
@@ -51,10 +51,10 @@ export default class Footer {
                 <div class="footer__hr"></div>
                 <ul class="footer__bottom">
                   <li class="footer__bottom-item">
-                    <a class="link" href="#">Franchising</a>
+                    <a class="footer__link link" href="universal.html" data-text="Franchising">Franchising</a>
                   </li>
                   <li class="footer__bottom-item">
-                    <a class="link" href="#">Advertising</a>
+                    <a class="footer__link link" href="universal.html" data-text="Advertising">Advertising</a>
                   </li>
                   <li class="footer__bottom-item"></li>
                   <li class="footer__bottom-item footer__contact-wrapper">
@@ -67,5 +67,9 @@ export default class Footer {
   render() {
     replace(componentName, this.parentEl, this.template);
     new Logo('.footer').render();
+
+    setTimeout(() => {
+      initListenersToSetUniversalPageTitle('.footer__link');
+    }, 0);
   }
 }
