@@ -1,5 +1,6 @@
 import {replace} from '../utils';
 import Logo from '../components/logo';
+import { UNIVERSAL_PAGE_TITLE_KEY } from '../constants';
 
 const componentName = 'header';
 
@@ -13,19 +14,19 @@ export default class Header {
                 <!--logo-->
                 <ul class="menu">
                   <li class="menu__item">
-                    <a class="link" href="our-services.html">SERVICES</a>
+                    <a class="menu__link link" href="our-services.html" data-text="Services">SERVICES</a>
                   </li>
                   <li class="menu__item">
-                    <a class="link" href="#">OUR TEAM</a>
+                    <a class="menu__link link" href="our-services.html" data-text="Our Team">OUR TEAM</a>
                   </li>
                   <li class="menu__item">
-                    <a class="link" href="#">ADVANTAGES</a>
+                    <a class="menu__link link" href="our-services.html" data-text="Advantages">ADVANTAGES</a>
                   </li>
                   <li class="menu__item">
-                    <a class="link" href="#">FEEDBACKS</a>
+                    <a class="menu__link link" href="our-services.html" data-text="Feedbacks">FEEDBACKS</a>
                   </li>
                   <li class="menu__item">
-                    <a class="link" href="#">CONTACTS</a>
+                    <a class="menu__link link" href="our-services.html" data-text="Contacts">CONTACTS</a>
                   </li>
                 </ul>
                 <a href="./" class="header__cta cta">
@@ -42,5 +43,15 @@ export default class Header {
   render() {
     replace(componentName, this.parentEl, this.template);
     new Logo('.header').render();
+
+    setTimeout(() => {
+      document.querySelectorAll('.menu__link').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          const $target = event.target;
+          const text = $target.getAttribute('data-text');
+          sessionStorage.setItem(UNIVERSAL_PAGE_TITLE_KEY, text)
+        })
+      });
+    }, 0);
   }
 }

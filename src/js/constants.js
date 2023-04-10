@@ -1,0 +1,1 @@
+export const UNIVERSAL_PAGE_TITLE_KEY = 'universal-page-title';

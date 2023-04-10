@@ -36,7 +36,7 @@ var Footer = /*#__PURE__*/function () {
 }();
 exports["default"] = Footer;
 
-},{"../components/logo":3,"../utils":5}],2:[function(require,module,exports){
+},{"../components/logo":3,"../utils":6}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45,6 +45,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _utils = require("../utils");
 var _logo = _interopRequireDefault(require("../components/logo"));
+var _constants = require("../constants");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61,20 +62,29 @@ var Header = /*#__PURE__*/function () {
   _createClass(Header, [{
     key: "template",
     get: function get() {
-      return "<header class=\"header container-full\">\n              <nav class=\"header__content container-full__inner\">\n                <!--logo-->\n                <ul class=\"menu\">\n                  <li class=\"menu__item\">\n                    <a class=\"link\" href=\"our-services.html\">SERVICES</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"link\" href=\"#\">OUR TEAM</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"link\" href=\"#\">ADVANTAGES</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"link\" href=\"#\">FEEDBACKS</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"link\" href=\"#\">CONTACTS</a>\n                  </li>\n                </ul>\n                <a href=\"./\" class=\"header__cta cta\">\n                  <div class=\"cta__btn\">CALL ME BACK</div>\n                </a>\n                <div class=\"burger-icon\">\n                  <svg width=\"24\" height=\"16\" viewBox=\"0 0 24 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                    <path d=\"M0.75 15.5H23.25V13H0.75V15.5ZM0.75 9.25H23.25V6.75H0.75V9.25ZM0.75 0.5V3H23.25V0.5H0.75Z\" fill=\"black\"/>\n                  </svg>\n                </div>\n              </nav>\n            </header>";
+      return "<header class=\"header container-full\">\n              <nav class=\"header__content container-full__inner\">\n                <!--logo-->\n                <ul class=\"menu\">\n                  <li class=\"menu__item\">\n                    <a class=\"menu__link link\" href=\"our-services.html\" data-text=\"Services\">SERVICES</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"menu__link link\" href=\"our-services.html\" data-text=\"Our Team\">OUR TEAM</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"menu__link link\" href=\"our-services.html\" data-text=\"Advantages\">ADVANTAGES</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"menu__link link\" href=\"our-services.html\" data-text=\"Feedbacks\">FEEDBACKS</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"menu__link link\" href=\"our-services.html\" data-text=\"Contacts\">CONTACTS</a>\n                  </li>\n                </ul>\n                <a href=\"./\" class=\"header__cta cta\">\n                  <div class=\"cta__btn\">CALL ME BACK</div>\n                </a>\n                <div class=\"burger-icon\">\n                  <svg width=\"24\" height=\"16\" viewBox=\"0 0 24 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                    <path d=\"M0.75 15.5H23.25V13H0.75V15.5ZM0.75 9.25H23.25V6.75H0.75V9.25ZM0.75 0.5V3H23.25V0.5H0.75Z\" fill=\"black\"/>\n                  </svg>\n                </div>\n              </nav>\n            </header>";
     }
   }, {
     key: "render",
     value: function render() {
       (0, _utils.replace)(componentName, this.parentEl, this.template);
       new _logo["default"]('.header').render();
+      setTimeout(function () {
+        document.querySelectorAll('.menu__link').forEach(function (link) {
+          link.addEventListener('click', function (event) {
+            var $target = event.target;
+            var text = $target.getAttribute('data-text');
+            sessionStorage.setItem(_constants.UNIVERSAL_PAGE_TITLE_KEY, text);
+          });
+        });
+      }, 0);
     }
   }]);
   return Header;
 }();
 exports["default"] = Header;
 
-},{"../components/logo":3,"../utils":5}],3:[function(require,module,exports){
+},{"../components/logo":3,"../constants":4,"../utils":6}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -109,18 +119,40 @@ var Logo = /*#__PURE__*/function () {
 }();
 exports["default"] = Logo;
 
-},{"../utils":5}],4:[function(require,module,exports){
+},{"../utils":6}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.UNIVERSAL_PAGE_TITLE_KEY = void 0;
+var UNIVERSAL_PAGE_TITLE_KEY = 'universal-page-title';
+exports.UNIVERSAL_PAGE_TITLE_KEY = UNIVERSAL_PAGE_TITLE_KEY;
+
+},{}],5:[function(require,module,exports){
 "use strict";
 
 var _header = _interopRequireDefault(require("../blocks/header"));
 var _footer = _interopRequireDefault(require("../blocks/footer"));
+var _constants = require("../constants");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 document.addEventListener('DOMContentLoaded', function () {
   new _header["default"]().render();
   new _footer["default"]().render();
+  setPageTitle();
 });
+function setPageTitle() {
+  var title = sessionStorage.getItem(_constants.UNIVERSAL_PAGE_TITLE_KEY);
+  var reusableTemplage = function reusableTemplage() {
+    return "Here will be information for \"".concat(pageTitle, "\" page");
+  };
+  var pageTitle = title && title !== 'null' ? title : 'Universal';
+  var titleElem = document.querySelector('.title__text1');
+  titleElem.innerHTML = titleElem.innerHTML + reusableTemplage();
+  sessionStorage.clear();
+}
 
-},{"../blocks/footer":1,"../blocks/header":2}],5:[function(require,module,exports){
+},{"../blocks/footer":1,"../blocks/header":2,"../constants":4}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -139,4 +171,4 @@ function replace(componentName, parentElSelector, template) {
   parentEl.innerHTML = parentEl.innerHTML.replace(regex, template);
 }
 
-},{}]},{},[4]);
+},{}]},{},[5]);
