@@ -1051,7 +1051,7 @@
   top: 20px;
   left: 10px;
   z-index: 1;
-  background-image: url("../images/icons/user.png");
+  background-image: url("../images/icons/user.svg");
 }
 .field__phone-wrapper {
   position: relative;
@@ -1064,7 +1064,7 @@
   top: 20px;
   left: 10px;
   z-index: 1;
-  background-image: url("../images/icons/phone.png");
+  background-image: url("../images/icons/phone2.svg");
 }
 .field__input {
   width: 300px;
