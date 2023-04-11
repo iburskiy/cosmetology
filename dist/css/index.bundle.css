@@ -730,7 +730,7 @@
   justify-content: space-between;
 }
 .list__item {
-  background-image: url("../images/green-tick.svg");
+  background-image: url("../images/icons/green-tick.svg");
   background-repeat: no-repeat;
   background-position: left top;
   padding-left: 50px;
@@ -902,11 +902,11 @@
 }
 .team__slider .splide__arrow--prev {
   left: -55px;
-  background: url(../images/arrow-left.svg);
+  background: url(../images/icons/arrow-left.svg);
 }
 .team__slider .splide__arrow--next {
   right: -55px;
-  background: url(../images/arrow-right.svg);
+  background: url(../images/icons/arrow-right.svg);
 }
 @media (max-width: 1279px) {
   .team__slider .splide__arrows {
@@ -1164,7 +1164,7 @@
   justify-content: space-between;
 }
 .list__item {
-  background-image: url("../images/green-tick.svg");
+  background-image: url("../images/icons/green-tick.svg");
   background-repeat: no-repeat;
   background-position: left top;
   padding-left: 50px;
@@ -1290,11 +1290,11 @@
 }
 .feedbacks__slider .splide__arrow--prev {
   left: -55px;
-  background: url(../images/arrow-left.svg);
+  background: url(../images/icons/arrow-left.svg);
 }
 .feedbacks__slider .splide__arrow--next {
   right: -55px;
-  background: url(../images/arrow-right.svg);
+  background: url(../images/icons/arrow-right.svg);
 }
 @media (max-width: 1279px) {
   .feedbacks__slider .splide__arrows {

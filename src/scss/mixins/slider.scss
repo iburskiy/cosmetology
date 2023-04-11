@@ -11,11 +11,11 @@
     }
     &__arrow--prev {
       left: -55px;
-      background: url(../images/arrow-left.svg);
+      background: url(../images/icons/arrow-left.svg);
     }
     &__arrow--next {
       right: -55px;
-      background: url(../images/arrow-right.svg);
+      background: url(../images/icons/arrow-right.svg);
     }
 
     @media (max-width: $breakpoint-tablet-max) {
