@@ -28,6 +28,9 @@
     font: inherit;
   }
   @media (max-width: $breakpoint-mobile-max) {
+    padding-left: $indent-container-mobile;
+    padding-right: $indent-container-mobile;
+
     &__list-item {
       max-width: none;
     }

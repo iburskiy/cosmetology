@@ -41,8 +41,8 @@
 }
 @media (max-width: 1279px) {
   .container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media (max-width: 767px) {
@@ -93,8 +93,8 @@
 }
 @media (max-width: 1279px) {
   .container-full__inner {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -732,7 +732,6 @@
   background-image: url("../images/green-tick.svg");
   background-repeat: no-repeat;
   background-position: left top;
-  margin-left: 5px;
   padding-left: 50px;
   min-height: 31px;
   font-family: "Merriweather", serif;
@@ -1024,6 +1023,12 @@
     width: 100%;
   }
 }
+@media (max-width: 767px) {
+  .form__chkbox {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .field {
   display: flex;
@@ -1136,6 +1141,10 @@
   font: inherit;
 }
 @media (max-width: 767px) {
+  .info {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .info__list-item {
     max-width: none;
   }
@@ -1152,7 +1161,6 @@
   background-image: url("../images/green-tick.svg");
   background-repeat: no-repeat;
   background-position: left top;
-  margin-left: 5px;
   padding-left: 50px;
   min-height: 31px;
   font-family: "Merriweather", serif;

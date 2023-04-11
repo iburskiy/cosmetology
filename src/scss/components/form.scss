@@ -38,4 +38,10 @@ $breakpoint-request-form-mobile: 500px;
   @media (max-width: $breakpoint-request-form-mobile) {
     width: 100%;
   }
+  @media (max-width: $breakpoint-mobile-max) {
+    &__chkbox {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
