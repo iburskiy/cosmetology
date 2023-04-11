@@ -23,7 +23,7 @@ var Footer = /*#__PURE__*/function () {
   _createClass(Footer, [{
     key: "template",
     get: function get() {
-      return "<footer class=\"footer container-full\">\n              <nav class=\"footer__content container-full__inner\">\n                <div class=\"footer__top\">\n                  <!--logo-->\n                  <a href=\"./\" class=\"cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                </div>\n                <div class=\"footer__menu\">\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Services\">Services</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Our Team\">Our team</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Advantage\">Advantage</a>\n                    </li>\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Feedbacks\">Feedbacks</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Contacts\">Contacts</a>\n                    </li>\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Privacy Policy\">Privacy Policy</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Personal data processing agreement\">Personal data processing agreement</a>\n                    </li>\n                  </ul>\n                  <div class=\"footer__menu-col footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"tel:+17186149511\">+1 718-614-9511</a>\n                  </div>\n                </div>\n                <div class=\"footer__hr\"></div>\n                <ul class=\"footer__bottom\">\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Franchising\">Franchising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"footer__link link\" href=\"universal.html\" data-text=\"Advertising\">Advertising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\"></li>\n                  <li class=\"footer__bottom-item footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"mailto:hello@beautymed.com\">hello@beautymed.com</a>\n                  </li>\n                </ul>\n              </nav>\n            </footer>";
+      return "<footer class=\"footer container-full\">\n              <nav class=\"footer__content container-full__inner\">\n                <div class=\"footer__top\">\n                  <!--logo-->\n                  <a href=\"./\" class=\"cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                </div>\n                <div class=\"footer__menu\">\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Services\">Services</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Our Team\">Our team</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Advantage\">Advantage</a>\n                    </li>\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Feedbacks\">Feedbacks</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Contacts\">Contacts</a>\n                    </li>\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Privacy Policy\">Privacy Policy</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Personal data processing agreement\">Personal data processing agreement</a>\n                    </li>\n                  </ul>\n                  <div class=\"footer__menu-col footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"tel:+17186149511\">+1 718-614-9511</a>\n                  </div>\n                </div>\n                <div class=\"footer__hr\"></div>\n                <ul class=\"footer__bottom\">\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Franchising\">Franchising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Advertising\">Advertising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\"></li>\n                  <li class=\"footer__bottom-item footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"mailto:hello@beautymed.com\">hello@beautymed.com</a>\n                  </li>\n                </ul>\n              </nav>\n            </footer>";
     }
   }, {
     key: "render",
@@ -31,7 +31,7 @@ var Footer = /*#__PURE__*/function () {
       (0, _utils.replace)(componentName, this.parentEl, this.template);
       new _logo["default"]('.footer').render();
       setTimeout(function () {
-        (0, _utils.initListenersToSetUniversalPageTitle)('.footer__link');
+        (0, _utils.initListenersToSetUniversalPageTitle)();
       }, 0);
     }
   }]);
@@ -64,7 +64,7 @@ var Header = /*#__PURE__*/function () {
   _createClass(Header, [{
     key: "template",
     get: function get() {
-      return "<header class=\"header container-full\">\n              <nav class=\"header__content container-full__inner\">\n                <!--logo-->\n                <ul class=\"menu\">\n                  <li class=\"menu__item\">\n                    <a class=\"menu__link link\" href=\"universal.html\" data-text=\"Services\">SERVICES</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"menu__link link\" href=\"universal.html\" data-text=\"Our Team\">OUR TEAM</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"menu__link link\" href=\"universal.html\" data-text=\"Advantages\">ADVANTAGES</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"menu__link link\" href=\"universal.html\" data-text=\"Feedbacks\">FEEDBACKS</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"menu__link link\" href=\"universal.html\" data-text=\"Contacts\">CONTACTS</a>\n                  </li>\n                </ul>\n                <a href=\"./\" class=\"header__cta cta\">\n                  <div class=\"cta__btn\">CALL ME BACK</div>\n                </a>\n                <div class=\"burger-icon\">\n                  <svg width=\"24\" height=\"16\" viewBox=\"0 0 24 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                    <path d=\"M0.75 15.5H23.25V13H0.75V15.5ZM0.75 9.25H23.25V6.75H0.75V9.25ZM0.75 0.5V3H23.25V0.5H0.75Z\" fill=\"black\"/>\n                  </svg>\n                </div>\n              </nav>\n            </header>";
+      return "<header class=\"header container-full\">\n              <nav class=\"header__content container-full__inner\">\n                <!--logo-->\n                <ul class=\"menu\">\n                  <li class=\"menu__item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Services\">SERVICES</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Our Team\">OUR TEAM</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Advantages\">ADVANTAGES</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Feedbacks\">FEEDBACKS</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Contacts\">CONTACTS</a>\n                  </li>\n                </ul>\n                <a href=\"./\" class=\"header__cta cta\">\n                  <div class=\"cta__btn\">CALL ME BACK</div>\n                </a>\n                <div class=\"burger-icon\">\n                  <svg width=\"24\" height=\"16\" viewBox=\"0 0 24 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                    <path d=\"M0.75 15.5H23.25V13H0.75V15.5ZM0.75 9.25H23.25V6.75H0.75V9.25ZM0.75 0.5V3H23.25V0.5H0.75Z\" fill=\"black\"/>\n                  </svg>\n                </div>\n              </nav>\n            </header>";
     }
   }, {
     key: "render",
@@ -72,7 +72,7 @@ var Header = /*#__PURE__*/function () {
       (0, _utils.replace)(componentName, this.parentEl, this.template);
       new _logo["default"]('.header').render();
       setTimeout(function () {
-        (0, _utils.initListenersToSetUniversalPageTitle)('.menu__link');
+        (0, _utils.initListenersToSetUniversalPageTitle)();
       }, 0);
     }
   }]);
@@ -121,9 +121,11 @@ exports["default"] = Logo;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.UNIVERSAL_PAGE_TITLE_KEY = void 0;
+exports.UNIVERSAL_PAGE_TITLE_KEY = exports.DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE = void 0;
 var UNIVERSAL_PAGE_TITLE_KEY = 'universal-page-title';
 exports.UNIVERSAL_PAGE_TITLE_KEY = UNIVERSAL_PAGE_TITLE_KEY;
+var DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE = ".universal-page-link-js";
+exports.DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE = DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE;
 
 },{}],5:[function(require,module,exports){
 "use strict";
@@ -168,11 +170,10 @@ function replace(componentName, parentElSelector, template) {
   var regex = new RegExp("<!--".concat(componentName, "-->"), "g");
   parentEl.innerHTML = parentEl.innerHTML.replace(regex, template);
 }
-function initListenersToSetUniversalPageTitle(linkSelector) {
-  document.querySelectorAll(linkSelector).forEach(function (link) {
-    link.addEventListener('click', function (event) {
-      var $target = event.target;
-      var text = $target.getAttribute('data-text');
+function initListenersToSetUniversalPageTitle() {
+  document.querySelectorAll(_constants.DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE).forEach(function (link) {
+    link.addEventListener('click', function () {
+      var text = link.getAttribute('data-text');
       sessionStorage.setItem(_constants.UNIVERSAL_PAGE_TITLE_KEY, text);
     });
   });

@@ -789,6 +789,7 @@
   grid-gap: 20px;
 }
 .grid__item:hover {
+  cursor: pointer;
   border: 5px solid #32BA7C;
 }
 .grid__item:nth-child(1) {

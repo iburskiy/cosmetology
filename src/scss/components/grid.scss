@@ -6,6 +6,7 @@
 
   &__item {
     &:hover {
+      cursor: pointer;
       border: 5px solid $green1;
     }
   }

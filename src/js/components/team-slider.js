@@ -1,4 +1,5 @@
 import Splide from '@splidejs/splide';
+import { initListenersToSetUniversalPageTitle } from '../utils';
 
 export default class TeamSlider {
   render() {
@@ -17,5 +18,7 @@ export default class TeamSlider {
       }
     } );
     teamSlider.mount();
+
+    initListenersToSetUniversalPageTitle();
   }
 }

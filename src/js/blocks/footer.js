@@ -19,29 +19,29 @@ export default class Footer {
                 <div class="footer__menu">
                   <ul class="footer__menu-col">
                     <li class="footer__menu-item">
-                      <a class="footer__link link" href="universal.html" data-text="Services">Services</a>
+                      <a class="universal-page-link-js link" href="universal.html" data-text="Services">Services</a>
                     </li>
                     <li class="footer__menu-item">
-                      <a class="footer__link link" href="universal.html" data-text="Our Team">Our team</a>
+                      <a class="universal-page-link-js link" href="universal.html" data-text="Our Team">Our team</a>
                     </li>
                     <li class="footer__menu-item">
-                      <a class="footer__link link" href="universal.html" data-text="Advantage">Advantage</a>
-                    </li>
-                  </ul>
-                  <ul class="footer__menu-col">
-                    <li class="footer__menu-item">
-                      <a class="footer__link link" href="universal.html" data-text="Feedbacks">Feedbacks</a>
-                    </li>
-                    <li class="footer__menu-item">
-                      <a class="footer__link link" href="universal.html" data-text="Contacts">Contacts</a>
+                      <a class="universal-page-link-js link" href="universal.html" data-text="Advantage">Advantage</a>
                     </li>
                   </ul>
                   <ul class="footer__menu-col">
                     <li class="footer__menu-item">
-                      <a class="footer__link link" href="universal.html" data-text="Privacy Policy">Privacy Policy</a>
+                      <a class="universal-page-link-js link" href="universal.html" data-text="Feedbacks">Feedbacks</a>
                     </li>
                     <li class="footer__menu-item">
-                      <a class="footer__link link" href="universal.html" data-text="Personal data processing agreement">Personal data processing agreement</a>
+                      <a class="universal-page-link-js link" href="universal.html" data-text="Contacts">Contacts</a>
+                    </li>
+                  </ul>
+                  <ul class="footer__menu-col">
+                    <li class="footer__menu-item">
+                      <a class="universal-page-link-js link" href="universal.html" data-text="Privacy Policy">Privacy Policy</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a class="universal-page-link-js link" href="universal.html" data-text="Personal data processing agreement">Personal data processing agreement</a>
                     </li>
                   </ul>
                   <div class="footer__menu-col footer__contact-wrapper">
@@ -51,10 +51,10 @@ export default class Footer {
                 <div class="footer__hr"></div>
                 <ul class="footer__bottom">
                   <li class="footer__bottom-item">
-                    <a class="footer__link link" href="universal.html" data-text="Franchising">Franchising</a>
+                    <a class="universal-page-link-js link" href="universal.html" data-text="Franchising">Franchising</a>
                   </li>
                   <li class="footer__bottom-item">
-                    <a class="footer__link link" href="universal.html" data-text="Advertising">Advertising</a>
+                    <a class="universal-page-link-js link" href="universal.html" data-text="Advertising">Advertising</a>
                   </li>
                   <li class="footer__bottom-item"></li>
                   <li class="footer__bottom-item footer__contact-wrapper">
@@ -69,7 +69,7 @@ export default class Footer {
     new Logo('.footer').render();
 
     setTimeout(() => {
-      initListenersToSetUniversalPageTitle('.footer__link');
+      initListenersToSetUniversalPageTitle();
     }, 0);
   }
 }

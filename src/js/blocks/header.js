@@ -13,19 +13,19 @@ export default class Header {
                 <!--logo-->
                 <ul class="menu">
                   <li class="menu__item">
-                    <a class="menu__link link" href="universal.html" data-text="Services">SERVICES</a>
+                    <a class="universal-page-link-js link" href="universal.html" data-text="Services">SERVICES</a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link link" href="universal.html" data-text="Our Team">OUR TEAM</a>
+                    <a class="universal-page-link-js link" href="universal.html" data-text="Our Team">OUR TEAM</a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link link" href="universal.html" data-text="Advantages">ADVANTAGES</a>
+                    <a class="universal-page-link-js link" href="universal.html" data-text="Advantages">ADVANTAGES</a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link link" href="universal.html" data-text="Feedbacks">FEEDBACKS</a>
+                    <a class="universal-page-link-js link" href="universal.html" data-text="Feedbacks">FEEDBACKS</a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link link" href="universal.html" data-text="Contacts">CONTACTS</a>
+                    <a class="universal-page-link-js link" href="universal.html" data-text="Contacts">CONTACTS</a>
                   </li>
                 </ul>
                 <a href="./" class="header__cta cta">
@@ -44,7 +44,7 @@ export default class Header {
     new Logo('.header').render();
 
     setTimeout(() => {
-      initListenersToSetUniversalPageTitle('.menu__link');
+      initListenersToSetUniversalPageTitle();
     }, 0);
   }
 }

@@ -1,4 +1,7 @@
-import { UNIVERSAL_PAGE_TITLE_KEY } from './constants';
+import {
+  DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE,
+  UNIVERSAL_PAGE_TITLE_KEY
+} from './constants';
 
 /**
  * Replaces comment in HTML file such as <!--header--> with template from JS file
@@ -12,11 +15,10 @@ export function replace(componentName, parentElSelector, template) {
   parentEl.innerHTML = parentEl.innerHTML.replace(regex, template);
 }
 
-export function initListenersToSetUniversalPageTitle(linkSelector) {
-  document.querySelectorAll(linkSelector).forEach((link) => {
-    link.addEventListener('click', (event) => {
-      const $target = event.target;
-      const text = $target.getAttribute('data-text');
+export function initListenersToSetUniversalPageTitle() {
+  document.querySelectorAll(DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE).forEach((link) => {
+    link.addEventListener('click', () => {
+      const text = link.getAttribute('data-text');
       sessionStorage.setItem(UNIVERSAL_PAGE_TITLE_KEY, text)
     })
   });
