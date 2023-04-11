@@ -94,7 +94,7 @@
   color: inherit;
 }
 .link:hover {
-  text-decoration: underline;
+  color: #32BA7C;
 }
 
 .logo {
@@ -300,7 +300,7 @@
   color: inherit;
 }
 .link:hover {
-  text-decoration: underline;
+  color: #32BA7C;
 }
 
 .footer {

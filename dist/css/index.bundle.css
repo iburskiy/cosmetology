@@ -474,7 +474,7 @@
   color: inherit;
 }
 .link:hover {
-  text-decoration: underline;
+  color: #32BA7C;
 }
 
 .logo {
@@ -640,6 +640,7 @@
 }
 .top__btn:hover {
   cursor: pointer;
+  background-color: #058D4F;
 }
 .top__list {
   padding-top: 75px;
@@ -702,7 +703,7 @@
   color: inherit;
 }
 .link:hover {
-  text-decoration: underline;
+  color: #32BA7C;
 }
 
 .face {
@@ -786,6 +787,9 @@
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 400px 250px;
   grid-gap: 20px;
+}
+.grid__item:hover {
+  border: 5px solid #32BA7C;
 }
 .grid__item:nth-child(1) {
   grid-row: 1/3;
@@ -961,7 +965,7 @@
   color: inherit;
 }
 .link:hover {
-  text-decoration: underline;
+  color: #32BA7C;
 }
 
 .form {
@@ -1008,6 +1012,7 @@
 }
 .form__btn:hover {
   cursor: pointer;
+  background-color: #058D4F;
 }
 .form__chkbox {
   margin: 16px 57px 0;
@@ -1345,7 +1350,7 @@
   color: inherit;
 }
 .link:hover {
-  text-decoration: underline;
+  color: #32BA7C;
 }
 
 .contacts {
@@ -1414,6 +1419,7 @@
 }
 .contacts__btn:hover {
   cursor: pointer;
+  background-color: #058D4F;
 }
 
 .location__content {
@@ -1501,7 +1507,7 @@
   color: inherit;
 }
 .link:hover {
-  text-decoration: underline;
+  color: #32BA7C;
 }
 
 .footer {
