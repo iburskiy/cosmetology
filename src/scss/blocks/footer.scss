@@ -72,6 +72,10 @@ $indent-internal-footer-tablet: 30px;
     &__top {
       height: 74px;
     }
+    //hack to avoid overlapping
+    &__contact-wrapper {
+      font-size: 16px;
+    }
   }
   @media (max-width: $breakpoint-mobile-max) {
     &__menu {
@@ -92,6 +96,9 @@ $indent-internal-footer-tablet: 30px;
     }
     &__bottom-item {
       flex: none;
+    }
+    &__contact-wrapper {
+      font-size: 18px;
     }
   }
 }

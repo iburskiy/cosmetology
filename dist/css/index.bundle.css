@@ -1360,6 +1360,11 @@
   padding-top: 20px;
   padding-bottom: 40px;
 }
+.contacts__inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .contacts__title {
   font-family: "Lora", serif;
   font-style: normal;
@@ -1373,20 +1378,22 @@
 .contacts__address {
   display: flex;
   margin-top: 45px;
+  width: 270px;
 }
 .contacts__icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 110px;
 }
 .contacts__phone {
   display: flex;
   margin-top: 40px;
+  width: 270px;
 }
 .contacts__hours {
   display: flex;
   margin-top: 40px;
+  width: 270px;
 }
 .contacts__text {
   font-family: "Merriweather", serif;
@@ -1421,6 +1428,12 @@
 .contacts__btn:hover {
   cursor: pointer;
   background-color: #058D4F;
+}
+@media (max-width: 767px) {
+  .contacts__btn {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
 }
 
 .location__content {
@@ -1587,6 +1600,9 @@
   .footer__top {
     height: 74px;
   }
+  .footer__contact-wrapper {
+    font-size: 16px;
+  }
 }
 @media (max-width: 767px) {
   .footer__menu {
@@ -1607,6 +1623,9 @@
   }
   .footer__bottom-item {
     flex: none;
+  }
+  .footer__contact-wrapper {
+    font-size: 18px;
   }
 }
 

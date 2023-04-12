@@ -379,6 +379,9 @@
   .footer__top {
     height: 74px;
   }
+  .footer__contact-wrapper {
+    font-size: 16px;
+  }
 }
 @media (max-width: 767px) {
   .footer__menu {
@@ -399,6 +402,9 @@
   }
   .footer__bottom-item {
     flex: none;
+  }
+  .footer__contact-wrapper {
+    font-size: 18px;
   }
 }
 
