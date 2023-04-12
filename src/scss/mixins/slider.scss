@@ -20,12 +20,23 @@
         position: relative;
       }
       &__arrow--prev {
-        top: 70px;
+        top: 60px;
         left: calc(50% - 70px);
       }
       &__arrow--next {
-        top: 70px;
+        top: 60px;
         right: calc(50% - 70px);
+      }
+    }
+    @media (max-width: $breakpoint-mobile-max) {
+      &__arrows {
+        height: $arrow-container-height-mobile;
+      }
+      &__arrow--prev {
+        top: 50px;
+      }
+      &__arrow--next {
+        top: 50px;
       }
     }
   }
