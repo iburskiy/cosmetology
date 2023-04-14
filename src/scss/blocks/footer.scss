@@ -61,9 +61,6 @@ $indent-internal-footer-tablet: 30px;
     padding-top: $indent-internal-footer-tablet;
     padding-bottom: $indent-internal-footer-tablet;
 
-    &__menu {
-      margin-top: 30px;
-    }
     &__bottom {
       padding-top: $indent-internal-footer-tablet;
     }
@@ -84,7 +81,7 @@ $indent-internal-footer-tablet: 30px;
     &__menu-item {
       padding-right: 0;
     }
-    &__menu-col {
+    &__menu-col:not(:last-child) {
       margin-bottom: 25px;
     }
     &__bottom {

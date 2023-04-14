@@ -16,6 +16,11 @@
   }
   &__social-link {
     display: flex;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
   }
   &__block {
     padding-left: 60px;

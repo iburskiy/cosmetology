@@ -5,8 +5,10 @@ $breakpoint-request-form-mobile: 500px;
 
 .form {
   padding-top: 20px;
-  padding-bottom: 28px;
+  padding-bottom: 40px;
   width: 420px;
+  height: 100%;
+  box-sizing: border-box;
 
   &__title {
     @include fontLora(500, 30px);
@@ -28,7 +30,7 @@ $breakpoint-request-form-mobile: 500px;
     @include button(20px 61.5px, 16px);
   }
   &__chkbox {
-    margin: 16px 57px 0;
+    margin: 20px 57px 0;
     text-align: center;
   }
 
