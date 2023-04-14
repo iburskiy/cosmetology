@@ -399,6 +399,7 @@
     margin-bottom: 25px;
   }
   .footer__bottom {
+    padding-top: 25px;
     flex-direction: column;
     gap: 25px;
   }

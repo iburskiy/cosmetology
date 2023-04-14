@@ -5,9 +5,13 @@
   grid-gap: 20px;
 
   &__item {
-    &:hover {
-      cursor: pointer;
-      border: 5px solid $green1;
+    // to enable hover effect only in browser, not while tapping on mobile devices
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        margin: -5px;
+        cursor: pointer;
+        border: 5px solid $green1;
+      }
     }
   }
   &__item:nth-child(1) {
@@ -31,6 +35,14 @@
   @media (max-width: $breakpoint-mobile-max) {
     grid-template-columns: none;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    &__item {
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          margin: 0;
+        }
+      }
+    }
     &__item:nth-child(2) {
       grid-column: unset;
     }
