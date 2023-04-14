@@ -27,7 +27,9 @@ $breakpoint-request-form-mobile: 500px;
     justify-content: center;
   }
   &__btn {
-    @include button(20px 61.5px, 16px);
+    // here padding not important, button width is regulated by width parameter
+    @include button(20px 60px, 16px);
+    width: 300px;
   }
   &__chkbox {
     margin: 20px 57px 0;

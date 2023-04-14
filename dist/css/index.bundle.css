@@ -1023,7 +1023,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 61.5px;
+  padding: 20px 60px;
   line-height: 150%;
   font-family: "Merriweather", serif;
   font-style: normal;
@@ -1032,6 +1032,7 @@
   line-height: 150%;
   color: #373737;
   color: white;
+  width: 300px;
 }
 .form__btn:hover {
   cursor: pointer;
