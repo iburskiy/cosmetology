@@ -1475,6 +1475,9 @@
 .location__content {
   position: relative;
 }
+.location__img-wrapper {
+  display: flex;
+}
 .location__img {
   display: block;
   max-width: 100%;
@@ -1486,11 +1489,9 @@
   right: 0;
 }
 @media (max-width: 1279px) {
-  .location__contacts {
-    right: 0;
+  .location__img-wrapper {
+    justify-content: center;
   }
-}
-@media (max-width: 1023px) {
   .location__contacts {
     position: static;
     width: 100%;

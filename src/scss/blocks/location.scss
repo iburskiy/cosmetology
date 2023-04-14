@@ -5,6 +5,9 @@
   &__content {
     position: relative;
   }
+  &__img-wrapper {
+    display: flex;
+  }
   &__img {
     display: block;
     max-width: 100%;
@@ -17,12 +20,9 @@
   }
 
   @media (max-width: $breakpoint-tablet-max) {
-    &__contacts {
-      right: 0;
+    &__img-wrapper {
+      justify-content: center;
     }
-  }
-
-  @media (max-width: $breakpoint-tablet-middle) {
     &__contacts {
       position: static;
       width: 100%;
