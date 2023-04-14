@@ -913,9 +913,21 @@
   left: -55px;
   background: url(../images/icons/arrow-left.svg);
 }
+@media (hover: hover) and (pointer: fine) {
+  .team__slider .splide__arrow--prev:hover {
+    background: url(../images/icons/arrow-left-hover.svg);
+    opacity: 1;
+  }
+}
 .team__slider .splide__arrow--next {
   right: -55px;
   background: url(../images/icons/arrow-right.svg);
+}
+@media (hover: hover) and (pointer: fine) {
+  .team__slider .splide__arrow--next:hover {
+    background: url(../images/icons/arrow-right-hover.svg);
+    opacity: 1;
+  }
 }
 @media (max-width: 1279px) {
   .team__slider .splide__arrows {
@@ -1312,9 +1324,21 @@
   left: -55px;
   background: url(../images/icons/arrow-left.svg);
 }
+@media (hover: hover) and (pointer: fine) {
+  .feedbacks__slider .splide__arrow--prev:hover {
+    background: url(../images/icons/arrow-left-hover.svg);
+    opacity: 1;
+  }
+}
 .feedbacks__slider .splide__arrow--next {
   right: -55px;
   background: url(../images/icons/arrow-right.svg);
+}
+@media (hover: hover) and (pointer: fine) {
+  .feedbacks__slider .splide__arrow--next:hover {
+    background: url(../images/icons/arrow-right-hover.svg);
+    opacity: 1;
+  }
 }
 @media (max-width: 1279px) {
   .feedbacks__slider .splide__arrows {

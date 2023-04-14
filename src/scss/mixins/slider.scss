@@ -8,10 +8,23 @@
     &__arrow--prev {
       left: -55px;
       background: url(../images/icons/arrow-left.svg);
+      // to enable hover effect only in browser, not while tapping on mobile devices
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background: url(../images/icons/arrow-left-hover.svg);
+          opacity: 1;
+        }
+      }
     }
     &__arrow--next {
       right: -55px;
       background: url(../images/icons/arrow-right.svg);
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background: url(../images/icons/arrow-right-hover.svg);
+          opacity: 1;
+        }
+      }
     }
 
     @media (max-width: $breakpoint-tablet-max) {
