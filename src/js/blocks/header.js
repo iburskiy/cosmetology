@@ -28,7 +28,7 @@ export default class Header {
                     <a class="universal-page-link-js link" href="universal.html" data-text="Contacts">CONTACTS</a>
                   </li>
                 </ul>
-                <a href="./" class="header__cta cta">
+                <a href="./#form" class="header__cta cta">
                   <div class="cta__btn">CALL ME BACK</div>
                 </a>
                 <div class="burger-icon">

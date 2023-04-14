@@ -12,7 +12,7 @@ export default class Footer {
               <nav class="footer__content container-full__inner">
                 <div class="footer__top">
                   <!--logo-->
-                  <a href="./" class="cta">
+                  <a href="./#form" class="cta">
                     <div class="cta__btn">CALL ME BACK</div>
                   </a>
                 </div>
