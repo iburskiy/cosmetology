@@ -69,3 +69,11 @@ html {
     @include container();
   }
 }
+
+.hidden {
+  display: none;
+}
+
+.no-overflow-js {
+  overflow-y: hidden;
+}

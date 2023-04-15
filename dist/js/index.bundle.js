@@ -3797,7 +3797,7 @@ var Footer = /*#__PURE__*/function () {
 }();
 exports["default"] = Footer;
 
-},{"../components/logo":5,"../utils":9}],3:[function(require,module,exports){
+},{"../components/logo":5,"../utils":12}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3806,6 +3806,8 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _utils = require("../utils");
 var _logo = _interopRequireDefault(require("../components/logo"));
+var _menuMobile = _interopRequireDefault(require("../components/menu-mobile"));
+var _menu = _interopRequireDefault(require("../components/menu"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3822,15 +3824,19 @@ var Header = /*#__PURE__*/function () {
   _createClass(Header, [{
     key: "template",
     get: function get() {
-      return "<header class=\"header container-full\">\n              <nav class=\"header__content container-full__inner\">\n                <!--logo-->\n                <ul class=\"menu\">\n                  <li class=\"menu__item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Services\">SERVICES</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Our Team\">OUR TEAM</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Advantages\">ADVANTAGES</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Feedbacks\">FEEDBACKS</a>\n                  </li>\n                  <li class=\"menu__item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Contacts\">CONTACTS</a>\n                  </li>\n                </ul>\n                <a href=\"./#form\" class=\"header__cta cta\">\n                  <div class=\"cta__btn\">CALL ME BACK</div>\n                </a>\n                <div class=\"burger-icon\">\n                  <img src=\"./images/icons/burger.svg\" alt=\"\">\n                </div>\n              </nav>\n            </header>";
+      return "<header class=\"header container-full\">\n              <nav class=\"header__content container-full__inner\">\n                <!--logo-->\n                <!--menu-->\n                <a href=\"./#form\" class=\"header__cta cta\">\n                  <div class=\"cta__btn\">CALL ME BACK</div>\n                </a>\n                <div class=\"burger-icon\">\n                  <img src=\"./images/icons/burger.svg\" alt=\"\">\n                </div>\n              </nav>\n              <!--menu-mobile-->\n            </header>";
     }
   }, {
     key: "render",
     value: function render() {
       (0, _utils.replace)(componentName, this.parentEl, this.template);
       new _logo["default"]('.header').render();
+      new _menu["default"]('.header', 'menu', 'menu__item').render();
+      var menuMobile = new _menuMobile["default"]('.header');
+      menuMobile.render();
       setTimeout(function () {
         (0, _utils.initListenersToSetUniversalPageTitle)();
+        menuMobile.init();
       }, 0);
     }
   }]);
@@ -3838,7 +3844,7 @@ var Header = /*#__PURE__*/function () {
 }();
 exports["default"] = Header;
 
-},{"../components/logo":5,"../utils":9}],4:[function(require,module,exports){
+},{"../components/logo":5,"../components/menu":7,"../components/menu-mobile":6,"../utils":12}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3913,7 +3919,146 @@ var Logo = /*#__PURE__*/function () {
 }();
 exports["default"] = Logo;
 
-},{"../utils":9}],6:[function(require,module,exports){
+},{"../utils":12}],6:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _utils = require("../utils");
+var _socials = _interopRequireDefault(require("./socials"));
+var _menu = _interopRequireDefault(require("./menu"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var componentName = 'menu-mobile';
+var MenuMobile = /*#__PURE__*/function () {
+  function MenuMobile(parentEl) {
+    _classCallCheck(this, MenuMobile);
+    this.parentEl = parentEl;
+  }
+  _createClass(MenuMobile, [{
+    key: "init",
+    value: function init() {
+      var _this = this;
+      var $burgerIcon = document.querySelector('.burger-icon');
+      $burgerIcon.addEventListener('click', function () {
+        _this.toggleMobileMenu();
+      });
+    }
+  }, {
+    key: "template",
+    get: function get() {
+      return "<div class=\"menu-mobile hidden\">\n                <div class=\"menu-mobile__content\">\n                  <div class=\"menu-mobile__close-wrapper\">\n                    <img src=\"./images/icons/close.svg\" alt=\"\" class=\"menu-mobile__close\">\n                  </div>\n                  <a href=\"./#form\" class=\"menu-mobile__cta cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                  <!--menu-->\n                  <nav class=\"menu-mobile__socials socials\">\n                    <!--socials-->\n                  </nav>\n                </div>\n            </div>";
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+      (0, _utils.replace)(componentName, this.parentEl, this.template);
+      new _menu["default"]('.menu-mobile', 'menu-mobile__list', 'menu-mobile__item').render();
+      new _socials["default"]('.menu-mobile').render();
+      setTimeout(function () {
+        var $closeIcon = document.querySelector('.menu-mobile__close-wrapper');
+        $closeIcon.addEventListener('click', function () {
+          _this2.toggleMobileMenu();
+        });
+      }, 0);
+    }
+  }, {
+    key: "toggleMobileMenu",
+    value: function toggleMobileMenu() {
+      document.querySelector('.menu-mobile').classList.toggle('hidden');
+      document.body.classList.toggle('no-overflow-js');
+    }
+  }]);
+  return MenuMobile;
+}();
+exports["default"] = MenuMobile;
+
+},{"../utils":12,"./menu":7,"./socials":8}],7:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _utils = require("../utils");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var componentName = 'menu';
+var Menu = /*#__PURE__*/function () {
+  function Menu(parentEl, ulClass, liClass) {
+    _classCallCheck(this, Menu);
+    this.parentEl = parentEl;
+    this.ulClass = ulClass;
+    this.liClass = liClass;
+  }
+  _createClass(Menu, [{
+    key: "template",
+    get: function get() {
+      return "<ul class=\"".concat(this.ulClass, "\">\n              ").concat(this.generateMenuItem('Services'), "\n              ").concat(this.generateMenuItem('Our Team'), "\n              ").concat(this.generateMenuItem('Advantages'), "\n              ").concat(this.generateMenuItem('Feedbacks'), "\n              ").concat(this.generateMenuItem('Contacts'), "\n            </ul>");
+    }
+  }, {
+    key: "generateMenuItem",
+    value: function generateMenuItem(text) {
+      return "<li class=\"".concat(this.liClass, "\">\n              <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"").concat(text, "\">").concat(text, "</a>\n            </li>");
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      (0, _utils.replace)(componentName, this.parentEl, this.template);
+    }
+  }]);
+  return Menu;
+}();
+exports["default"] = Menu;
+
+},{"../utils":12}],8:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _utils = require("../utils");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var componentName = 'socials';
+var Socials = /*#__PURE__*/function () {
+  function Socials(parentEl) {
+    _classCallCheck(this, Socials);
+    this.parentEl = parentEl;
+  }
+  _createClass(Socials, [{
+    key: "template",
+    get: function get() {
+      return "<a class=\"socials__link link\" href=\"#\">\n              <img src=\"./images/icons/youtube.svg\" alt=\"\">\n            </a>\n            <a class=\"socials__link link\" href=\"#\">\n              <img src=\"./images/icons/instagram.svg\" alt=\"\">\n            </a>\n            <a class=\"socials__link link\" href=\"#\">\n              <img src=\"./images/icons/facebook.svg\" alt=\"\">\n            </a>";
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      (0, _utils.replace)(componentName, this.parentEl, this.template);
+    }
+  }]);
+  return Socials;
+}();
+exports["default"] = Socials;
+
+},{"../utils":12}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3958,7 +4103,7 @@ var TeamSlider = /*#__PURE__*/function () {
 }();
 exports["default"] = TeamSlider;
 
-},{"../utils":9,"@splidejs/splide":1}],7:[function(require,module,exports){
+},{"../utils":12,"@splidejs/splide":1}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3970,22 +4115,24 @@ exports.UNIVERSAL_PAGE_TITLE_KEY = UNIVERSAL_PAGE_TITLE_KEY;
 var DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE = ".universal-page-link-js";
 exports.DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE = DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE;
 
-},{}],8:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 var _header = _interopRequireDefault(require("../blocks/header"));
 var _footer = _interopRequireDefault(require("../blocks/footer"));
 var _feedbacksSlider = _interopRequireDefault(require("../components/feedbacks-slider"));
 var _teamSlider = _interopRequireDefault(require("../components/team-slider"));
+var _socials = _interopRequireDefault(require("../components/socials"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 document.addEventListener('DOMContentLoaded', function () {
   new _header["default"]().render();
   new _footer["default"]().render();
+  new _socials["default"]('.top').render();
   new _teamSlider["default"]().render();
   new _feedbacksSlider["default"]().render();
 });
 
-},{"../blocks/footer":2,"../blocks/header":3,"../components/feedbacks-slider":4,"../components/team-slider":6}],9:[function(require,module,exports){
+},{"../blocks/footer":2,"../blocks/header":3,"../components/feedbacks-slider":4,"../components/socials":8,"../components/team-slider":9}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4014,4 +4161,4 @@ function initListenersToSetUniversalPageTitle() {
   });
 }
 
-},{"./constants":7}]},{},[8]);
+},{"./constants":10}]},{},[11]);

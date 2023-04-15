@@ -1,0 +1,55 @@
+@import "../mixins/fontMerriweather";
+@import "../components/socials";
+
+.menu-mobile {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: $pink;
+  z-index: 1;
+  overflow: auto;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  &__close-wrapper {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__cta {
+    margin-top: 60px;
+  }
+
+  &__list {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    margin-top: 50px;
+    @include fontMerriweather(400, 16px);
+    text-transform: uppercase;
+  }
+  &__socials {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 165px;
+  }
+}

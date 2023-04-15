@@ -1,4 +1,8 @@
 .burger-icon {
+  &:hover {
+    cursor: pointer;
+  }
+
   @media (min-width: $breakpoint-tablet-middle + 1) {
     display: none;
   }

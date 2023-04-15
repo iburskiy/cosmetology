@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
@@ -82,6 +83,17 @@ html {
   }
 }
 
+.hidden {
+  display: none;
+}
+
+.no-overflow-js {
+  overflow-y: hidden;
+}
+
+.burger-icon:hover {
+  cursor: pointer;
+}
 @media (min-width: 1024px) {
   .burger-icon {
     display: none;
@@ -149,6 +161,7 @@ html {
   font-size: 18px;
   line-height: 150%;
   color: #373737;
+  text-transform: uppercase;
 }
 @media (max-width: 1279px) {
   .menu {
@@ -188,6 +201,69 @@ html {
     padding: 10px 20px;
     font-size: 16px;
   }
+}
+
+.socials__link {
+  display: flex;
+  opacity: 0.6;
+}
+.socials__link:hover {
+  opacity: 1;
+}
+
+.menu-mobile {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #F1DDDF;
+  z-index: 1;
+  overflow: auto;
+}
+.menu-mobile__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.menu-mobile__close-wrapper {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.menu-mobile__close-wrapper:hover {
+  cursor: pointer;
+}
+.menu-mobile__cta {
+  margin-top: 60px;
+}
+.menu-mobile__list {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-mobile__item {
+  margin-top: 50px;
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #373737;
+  text-transform: uppercase;
+}
+.menu-mobile__socials {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 165px;
 }
 
 .header {
