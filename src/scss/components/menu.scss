@@ -1,11 +1,13 @@
 @import "../mixins/fontMerriweather";
 
 .menu {
-  list-style: none;
-  padding: 0;
-  margin: 0 -25px;
-  display: flex;
-  justify-content: space-between;
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 -25px;
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__item {
     margin: 0 25px;
@@ -14,7 +16,9 @@
   }
 
   @media (max-width: $breakpoint-tablet-max) {
-    margin: 0 -15px;
+    &__list {
+      margin: 0 -15px;
+    }
 
     &__item {
       margin: 0 15px;

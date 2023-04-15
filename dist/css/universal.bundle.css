@@ -146,7 +146,7 @@ html {
   }
 }
 
-.menu {
+.menu__list {
   list-style: none;
   padding: 0;
   margin: 0 -25px;
@@ -164,7 +164,7 @@ html {
   text-transform: uppercase;
 }
 @media (max-width: 1279px) {
-  .menu {
+  .menu__list {
     margin: 0 -15px;
   }
   .menu__item {

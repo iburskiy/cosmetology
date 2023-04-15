@@ -24,7 +24,9 @@ export default class MenuMobile {
                   <a href="./#form" class="menu-mobile__cta cta">
                     <div class="cta__btn">CALL ME BACK</div>
                   </a>
-                  <!--menu-->
+                  <nav>
+                    <!--menu-->
+                  </nav>
                   <nav class="menu-mobile__socials socials">
                     <!--socials-->
                   </nav>

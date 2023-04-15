@@ -3824,14 +3824,14 @@ var Header = /*#__PURE__*/function () {
   _createClass(Header, [{
     key: "template",
     get: function get() {
-      return "<header class=\"header container-full\">\n              <nav class=\"header__content container-full__inner\">\n                <!--logo-->\n                <!--menu-->\n                <a href=\"./#form\" class=\"header__cta cta\">\n                  <div class=\"cta__btn\">CALL ME BACK</div>\n                </a>\n                <div class=\"burger-icon\">\n                  <img src=\"./images/icons/burger.svg\" alt=\"\">\n                </div>\n              </nav>\n              <!--menu-mobile-->\n            </header>";
+      return "<header class=\"header container-full\">\n              <div class=\"header__content container-full__inner\">\n                <!--logo-->\n                <nav class=\"menu\">\n                  <!--menu-->\n                </nav>\n                <a href=\"./#form\" class=\"header__cta cta\">\n                  <div class=\"cta__btn\">CALL ME BACK</div>\n                </a>\n                <div class=\"burger-icon\">\n                  <img src=\"./images/icons/burger.svg\" alt=\"\">\n                </div>\n              </div>\n              <!--menu-mobile-->\n            </header>";
     }
   }, {
     key: "render",
     value: function render() {
       (0, _utils.replace)(componentName, this.parentEl, this.template);
       new _logo["default"]('.header').render();
-      new _menu["default"]('.header', 'menu', 'menu__item').render();
+      new _menu["default"]('.header', 'menu__list', 'menu__item').render();
       var menuMobile = new _menuMobile["default"]('.header');
       menuMobile.render();
       setTimeout(function () {
@@ -3954,7 +3954,7 @@ var MenuMobile = /*#__PURE__*/function () {
   }, {
     key: "template",
     get: function get() {
-      return "<div class=\"menu-mobile hidden\">\n                <div class=\"menu-mobile__content\">\n                  <div class=\"menu-mobile__close-wrapper\">\n                    <img src=\"./images/icons/close.svg\" alt=\"\" class=\"menu-mobile__close\">\n                  </div>\n                  <a href=\"./#form\" class=\"menu-mobile__cta cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                  <!--menu-->\n                  <nav class=\"menu-mobile__socials socials\">\n                    <!--socials-->\n                  </nav>\n                </div>\n            </div>";
+      return "<div class=\"menu-mobile hidden\">\n                <div class=\"menu-mobile__content\">\n                  <div class=\"menu-mobile__close-wrapper\">\n                    <img src=\"./images/icons/close.svg\" alt=\"\" class=\"menu-mobile__close\">\n                  </div>\n                  <a href=\"./#form\" class=\"menu-mobile__cta cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                  <nav>\n                    <!--menu-->\n                  </nav>\n                  <nav class=\"menu-mobile__socials socials\">\n                    <!--socials-->\n                  </nav>\n                </div>\n            </div>";
     }
   }, {
     key: "render",
