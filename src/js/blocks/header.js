@@ -1,6 +1,6 @@
 import { initListenersToSetUniversalPageTitle, replace } from '../utils';
 import Logo from '../components/logo';
-import MenuMobile from '../components/menu-mobile';
+import Overlay from '../components/overlay';
 import Menu from '../components/menu';
 
 const componentName = 'header';
@@ -23,14 +23,14 @@ export default class Header {
                   <img src="./images/icons/burger.svg" alt="">
                 </div>
               </div>
-              <!--menu-mobile-->
+              <!--overlay-->
             </header>`;
   }
   render() {
     replace(componentName, this.parentEl, this.template);
     new Logo('.header').render();
     new Menu('.header', 'menu__list', 'menu__item').render();
-    const menuMobile = new MenuMobile('.header');
+    const menuMobile = new Overlay('.header');
     menuMobile.render();
 
     setTimeout(() => {

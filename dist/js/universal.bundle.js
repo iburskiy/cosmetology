@@ -48,7 +48,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _utils = require("../utils");
 var _logo = _interopRequireDefault(require("../components/logo"));
-var _menuMobile = _interopRequireDefault(require("../components/menu-mobile"));
+var _overlay = _interopRequireDefault(require("../components/overlay"));
 var _menu = _interopRequireDefault(require("../components/menu"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -66,7 +66,7 @@ var Header = /*#__PURE__*/function () {
   _createClass(Header, [{
     key: "template",
     get: function get() {
-      return "<header class=\"header container-full\">\n              <div class=\"header__content container-full__inner\">\n                <!--logo-->\n                <nav class=\"menu\">\n                  <!--menu-->\n                </nav>\n                <a href=\"./#form\" class=\"header__cta cta\">\n                  <div class=\"cta__btn\">CALL ME BACK</div>\n                </a>\n                <div class=\"burger-icon\">\n                  <img src=\"./images/icons/burger.svg\" alt=\"\">\n                </div>\n              </div>\n              <!--menu-mobile-->\n            </header>";
+      return "<header class=\"header container-full\">\n              <div class=\"header__content container-full__inner\">\n                <!--logo-->\n                <nav class=\"menu\">\n                  <!--menu-->\n                </nav>\n                <a href=\"./#form\" class=\"header__cta cta\">\n                  <div class=\"cta__btn\">CALL ME BACK</div>\n                </a>\n                <div class=\"burger-icon\">\n                  <img src=\"./images/icons/burger.svg\" alt=\"\">\n                </div>\n              </div>\n              <!--overlay-->\n            </header>";
     }
   }, {
     key: "render",
@@ -74,7 +74,7 @@ var Header = /*#__PURE__*/function () {
       (0, _utils.replace)(componentName, this.parentEl, this.template);
       new _logo["default"]('.header').render();
       new _menu["default"]('.header', 'menu__list', 'menu__item').render();
-      var menuMobile = new _menuMobile["default"]('.header');
+      var menuMobile = new _overlay["default"]('.header');
       menuMobile.render();
       setTimeout(function () {
         (0, _utils.initListenersToSetUniversalPageTitle)();
@@ -86,7 +86,7 @@ var Header = /*#__PURE__*/function () {
 }();
 exports["default"] = Header;
 
-},{"../components/logo":3,"../components/menu":5,"../components/menu-mobile":4,"../utils":9}],3:[function(require,module,exports){
+},{"../components/logo":3,"../components/menu":4,"../components/overlay":5,"../utils":9}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -129,68 +129,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _utils = require("../utils");
-var _socials = _interopRequireDefault(require("./socials"));
-var _menu = _interopRequireDefault(require("./menu"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-var componentName = 'menu-mobile';
-var MenuMobile = /*#__PURE__*/function () {
-  function MenuMobile(parentEl) {
-    _classCallCheck(this, MenuMobile);
-    this.parentEl = parentEl;
-  }
-  _createClass(MenuMobile, [{
-    key: "init",
-    value: function init() {
-      var _this = this;
-      var $burgerIcon = document.querySelector('.burger-icon');
-      $burgerIcon.addEventListener('click', function () {
-        _this.toggleMobileMenu();
-      });
-    }
-  }, {
-    key: "template",
-    get: function get() {
-      return "<div class=\"menu-mobile hidden\">\n                <div class=\"menu-mobile__content\">\n                  <div class=\"menu-mobile__close-wrapper\">\n                    <img src=\"./images/icons/close.svg\" alt=\"\" class=\"menu-mobile__close\">\n                  </div>\n                  <a href=\"./#form\" class=\"menu-mobile__cta cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                  <nav>\n                    <!--menu-->\n                  </nav>\n                  <nav class=\"menu-mobile__socials socials\">\n                    <!--socials-->\n                  </nav>\n                </div>\n            </div>";
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-      (0, _utils.replace)(componentName, this.parentEl, this.template);
-      new _menu["default"]('.menu-mobile', 'menu-mobile__list', 'menu-mobile__item').render();
-      new _socials["default"]('.menu-mobile').render();
-      setTimeout(function () {
-        var $closeIcon = document.querySelector('.menu-mobile__close-wrapper');
-        $closeIcon.addEventListener('click', function () {
-          _this2.toggleMobileMenu();
-        });
-      }, 0);
-    }
-  }, {
-    key: "toggleMobileMenu",
-    value: function toggleMobileMenu() {
-      document.querySelector('.menu-mobile').classList.toggle('hidden');
-      document.body.classList.toggle('no-overflow-js');
-    }
-  }]);
-  return MenuMobile;
-}();
-exports["default"] = MenuMobile;
-
-},{"../utils":9,"./menu":5,"./socials":6}],5:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-var _utils = require("../utils");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -225,7 +163,69 @@ var Menu = /*#__PURE__*/function () {
 }();
 exports["default"] = Menu;
 
-},{"../utils":9}],6:[function(require,module,exports){
+},{"../utils":9}],5:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _utils = require("../utils");
+var _socials = _interopRequireDefault(require("./socials"));
+var _menu = _interopRequireDefault(require("./menu"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var componentName = 'overlay';
+var Overlay = /*#__PURE__*/function () {
+  function Overlay(parentEl) {
+    _classCallCheck(this, Overlay);
+    this.parentEl = parentEl;
+  }
+  _createClass(Overlay, [{
+    key: "init",
+    value: function init() {
+      var _this = this;
+      var $burgerIcon = document.querySelector('.burger-icon');
+      $burgerIcon.addEventListener('click', function () {
+        _this.toggleMobileMenu();
+      });
+    }
+  }, {
+    key: "template",
+    get: function get() {
+      return "<div class=\"overlay hidden\">\n                <div class=\"overlay__content\">\n                  <div class=\"overlay__close-wrapper\">\n                    <img src=\"./images/icons/close.svg\" alt=\"\" class=\"overlay__close\">\n                  </div>\n                  <a href=\"./#form\" class=\"overlay__cta cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                  <nav>\n                    <!--menu-->\n                  </nav>\n                  <nav class=\"overlay__socials socials\">\n                    <!--socials-->\n                  </nav>\n                </div>\n            </div>";
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+      (0, _utils.replace)(componentName, this.parentEl, this.template);
+      new _menu["default"]('.overlay', 'overlay__list', 'overlay__item').render();
+      new _socials["default"]('.overlay').render();
+      setTimeout(function () {
+        var $closeIcon = document.querySelector('.overlay__close-wrapper');
+        $closeIcon.addEventListener('click', function () {
+          _this2.toggleMobileMenu();
+        });
+      }, 0);
+    }
+  }, {
+    key: "toggleMobileMenu",
+    value: function toggleMobileMenu() {
+      document.querySelector('.overlay').classList.toggle('hidden');
+      document.body.classList.toggle('no-overflow-js');
+    }
+  }]);
+  return Overlay;
+}();
+exports["default"] = Overlay;
+
+},{"../utils":9,"./menu":4,"./socials":6}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
