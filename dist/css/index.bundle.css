@@ -490,7 +490,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #32BA7C;
+  color: #258355;
 }
 
 .logo {
@@ -563,7 +563,7 @@ html {
   color: inherit;
 }
 .cta__btn {
-  border: 2px solid #32BA7C;
+  border: 2px solid #258355;
   padding: 20px 30px;
   font-family: "Merriweather", serif;
   font-style: normal;
@@ -703,7 +703,7 @@ html {
 }
 .top__btn {
   border: none;
-  background-color: #32BA7C;
+  background-color: #258355;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -784,7 +784,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #32BA7C;
+  color: #258355;
 }
 
 .face {
@@ -873,7 +873,7 @@ html {
   .grid__item:hover {
     margin: -5px;
     cursor: pointer;
-    border: 5px solid #32BA7C;
+    border: 5px solid #258355;
   }
 }
 .grid__item:nth-child(1) {
@@ -1077,7 +1077,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #32BA7C;
+  color: #258355;
 }
 
 .form {
@@ -1110,7 +1110,7 @@ html {
 }
 .form__btn {
   border: none;
-  background-color: #32BA7C;
+  background-color: #258355;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1490,7 +1490,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #32BA7C;
+  color: #258355;
 }
 
 .contacts {
@@ -1550,7 +1550,7 @@ html {
 }
 .contacts__btn {
   border: none;
-  background-color: #32BA7C;
+  background-color: #258355;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1640,7 +1640,7 @@ html {
   color: inherit;
 }
 .cta__btn {
-  border: 2px solid #32BA7C;
+  border: 2px solid #258355;
   padding: 20px 30px;
   font-family: "Merriweather", serif;
   font-style: normal;
@@ -1665,7 +1665,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #32BA7C;
+  color: #258355;
 }
 
 .footer {

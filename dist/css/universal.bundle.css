@@ -110,7 +110,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #32BA7C;
+  color: #258355;
 }
 
 .logo {
@@ -183,7 +183,7 @@ html {
   color: inherit;
 }
 .cta__btn {
-  border: 2px solid #32BA7C;
+  border: 2px solid #258355;
   padding: 20px 30px;
   font-family: "Merriweather", serif;
   font-style: normal;
@@ -363,7 +363,7 @@ html {
   color: inherit;
 }
 .cta__btn {
-  border: 2px solid #32BA7C;
+  border: 2px solid #258355;
   padding: 20px 30px;
   font-family: "Merriweather", serif;
   font-style: normal;
@@ -388,7 +388,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #32BA7C;
+  color: #258355;
 }
 
 .footer {
