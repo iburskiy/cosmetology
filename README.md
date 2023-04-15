@@ -55,3 +55,7 @@ In this way we have Logo, Header and Footer in one place without any repeat.
 If you press any link in Header or Footer you are redirected to universal.html page with dynamically generated text.
 Link click runs JS which reads value from link's `data-text` attribute and sets it to `sessionStorage` variable.
 When `universal.html` page is open, another JS reads that variable and generates dynamic text depending on the previously clicked link.
+
+## SEO
+Tested on https://www.seoreviewtools.com/google-seo-checker/?status=1
+Added `robots.txt` and generated `sitemap.xml`. To make it indexable I created the project https://iburskiy.github.io/ and added `robots.txt` there.
