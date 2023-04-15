@@ -4010,6 +4010,11 @@ var Overlay = /*#__PURE__*/function () {
         $closeIcon.addEventListener('click', function () {
           _this2.toggleMobileMenu();
         });
+        document.querySelectorAll('.overlay a').forEach(function ($link) {
+          $link.addEventListener('click', function () {
+            _this2.toggleMobileMenu();
+          });
+        });
       }, 0);
     }
   }, {

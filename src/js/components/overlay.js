@@ -43,6 +43,12 @@ export default class Overlay {
       $closeIcon.addEventListener('click', () => {
         this.toggleMobileMenu();
       });
+
+      document.querySelectorAll('.overlay a').forEach(($link) => {
+        $link.addEventListener('click', () => {
+          this.toggleMobileMenu();
+        });
+      })
     }, 0)
   }
 
