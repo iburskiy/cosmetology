@@ -1455,6 +1455,7 @@ html {
   align-items: center;
 }
 .feedback__icon {
+  opacity: 0.6;
   margin-left: 30px;
   display: flex;
   justify-content: center;
