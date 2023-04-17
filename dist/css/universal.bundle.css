@@ -110,7 +110,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #258355;
+  color: #258359;
 }
 
 .logo {
@@ -183,7 +183,7 @@ html {
   color: inherit;
 }
 .cta__btn {
-  border: 2px solid #258355;
+  border: 2px solid #258359;
   padding: 20px 30px;
   font-family: "Merriweather", serif;
   font-style: normal;
@@ -193,8 +193,8 @@ html {
   color: #373737;
 }
 .cta__btn:hover {
-  border-color: #058D4F;
-  color: #058D4F;
+  border-color: black;
+  color: #258359;
 }
 @media (max-width: 1279px) {
   .cta__btn {
@@ -363,7 +363,7 @@ html {
   color: inherit;
 }
 .cta__btn {
-  border: 2px solid #258355;
+  border: 2px solid #258359;
   padding: 20px 30px;
   font-family: "Merriweather", serif;
   font-style: normal;
@@ -373,8 +373,8 @@ html {
   color: #373737;
 }
 .cta__btn:hover {
-  border-color: #058D4F;
-  color: #058D4F;
+  border-color: black;
+  color: #258359;
 }
 @media (max-width: 1279px) {
   .cta__btn {
@@ -388,7 +388,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #258355;
+  color: #258359;
 }
 
 .footer {

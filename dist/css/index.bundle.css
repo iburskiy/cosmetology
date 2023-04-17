@@ -490,7 +490,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #258355;
+  color: #258359;
 }
 
 .logo {
@@ -563,7 +563,7 @@ html {
   color: inherit;
 }
 .cta__btn {
-  border: 2px solid #258355;
+  border: 2px solid #258359;
   padding: 20px 30px;
   font-family: "Merriweather", serif;
   font-style: normal;
@@ -573,8 +573,8 @@ html {
   color: #373737;
 }
 .cta__btn:hover {
-  border-color: #058D4F;
-  color: #058D4F;
+  border-color: black;
+  color: #258359;
 }
 @media (max-width: 1279px) {
   .cta__btn {
@@ -703,7 +703,7 @@ html {
 }
 .top__btn {
   border: none;
-  background-color: #258355;
+  background-color: #258359;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -719,7 +719,8 @@ html {
 }
 .top__btn:hover {
   cursor: pointer;
-  background-color: #058D4F;
+  color: #258359;
+  background-color: white;
 }
 .top__list {
   padding-top: 75px;
@@ -784,7 +785,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #258355;
+  color: #258359;
 }
 
 .face {
@@ -873,7 +874,7 @@ html {
   .grid__item:hover {
     margin: -5px;
     cursor: pointer;
-    border: 5px solid #258355;
+    border: 5px solid #258359;
   }
 }
 .grid__item:nth-child(1) {
@@ -1077,7 +1078,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #258355;
+  color: #258359;
 }
 
 .form {
@@ -1110,7 +1111,7 @@ html {
 }
 .form__btn {
   border: none;
-  background-color: #258355;
+  background-color: #258359;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1127,7 +1128,8 @@ html {
 }
 .form__btn:hover {
   cursor: pointer;
-  background-color: #058D4F;
+  color: #258359;
+  background-color: white;
 }
 .form__chkbox {
   margin: 20px 57px 0;
@@ -1491,7 +1493,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #258355;
+  color: #258359;
 }
 
 .contacts {
@@ -1551,7 +1553,7 @@ html {
 }
 .contacts__btn {
   border: none;
-  background-color: #258355;
+  background-color: #258359;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1567,7 +1569,8 @@ html {
 }
 .contacts__btn:hover {
   cursor: pointer;
-  background-color: #058D4F;
+  color: #258359;
+  background-color: white;
 }
 @media (max-width: 767px) {
   .contacts__btn {
@@ -1641,7 +1644,7 @@ html {
   color: inherit;
 }
 .cta__btn {
-  border: 2px solid #258355;
+  border: 2px solid #258359;
   padding: 20px 30px;
   font-family: "Merriweather", serif;
   font-style: normal;
@@ -1651,8 +1654,8 @@ html {
   color: #373737;
 }
 .cta__btn:hover {
-  border-color: #058D4F;
-  color: #058D4F;
+  border-color: black;
+  color: #258359;
 }
 @media (max-width: 1279px) {
   .cta__btn {
@@ -1666,7 +1669,7 @@ html {
   color: inherit;
 }
 .link:hover {
-  color: #258355;
+  color: #258359;
 }
 
 .footer {
