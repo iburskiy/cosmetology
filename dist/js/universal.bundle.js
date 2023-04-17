@@ -78,7 +78,6 @@ var Header = /*#__PURE__*/function () {
       var menuMobile = new _overlay["default"]('.header');
       menuMobile.render();
       setTimeout(function () {
-        (0, _utils.initListenersToSetUniversalPageTitle)();
         menuMobile.init();
       }, 0);
     }

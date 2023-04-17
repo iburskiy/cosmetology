@@ -1,4 +1,4 @@
-import { initListenersToSetUniversalPageTitle, replace } from '../utils';
+import {replace} from '../utils';
 import Logo from '../components/logo';
 import Overlay from '../components/overlay';
 import {Menu} from '../components/menu';
@@ -34,7 +34,6 @@ export default class Header {
     menuMobile.render();
 
     setTimeout(() => {
-      initListenersToSetUniversalPageTitle();
       menuMobile.init();
     }, 0);
   }

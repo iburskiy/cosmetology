@@ -19,7 +19,7 @@ export function initListenersToSetUniversalPageTitle() {
   document.querySelectorAll(DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE).forEach((link) => {
     link.addEventListener('click', () => {
       const text = link.getAttribute('data-text');
-      sessionStorage.setItem(UNIVERSAL_PAGE_TITLE_KEY, text)
+      sessionStorage.setItem(UNIVERSAL_PAGE_TITLE_KEY, text);
     })
   });
 }
