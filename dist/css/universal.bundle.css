@@ -228,16 +228,25 @@ html {
   align-items: center;
   margin-bottom: 50px;
 }
+.overlay__header {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #D8C4CF;
+}
 .overlay__close-wrapper {
-  position: absolute;
-  top: 24px;
-  right: 24px;
+  margin-right: 17px;
 }
 .overlay__close-wrapper:hover {
   cursor: pointer;
 }
+.overlay__close {
+  display: block;
+}
 .overlay__cta {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .overlay__list {
   margin: 0;

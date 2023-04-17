@@ -3969,8 +3969,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _utils = require("../utils");
-var _socials = _interopRequireDefault(require("./socials"));
+var _logo = _interopRequireDefault(require("../components/logo"));
 var _menu = require("./menu");
+var _socials = _interopRequireDefault(require("./socials"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3996,13 +3997,14 @@ var Overlay = /*#__PURE__*/function () {
   }, {
     key: "template",
     get: function get() {
-      return "<div class=\"overlay hidden\">\n                <div class=\"overlay__content\">\n                  <div class=\"overlay__close-wrapper\">\n                    <img src=\"./images/icons/close.svg\" alt=\"\" class=\"overlay__close\">\n                  </div>\n                  <a href=\"./#form\" class=\"overlay__cta cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                  <nav>\n                    <!--menu-->\n                  </nav>\n                  <nav class=\"overlay__socials socials\">\n                    <!--socials-->\n                  </nav>\n                </div>\n            </div>";
+      return "<div class=\"overlay hidden\">\n                <div class=\"overlay__content\">\n                  <div class=\"overlay__header container-full__inner\">\n                    <!--logo-->\n                    <div class=\"overlay__close-wrapper\">\n                      <img src=\"./images/icons/close.svg\" alt=\"\" class=\"overlay__close\">\n                    </div>\n                  </div>\n                  <a href=\"./#form\" class=\"overlay__cta cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                  <nav>\n                    <!--menu-->\n                  </nav>\n                  <nav class=\"overlay__socials socials\">\n                    <!--socials-->\n                  </nav>\n                </div>\n            </div>";
     }
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
       (0, _utils.replace)(componentName, this.parentEl, this.template);
+      new _logo["default"]('.overlay').render();
       new _menu.Menu('.overlay', 'overlay__list', 'overlay__item').render();
       new _socials["default"]('.overlay').render();
       setTimeout(function () {
@@ -4028,7 +4030,7 @@ var Overlay = /*#__PURE__*/function () {
 }();
 exports["default"] = Overlay;
 
-},{"../utils":12,"./menu":6,"./socials":8}],8:[function(require,module,exports){
+},{"../components/logo":5,"../utils":12,"./menu":6,"./socials":8}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

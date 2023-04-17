@@ -1,6 +1,7 @@
 import {replace} from '../utils';
-import Socials from './socials';
+import Logo from '../components/logo';
 import {Menu} from './menu';
+import Socials from './socials';
 
 const componentName = 'overlay';
 
@@ -18,8 +19,11 @@ export default class Overlay {
   get template() {
     return `<div class="overlay hidden">
                 <div class="overlay__content">
-                  <div class="overlay__close-wrapper">
-                    <img src="./images/icons/close.svg" alt="" class="overlay__close">
+                  <div class="overlay__header container-full__inner">
+                    <!--logo-->
+                    <div class="overlay__close-wrapper">
+                      <img src="./images/icons/close.svg" alt="" class="overlay__close">
+                    </div>
                   </div>
                   <a href="./#form" class="overlay__cta cta">
                     <div class="cta__btn">CALL ME BACK</div>
@@ -35,6 +39,7 @@ export default class Overlay {
   }
   render() {
     replace(componentName, this.parentEl, this.template);
+    new Logo('.overlay').render();
     new Menu('.overlay', 'overlay__list', 'overlay__item').render();
     new Socials('.overlay').render();
 
