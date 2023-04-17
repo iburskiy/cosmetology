@@ -6,8 +6,8 @@ import Socials from './socials';
 const componentName = 'overlay';
 
 export default class Overlay {
-  constructor(parentEl) {
-    this.parentEl = parentEl;
+  constructor(parentClass) {
+    this.parentElSelector = `.${parentClass}`;
   }
   init() {
     const $burgerIcon = document.querySelector('.burger-icon');
@@ -39,10 +39,10 @@ export default class Overlay {
             </div>`
   }
   render() {
-    replace(componentName, this.parentEl, this.template);
-    new Logo('.overlay').render();
-    new Menu('.overlay', 'overlay__list', 'overlay__item').render();
-    new Socials('.overlay').render();
+    replace(componentName, this.parentElSelector, this.template);
+    new Logo(componentName).render();
+    new Menu(componentName, 'overlay__list', 'overlay__item').render();
+    new Socials(componentName).render();
 
     setTimeout(() => {
       const $closeIcon = document.querySelector('.overlay__close-wrapper');

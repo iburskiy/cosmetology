@@ -5,8 +5,8 @@ import {generateMenuItem} from '../components/menu';
 const componentName = 'footer';
 
 export default class Footer {
-  constructor() {
-    this.parentEl = '.body';
+  constructor(parentClass) {
+    this.parentElSelector = `.${parentClass}`;
   }
   get template() {
     return `<footer class="footer container-full">
@@ -56,8 +56,8 @@ export default class Footer {
             </footer>`;
   }
   render() {
-    replace(componentName, this.parentEl, this.template);
-    new Logo('.footer').render();
+    replace(componentName, this.parentElSelector, this.template);
+    new Logo(componentName).render();
 
     setTimeout(() => {
       initListenersToSetUniversalPageTitle();

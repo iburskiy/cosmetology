@@ -17,9 +17,9 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var componentName = 'footer';
 var Footer = /*#__PURE__*/function () {
-  function Footer() {
+  function Footer(parentClass) {
     _classCallCheck(this, Footer);
-    this.parentEl = '.body';
+    this.parentElSelector = ".".concat(parentClass);
   }
   _createClass(Footer, [{
     key: "template",
@@ -29,8 +29,8 @@ var Footer = /*#__PURE__*/function () {
   }, {
     key: "render",
     value: function render() {
-      (0, _utils.replace)(componentName, this.parentEl, this.template);
-      new _logo["default"]('.footer').render();
+      (0, _utils.replace)(componentName, this.parentElSelector, this.template);
+      new _logo["default"](componentName).render();
       setTimeout(function () {
         (0, _utils.initListenersToSetUniversalPageTitle)();
       }, 0);
@@ -60,9 +60,9 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var componentName = 'header';
 var Header = /*#__PURE__*/function () {
-  function Header() {
+  function Header(parentClass) {
     _classCallCheck(this, Header);
-    this.parentEl = '.body';
+    this.parentElSelector = ".".concat(parentClass);
   }
   _createClass(Header, [{
     key: "template",
@@ -72,10 +72,10 @@ var Header = /*#__PURE__*/function () {
   }, {
     key: "render",
     value: function render() {
-      (0, _utils.replace)(componentName, this.parentEl, this.template);
-      new _logo["default"]('.header').render();
-      new _menu.Menu('.header', 'menu__list', 'menu__item').render();
-      var overlay = new _overlay["default"]('.header');
+      (0, _utils.replace)(componentName, this.parentElSelector, this.template);
+      new _logo["default"](componentName).render();
+      new _menu.Menu(componentName, 'menu__list', 'menu__item').render();
+      var overlay = new _overlay["default"](componentName);
       overlay.render();
       setTimeout(function () {
         overlay.init();
@@ -102,9 +102,9 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var componentName = 'logo';
 var Logo = /*#__PURE__*/function () {
-  function Logo(parentEl) {
+  function Logo(parentClass) {
     _classCallCheck(this, Logo);
-    this.parentEl = parentEl;
+    this.parentElSelector = ".".concat(parentClass);
   }
   _createClass(Logo, [{
     key: "template",
@@ -114,7 +114,7 @@ var Logo = /*#__PURE__*/function () {
   }, {
     key: "render",
     value: function render() {
-      (0, _utils.replace)(componentName, this.parentEl, this.template);
+      (0, _utils.replace)(componentName, this.parentElSelector, this.template);
     }
   }]);
   return Logo;
@@ -138,9 +138,9 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var componentName = 'menu';
 var Menu = /*#__PURE__*/function () {
-  function Menu(parentEl, ulClass, liClass) {
+  function Menu(parentClass, ulClass, liClass) {
     _classCallCheck(this, Menu);
-    this.parentEl = parentEl;
+    this.parentElSelector = ".".concat(parentClass);
     this.ulClass = ulClass;
     this.liClass = liClass;
   }
@@ -152,7 +152,7 @@ var Menu = /*#__PURE__*/function () {
   }, {
     key: "render",
     value: function render() {
-      (0, _utils.replace)(componentName, this.parentEl, this.template);
+      (0, _utils.replace)(componentName, this.parentElSelector, this.template);
     }
   }]);
   return Menu;
@@ -182,9 +182,9 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var componentName = 'overlay';
 var Overlay = /*#__PURE__*/function () {
-  function Overlay(parentEl) {
+  function Overlay(parentClass) {
     _classCallCheck(this, Overlay);
-    this.parentEl = parentEl;
+    this.parentElSelector = ".".concat(parentClass);
   }
   _createClass(Overlay, [{
     key: "init",
@@ -205,10 +205,10 @@ var Overlay = /*#__PURE__*/function () {
     key: "render",
     value: function render() {
       var _this2 = this;
-      (0, _utils.replace)(componentName, this.parentEl, this.template);
-      new _logo["default"]('.overlay').render();
-      new _menu.Menu('.overlay', 'overlay__list', 'overlay__item').render();
-      new _socials["default"]('.overlay').render();
+      (0, _utils.replace)(componentName, this.parentElSelector, this.template);
+      new _logo["default"](componentName).render();
+      new _menu.Menu(componentName, 'overlay__list', 'overlay__item').render();
+      new _socials["default"](componentName).render();
       setTimeout(function () {
         var $closeIcon = document.querySelector('.overlay__close-wrapper');
         $closeIcon.addEventListener('click', function () {
@@ -248,9 +248,9 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var componentName = 'socials';
 var Socials = /*#__PURE__*/function () {
-  function Socials(parentEl) {
+  function Socials(parentClass) {
     _classCallCheck(this, Socials);
-    this.parentEl = parentEl;
+    this.parentElSelector = ".".concat(parentClass);
   }
   _createClass(Socials, [{
     key: "template",
@@ -260,7 +260,7 @@ var Socials = /*#__PURE__*/function () {
   }, {
     key: "render",
     value: function render() {
-      (0, _utils.replace)(componentName, this.parentEl, this.template);
+      (0, _utils.replace)(componentName, this.parentElSelector, this.template);
     }
   }]);
   return Socials;
@@ -287,8 +287,8 @@ var _footer = _interopRequireDefault(require("../blocks/footer"));
 var _constants = require("../constants");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 document.addEventListener('DOMContentLoaded', function () {
-  new _header["default"]().render();
-  new _footer["default"]().render();
+  new _header["default"]('body').render();
+  new _footer["default"]('body').render();
   setPageTitle();
 });
 function setPageTitle() {

@@ -2,8 +2,11 @@ import Splide from '@splidejs/splide';
 import { initListenersToSetUniversalPageTitle } from '../utils';
 
 export default class TeamSlider {
+  constructor(parentClass) {
+    this.parentElSelector = `.${parentClass}`;
+  }
   render() {
-    const teamSlider = new Splide( '.team__slider', {
+    const teamSlider = new Splide( this.parentElSelector, {
       type   : 'loop',
       perPage: 3,
       gap: '20px',

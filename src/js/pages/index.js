@@ -5,11 +5,11 @@ import TeamSlider from '../components/team-slider';
 import Socials from '../components/socials';
 
 document.addEventListener( 'DOMContentLoaded', function() {
-  new Header().render();
-  new Footer().render();
+  new Header('body').render();
+  new Footer('body').render();
 
-  new Socials('.top').render();
+  new Socials('top').render();
 
-  new TeamSlider().render();
-  new FeedbacksSlider().render();
+  new TeamSlider('team__slider').render();
+  new FeedbacksSlider('feedbacks__slider').render();
 } );

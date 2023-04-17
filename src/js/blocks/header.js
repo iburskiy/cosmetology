@@ -6,8 +6,8 @@ import {Menu} from '../components/menu';
 const componentName = 'header';
 
 export default class Header {
-  constructor() {
-    this.parentEl = '.body';
+  constructor(parentClass) {
+    this.parentElSelector = `.${parentClass}`;
   }
   get template() {
     return `<header class="header container-full">
@@ -27,10 +27,10 @@ export default class Header {
             </header>`;
   }
   render() {
-    replace(componentName, this.parentEl, this.template);
-    new Logo('.header').render();
-    new Menu('.header', 'menu__list', 'menu__item').render();
-    const overlay = new Overlay('.header');
+    replace(componentName, this.parentElSelector, this.template);
+    new Logo(componentName).render();
+    new Menu(componentName, 'menu__list', 'menu__item').render();
+    const overlay = new Overlay(componentName);
     overlay.render();
 
     setTimeout(() => {

@@ -3,8 +3,8 @@ import { replace } from '../utils';
 const componentName = 'socials';
 
 export default class Socials {
-  constructor(parentEl) {
-    this.parentEl = parentEl;
+  constructor(parentClass) {
+    this.parentElSelector = `.${parentClass}`;
   }
   get template() {
     return `<a class="socials__link link" href="#">
@@ -18,6 +18,6 @@ export default class Socials {
             </a>`;
   }
   render() {
-    replace(componentName, this.parentEl, this.template);
+    replace(componentName, this.parentElSelector, this.template);
   }
 }

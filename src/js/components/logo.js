@@ -3,8 +3,8 @@ import {replace} from '../utils';
 const componentName = 'logo';
 
 export default class Logo {
-  constructor(parentEl) {
-    this.parentEl = parentEl;
+  constructor(parentClass) {
+    this.parentElSelector = `.${parentClass}`;
   }
   get template() {
     return `<a href="./" class="logo">
@@ -13,6 +13,6 @@ export default class Logo {
             </a>`;
   }
   render() {
-    replace(componentName, this.parentEl, this.template);
+    replace(componentName, this.parentElSelector, this.template);
   }
 }

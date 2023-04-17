@@ -3,8 +3,8 @@ import { replace } from '../utils';
 const componentName = 'menu';
 
 export class Menu {
-  constructor(parentEl, ulClass, liClass) {
-    this.parentEl = parentEl;
+  constructor(parentClass, ulClass, liClass) {
+    this.parentElSelector = `.${parentClass}`;
     this.ulClass = ulClass;
     this.liClass = liClass;
   }
@@ -18,7 +18,7 @@ export class Menu {
             </ul>`
   }
   render() {
-    replace(componentName, this.parentEl, this.template);
+    replace(componentName, this.parentElSelector, this.template);
   }
 }
 

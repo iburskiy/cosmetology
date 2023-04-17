@@ -3,8 +3,8 @@ import Footer from '../blocks/footer';
 import {UNIVERSAL_PAGE_TITLE_KEY} from '../constants'
 
 document.addEventListener( 'DOMContentLoaded', function() {
-  new Header().render();
-  new Footer().render();
+  new Header('body').render();
+  new Footer('body').render();
 
   setPageTitle();
 } );
