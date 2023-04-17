@@ -1,7 +1,10 @@
 .link {
   text-decoration: none;
   color: inherit;
-  &:hover {
-    color: $green1;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: $green1;
+    }
   }
 }

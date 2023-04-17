@@ -9,9 +9,11 @@
     padding: 20px 30px;
     @include fontMerriweather(700, 18px);
 
-    &:hover {
-      border-color: black;
-      color: $green1;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        border-color: black;
+        color: $green1;
+      }
     }
   }
 

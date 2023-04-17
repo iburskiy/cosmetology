@@ -11,9 +11,11 @@
   @include fontMerriweather(700, $fontSize);
   color: white;
 
-  &:hover {
-    cursor: pointer;
-    color: $green1;
-    background-color: white;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      color: $green1;
+      background-color: white;
+    }
   }
 }

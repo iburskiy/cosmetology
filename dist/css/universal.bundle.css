@@ -91,8 +91,10 @@ html {
   overflow-y: hidden;
 }
 
-.burger-icon:hover {
-  cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  .burger-icon:hover {
+    cursor: pointer;
+  }
 }
 @media (min-width: 1024px) {
   .burger-icon {
@@ -109,8 +111,10 @@ html {
   text-decoration: none;
   color: inherit;
 }
-.link:hover {
-  color: #258359;
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    color: #258359;
+  }
 }
 
 .logo {
@@ -192,9 +196,11 @@ html {
   line-height: 150%;
   color: #373737;
 }
-.cta__btn:hover {
-  border-color: black;
-  color: #258359;
+@media (hover: hover) and (pointer: fine) {
+  .cta__btn:hover {
+    border-color: black;
+    color: #258359;
+  }
 }
 @media (max-width: 1279px) {
   .cta__btn {
@@ -207,8 +213,10 @@ html {
   display: flex;
   opacity: 0.6;
 }
-.socials__link:hover {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .socials__link:hover {
+    opacity: 1;
+  }
 }
 
 .overlay {
@@ -236,11 +244,10 @@ html {
   align-items: center;
   border-bottom: 1px solid #D8C4CF;
 }
-.overlay__close-wrapper {
-  margin-right: 17px;
-}
-.overlay__close-wrapper:hover {
-  cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  .overlay__close-wrapper:hover {
+    cursor: pointer;
+  }
 }
 .overlay__close {
   display: block;
@@ -381,9 +388,11 @@ html {
   line-height: 150%;
   color: #373737;
 }
-.cta__btn:hover {
-  border-color: black;
-  color: #258359;
+@media (hover: hover) and (pointer: fine) {
+  .cta__btn:hover {
+    border-color: black;
+    color: #258359;
+  }
 }
 @media (max-width: 1279px) {
   .cta__btn {
@@ -396,8 +405,10 @@ html {
   text-decoration: none;
   color: inherit;
 }
-.link:hover {
-  color: #258359;
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    color: #258359;
+  }
 }
 
 .footer {
