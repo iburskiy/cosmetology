@@ -75,10 +75,10 @@ var Header = /*#__PURE__*/function () {
       (0, _utils.replace)(componentName, this.parentEl, this.template);
       new _logo["default"]('.header').render();
       new _menu.Menu('.header', 'menu__list', 'menu__item').render();
-      var menuMobile = new _overlay["default"]('.header');
-      menuMobile.render();
+      var overlay = new _overlay["default"]('.header');
+      overlay.render();
       setTimeout(function () {
-        menuMobile.init();
+        overlay.init();
       }, 0);
     }
   }]);

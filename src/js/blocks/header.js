@@ -30,11 +30,11 @@ export default class Header {
     replace(componentName, this.parentEl, this.template);
     new Logo('.header').render();
     new Menu('.header', 'menu__list', 'menu__item').render();
-    const menuMobile = new Overlay('.header');
-    menuMobile.render();
+    const overlay = new Overlay('.header');
+    overlay.render();
 
     setTimeout(() => {
-      menuMobile.init();
+      overlay.init();
     }, 0);
   }
 }
