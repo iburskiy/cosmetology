@@ -12,6 +12,7 @@ export default class Overlay {
   init() {
     const $burgerIcon = document.querySelector('.burger-icon');
     $burgerIcon.addEventListener('click', () => {
+      scroll(0, 0);
       this.toggleMobileMenu();
     })
   }

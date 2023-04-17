@@ -193,6 +193,7 @@ var Overlay = /*#__PURE__*/function () {
       var _this = this;
       var $burgerIcon = document.querySelector('.burger-icon');
       $burgerIcon.addEventListener('click', function () {
+        scroll(0, 0);
         _this.toggleMobileMenu();
       });
     }
