@@ -1,7 +1,7 @@
 import { initListenersToSetUniversalPageTitle, replace } from '../utils';
 import Logo from '../components/logo';
 import Overlay from '../components/overlay';
-import Menu from '../components/menu';
+import {Menu} from '../components/menu';
 
 const componentName = 'header';
 

@@ -2,7 +2,8 @@
 
 The project has been published to Github Pages, namely to https://iburskiy.github.io/cosmetology.
 The purpose of the project was to practice with markup using BEM methodology in SCSS version and use Github Pages build process to deploy it on the web.
-It represents the design of Cosmetology Home Page and Universal Page (see point about this page below) for a demo how multiple page website may look like on Github Pages 
+It represents the design of Cosmetology Home Page and Universal Page (see point about this page below) for a demo 
+how multiple page website may look like on Github Pages.
 
 ## Build
 Run `npm run build` to build the project.
@@ -52,9 +53,9 @@ Logo is inner part of Header and Footer and its placeholder <!--logo--> is also 
 In this way we have Logo, Header and Footer in one place without any repeat.
 
 ## Universal page
-If you press any link in Header or Footer you are redirected to universal.html page with dynamically generated text.
+If to click on images in `Our Services` section or some link in Footer, you are redirected to `universal.html` page with dynamically generated text.
 Link click runs JS which reads value from link's `data-text` attribute and sets it to `sessionStorage` variable.
-When `universal.html` page is open, another JS reads that variable and generates dynamic text depending on the previously clicked link.
+When `universal.html` page is open, another JS code reads that variable from `sessionStorage` and generates dynamic text depending on the previously clicked link.
 
 ## SEO
 Tested on https://www.seoreviewtools.com/google-seo-checker/?status=1

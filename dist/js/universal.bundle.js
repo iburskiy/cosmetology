@@ -7,6 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _utils = require("../utils");
 var _logo = _interopRequireDefault(require("../components/logo"));
+var _menu = require("../components/menu");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23,7 +24,7 @@ var Footer = /*#__PURE__*/function () {
   _createClass(Footer, [{
     key: "template",
     get: function get() {
-      return "<footer class=\"footer container-full\">\n              <nav class=\"footer__content container-full__inner\">\n                <div class=\"footer__top\">\n                  <!--logo-->\n                  <a href=\"./#form\" class=\"cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                </div>\n                <div class=\"footer__menu\">\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Services\">Services</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Our Team\">Our team</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Advantage\">Advantage</a>\n                    </li>\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Feedbacks\">Feedbacks</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Contacts\">Contacts</a>\n                    </li>\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Privacy Policy\">Privacy Policy</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Personal data processing agreement\">Personal data processing agreement</a>\n                    </li>\n                  </ul>\n                  <div class=\"footer__menu-col footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"tel:+17186149511\">+1 718-614-9511</a>\n                  </div>\n                </div>\n                <div class=\"footer__hr\"></div>\n                <ul class=\"footer__bottom\">\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Franchising\">Franchising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Advertising\">Advertising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\"></li>\n                  <li class=\"footer__bottom-item footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"mailto:hello@beautymed.com\">hello@beautymed.com</a>\n                  </li>\n                </ul>\n              </nav>\n            </footer>";
+      return "<footer class=\"footer container-full\">\n              <nav class=\"footer__content container-full__inner\">\n                <div class=\"footer__top\">\n                  <!--logo-->\n                  <a href=\"./#form\" class=\"cta\">\n                    <div class=\"cta__btn\">CALL ME BACK</div>\n                  </a>\n                </div>\n                <div class=\"footer__menu\">\n                  <ul class=\"footer__menu-col\">\n                    ".concat((0, _menu.generateMenuItem)('footer__menu-item', './#services', 'Services'), "\n                    ").concat((0, _menu.generateMenuItem)('footer__menu-item', './#team', 'Our Team'), "\n                    ").concat((0, _menu.generateMenuItem)('footer__menu-item', './#request', 'Advantages'), "\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    ").concat((0, _menu.generateMenuItem)('footer__menu-item', './#feedbacks', 'Feedbacks'), "\n                    ").concat((0, _menu.generateMenuItem)('footer__menu-item', './#location', 'Contacts'), "\n                  </ul>\n                  <ul class=\"footer__menu-col\">\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Privacy Policy\">Privacy Policy</a>\n                    </li>\n                    <li class=\"footer__menu-item\">\n                      <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Personal data processing agreement\">Personal data processing agreement</a>\n                    </li>\n                  </ul>\n                  <div class=\"footer__menu-col footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"tel:+17186149511\">+1 718-614-9511</a>\n                  </div>\n                </div>\n                <div class=\"footer__hr\"></div>\n                <ul class=\"footer__bottom\">\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Franchising\">Franchising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\">\n                    <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"Advertising\">Advertising</a>\n                  </li>\n                  <li class=\"footer__bottom-item\"></li>\n                  <li class=\"footer__bottom-item footer__contact-wrapper\">\n                    <a class=\"footer__contact\" href=\"mailto:hello@beautymed.com\">hello@beautymed.com</a>\n                  </li>\n                </ul>\n              </nav>\n            </footer>");
     }
   }, {
     key: "render",
@@ -39,7 +40,7 @@ var Footer = /*#__PURE__*/function () {
 }();
 exports["default"] = Footer;
 
-},{"../components/logo":3,"../utils":9}],2:[function(require,module,exports){
+},{"../components/logo":3,"../components/menu":4,"../utils":9}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -49,7 +50,7 @@ exports["default"] = void 0;
 var _utils = require("../utils");
 var _logo = _interopRequireDefault(require("../components/logo"));
 var _overlay = _interopRequireDefault(require("../components/overlay"));
-var _menu = _interopRequireDefault(require("../components/menu"));
+var _menu = require("../components/menu");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -73,7 +74,7 @@ var Header = /*#__PURE__*/function () {
     value: function render() {
       (0, _utils.replace)(componentName, this.parentEl, this.template);
       new _logo["default"]('.header').render();
-      new _menu["default"]('.header', 'menu__list', 'menu__item').render();
+      new _menu.Menu('.header', 'menu__list', 'menu__item').render();
       var menuMobile = new _overlay["default"]('.header');
       menuMobile.render();
       setTimeout(function () {
@@ -127,7 +128,8 @@ exports["default"] = Logo;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.Menu = void 0;
+exports.generateMenuItem = generateMenuItem;
 var _utils = require("../utils");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -146,12 +148,7 @@ var Menu = /*#__PURE__*/function () {
   _createClass(Menu, [{
     key: "template",
     get: function get() {
-      return "<ul class=\"".concat(this.ulClass, "\">\n              ").concat(this.generateMenuItem('Services'), "\n              ").concat(this.generateMenuItem('Our Team'), "\n              ").concat(this.generateMenuItem('Advantages'), "\n              ").concat(this.generateMenuItem('Feedbacks'), "\n              ").concat(this.generateMenuItem('Contacts'), "\n            </ul>");
-    }
-  }, {
-    key: "generateMenuItem",
-    value: function generateMenuItem(text) {
-      return "<li class=\"".concat(this.liClass, "\">\n              <a class=\"universal-page-link-js link\" href=\"universal.html\" data-text=\"").concat(text, "\">").concat(text, "</a>\n            </li>");
+      return "<ul class=\"".concat(this.ulClass, "\">\n              ").concat(generateMenuItem(this.liClass, './#services', 'Services'), "\n              ").concat(generateMenuItem(this.liClass, './#team', 'Our Team'), "\n              ").concat(generateMenuItem(this.liClass, './#request', 'Advantages'), "\n              ").concat(generateMenuItem(this.liClass, './#feedbacks', 'Feedbacks'), "\n              ").concat(generateMenuItem(this.liClass, './#location', 'Contacts'), "\n            </ul>");
     }
   }, {
     key: "render",
@@ -161,7 +158,10 @@ var Menu = /*#__PURE__*/function () {
   }]);
   return Menu;
 }();
-exports["default"] = Menu;
+exports.Menu = Menu;
+function generateMenuItem(liClass, href, text) {
+  return "<li class=\"".concat(liClass, "\">\n              <a class=\"link\" href=\"").concat(href, "\">").concat(text, "</a>\n            </li>");
+}
 
 },{"../utils":9}],5:[function(require,module,exports){
 "use strict";
@@ -172,7 +172,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _utils = require("../utils");
 var _socials = _interopRequireDefault(require("./socials"));
-var _menu = _interopRequireDefault(require("./menu"));
+var _menu = require("./menu");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -205,7 +205,7 @@ var Overlay = /*#__PURE__*/function () {
     value: function render() {
       var _this2 = this;
       (0, _utils.replace)(componentName, this.parentEl, this.template);
-      new _menu["default"]('.overlay', 'overlay__list', 'overlay__item').render();
+      new _menu.Menu('.overlay', 'overlay__list', 'overlay__item').render();
       new _socials["default"]('.overlay').render();
       setTimeout(function () {
         var $closeIcon = document.querySelector('.overlay__close-wrapper');

@@ -1,5 +1,6 @@
 import { initListenersToSetUniversalPageTitle, replace } from '../utils';
 import Logo from '../components/logo';
+import {generateMenuItem} from '../components/menu';
 
 const componentName = 'footer';
 
@@ -18,23 +19,13 @@ export default class Footer {
                 </div>
                 <div class="footer__menu">
                   <ul class="footer__menu-col">
-                    <li class="footer__menu-item">
-                      <a class="universal-page-link-js link" href="universal.html" data-text="Services">Services</a>
-                    </li>
-                    <li class="footer__menu-item">
-                      <a class="universal-page-link-js link" href="universal.html" data-text="Our Team">Our team</a>
-                    </li>
-                    <li class="footer__menu-item">
-                      <a class="universal-page-link-js link" href="universal.html" data-text="Advantage">Advantage</a>
-                    </li>
+                    ${generateMenuItem('footer__menu-item', './#services', 'Services')}
+                    ${generateMenuItem('footer__menu-item','./#team','Our Team')}
+                    ${generateMenuItem('footer__menu-item','./#request','Advantages')}
                   </ul>
                   <ul class="footer__menu-col">
-                    <li class="footer__menu-item">
-                      <a class="universal-page-link-js link" href="universal.html" data-text="Feedbacks">Feedbacks</a>
-                    </li>
-                    <li class="footer__menu-item">
-                      <a class="universal-page-link-js link" href="universal.html" data-text="Contacts">Contacts</a>
-                    </li>
+                    ${generateMenuItem('footer__menu-item','./#feedbacks','Feedbacks')}
+                    ${generateMenuItem('footer__menu-item','./#location','Contacts')}
                   </ul>
                   <ul class="footer__menu-col">
                     <li class="footer__menu-item">

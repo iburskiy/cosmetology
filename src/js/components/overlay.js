@@ -1,6 +1,6 @@
 import {replace} from '../utils';
 import Socials from './socials';
-import Menu from './menu';
+import {Menu} from './menu';
 
 const componentName = 'overlay';
 
