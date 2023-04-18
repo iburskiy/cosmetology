@@ -10,9 +10,11 @@
   line-height: 150%;
   @include fontMerriweather(700, $fontSize);
   color: white;
+  border: 2px solid $green1;
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
+      border: 2px solid black;
       cursor: pointer;
       color: $green1;
       background-color: white;

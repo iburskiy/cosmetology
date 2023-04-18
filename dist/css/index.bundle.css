@@ -732,9 +732,11 @@ html {
   line-height: 150%;
   color: #373737;
   color: white;
+  border: 2px solid #258359;
 }
 @media (hover: hover) and (pointer: fine) {
   .top__btn:hover {
+    border: 2px solid black;
     cursor: pointer;
     color: #258359;
     background-color: white;
@@ -1149,10 +1151,12 @@ html {
   line-height: 150%;
   color: #373737;
   color: white;
+  border: 2px solid #258359;
   width: 300px;
 }
 @media (hover: hover) and (pointer: fine) {
   .form__btn:hover {
+    border: 2px solid black;
     cursor: pointer;
     color: #258359;
     background-color: white;
@@ -1591,9 +1595,11 @@ html {
   line-height: 150%;
   color: #373737;
   color: white;
+  border: 2px solid #258359;
 }
 @media (hover: hover) and (pointer: fine) {
   .contacts__btn:hover {
+    border: 2px solid black;
     cursor: pointer;
     color: #258359;
     background-color: white;
