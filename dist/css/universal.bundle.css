@@ -451,33 +451,10 @@ html {
 .footer__menu-item {
   padding-right: 53px;
 }
-.footer__hr {
-  width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
-  margin-top: 20px;
-}
-.footer__bottom {
-  margin: 0;
-  list-style-type: none;
-  display: flex;
-  padding: 40px 0 0;
-  font-family: "Merriweather", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
-  color: #373737;
-}
-.footer__bottom-item {
-  flex: 0 0 25%;
-}
 @media (max-width: 1279px) {
   .footer {
     padding-top: 30px;
     padding-bottom: 30px;
-  }
-  .footer__bottom {
-    padding-top: 30px;
   }
 }
 @media (max-width: 1023px) {
@@ -497,17 +474,6 @@ html {
   }
   .footer__menu-col:not(:last-child) {
     margin-bottom: 25px;
-  }
-  .footer__bottom {
-    padding-top: 25px;
-    flex-direction: column;
-    gap: 25px;
-  }
-  .footer__bottom-item:nth-child(3) {
-    display: none;
-  }
-  .footer__bottom-item {
-    flex: none;
   }
   .footer__contact-wrapper {
     font-size: 18px;

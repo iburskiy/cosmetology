@@ -35,23 +35,15 @@ export default class Footer {
                       <a class="universal-page-link-js link" href="universal.html" data-text="Personal data processing agreement">Personal data processing agreement</a>
                     </li>
                   </ul>
-                  <div class="footer__menu-col footer__contact-wrapper">
-                    <a class="footer__contact" href="tel:+17186149511">+1 718-614-9511</a>
-                  </div>
+                  <ul class="footer__menu-col footer__contact-wrapper">
+                    <li class="footer__menu-item">
+                      <a class="footer__contact" href="tel:+17186149511">+1 718-614-9511</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a class="footer__contact" href="mailto:hello@beautymed.com">hello@beautymed.com</a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="footer__hr"></div>
-                <ul class="footer__bottom">
-                  <li class="footer__bottom-item">
-                    <a class="universal-page-link-js link" href="universal.html" data-text="Franchising">Franchising</a>
-                  </li>
-                  <li class="footer__bottom-item">
-                    <a class="universal-page-link-js link" href="universal.html" data-text="Advertising">Advertising</a>
-                  </li>
-                  <li class="footer__bottom-item"></li>
-                  <li class="footer__bottom-item footer__contact-wrapper">
-                    <a class="footer__contact" href="mailto:hello@beautymed.com">hello@beautymed.com</a>
-                  </li>
-                </ul>
               </nav>
             </footer>`;
   }
