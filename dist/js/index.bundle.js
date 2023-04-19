@@ -4054,7 +4054,7 @@ var Socials = /*#__PURE__*/function () {
   _createClass(Socials, [{
     key: "template",
     get: function get() {
-      return "<a class=\"socials__link link\" href=\"#\">\n              <img src=\"./images/icons/youtube.svg\" alt=\"Youtube icon\">\n            </a>\n            <a class=\"socials__link link\" href=\"#\">\n              <img src=\"./images/icons/instagram.svg\" alt=\"Instagram icon\">\n            </a>\n            <a class=\"socials__link link\" href=\"#\">\n              <img src=\"./images/icons/facebook.svg\" alt=\"Facebook icon\">\n            </a>";
+      return "<a class=\"socials__link link\" href=\"javascript:void(0);\">\n              <img src=\"./images/icons/youtube.svg\" alt=\"Youtube icon\">\n            </a>\n            <a class=\"socials__link link\" href=\"javascript:void(0);\">\n              <img src=\"./images/icons/instagram.svg\" alt=\"Instagram icon\">\n            </a>\n            <a class=\"socials__link link\" href=\"javascript:void(0);\">\n              <img src=\"./images/icons/facebook.svg\" alt=\"Facebook icon\">\n            </a>";
     }
   }, {
     key: "render",

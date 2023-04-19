@@ -7,13 +7,13 @@ export default class Socials {
     this.parentElSelector = `.${parentClass}`;
   }
   get template() {
-    return `<a class="socials__link link" href="#">
+    return `<a class="socials__link link" href="javascript:void(0);">
               <img src="./images/icons/youtube.svg" alt="Youtube icon">
             </a>
-            <a class="socials__link link" href="#">
+            <a class="socials__link link" href="javascript:void(0);">
               <img src="./images/icons/instagram.svg" alt="Instagram icon">
             </a>
-            <a class="socials__link link" href="#">
+            <a class="socials__link link" href="javascript:void(0);">
               <img src="./images/icons/facebook.svg" alt="Facebook icon">
             </a>`;
   }
