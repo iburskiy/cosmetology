@@ -476,7 +476,7 @@ html {
 }
 @media (max-width: 1279px) and (hover: hover) and (pointer: fine) {
   .our-services__item:hover {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 @media (max-width: 1279px) {

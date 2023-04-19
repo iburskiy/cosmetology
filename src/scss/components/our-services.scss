@@ -44,7 +44,7 @@
     &__item {
       @media (hover: hover) and (pointer: fine) {
         &:hover {
-          margin-bottom: 0;
+          margin: 0;
         }
       }
     }
