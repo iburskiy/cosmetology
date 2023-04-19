@@ -1,0 +1,77 @@
+@import "../mixins/fontMerriweather";
+@import "../mixins/button";
+
+.our-services {
+  &__list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  &__item {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        margin: -5px;
+        cursor: pointer;
+        border: 5px solid $green1;
+      }
+    }
+  }
+  &__picture {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+  &__text {
+    margin: 20px 0;
+    @include fontMerriweather(400, 20px);
+  }
+  &__btn-wrapper {
+    margin: 60px 0 100px;
+  }
+  &__btn {
+    @include button(20px 40px, 28px);
+  }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    &__list {
+      flex-direction: column;
+      gap: 0;
+    }
+    &__item {
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__picture {
+      width: 100%;
+      height: 442px;
+      object-fit: cover;
+    }
+    &__btn-wrapper {
+      margin: 40px 0 $indent-between-blocks-tablet;
+    }
+    &__btn {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: $breakpoint-mobile-max) {
+    &__text {
+      padding-left: $indent-container-mobile;
+    }
+    &__picture {
+      height: 340px;
+    }
+    &__btn-wrapper {
+      margin: 20px $indent-container-mobile $indent-between-blocks-mobile;
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+}

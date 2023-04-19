@@ -1,0 +1,70 @@
+@import "../mixins/fontLora";
+@import "../mixins/fontMerriweather";
+
+$service-indent-between-blocks: 50px;
+
+.service {
+  &__title {
+    margin-top: 80px;
+    @include fontLora(600, 48px);
+  }
+  &__image {
+    margin-top: $service-indent-between-blocks;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+    height: 340px;
+  }
+  &__text {
+    margin-top: $service-indent-between-blocks;
+    @include fontMerriweather(400, 18px);
+    color: $black1;
+  }
+  &__subtitle {
+    margin: $service-indent-between-blocks 0 0;
+    @include fontLora(500, 36px);
+  }
+  &__list {
+    flex-direction: column;
+  }
+  &__list-item {
+    margin-top: 20px;
+  }
+  &__our-services {
+    margin: $service-indent-between-blocks 0 0;
+  }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    &__title {
+      margin-top: 60px;
+      font-size: 30px;
+    }
+    &__subtitle {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: $breakpoint-mobile-max) {
+    &__title {
+      margin-top: $indent-between-blocks-mobile;
+      padding: 0 $indent-container-mobile;
+    }
+    &__image {
+      margin-top: $indent-between-blocks-mobile;
+    }
+    &__text {
+      margin-top: $indent-between-blocks-mobile;
+      padding: 0 $indent-container-mobile;
+    }
+    &__subtitle {
+      margin: $indent-between-blocks-mobile 0 0;
+      padding: 0 $indent-container-mobile;
+    }
+    &__list {
+      padding: 0 $indent-container-mobile;
+    }
+    &__our-services {
+      margin: $indent-between-blocks-mobile 0 0;
+    }
+  }
+}
