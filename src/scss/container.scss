@@ -71,7 +71,7 @@ html {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .no-overflow-js {

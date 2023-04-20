@@ -3798,7 +3798,7 @@ var Footer = /*#__PURE__*/function () {
 }();
 exports["default"] = Footer;
 
-},{"../components/logo":5,"../components/menu":6,"../utils":12}],3:[function(require,module,exports){
+},{"../components/logo":5,"../components/menu":6,"../utils":13}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3844,7 +3844,7 @@ var Header = /*#__PURE__*/function () {
 }();
 exports["default"] = Header;
 
-},{"../components/logo":5,"../components/menu":6,"../components/overlay":7,"../utils":12}],4:[function(require,module,exports){
+},{"../components/logo":5,"../components/menu":6,"../components/overlay":7,"../utils":13}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3920,7 +3920,7 @@ var Logo = /*#__PURE__*/function () {
 }();
 exports["default"] = Logo;
 
-},{"../utils":12}],6:[function(require,module,exports){
+},{"../utils":13}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3961,7 +3961,7 @@ function generateMenuItem(liClass, href, text) {
   return "<li class=\"".concat(liClass, "\">\n              <a class=\"link\" href=\"").concat(href, "\">").concat(text, "</a>\n            </li>");
 }
 
-},{"../utils":12}],7:[function(require,module,exports){
+},{"../utils":13}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4031,7 +4031,70 @@ var Overlay = /*#__PURE__*/function () {
 }();
 exports["default"] = Overlay;
 
-},{"../components/logo":5,"../utils":12,"./menu":6,"./socials":8}],8:[function(require,module,exports){
+},{"../components/logo":5,"../utils":13,"./menu":6,"./socials":9}],8:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _utils = require("../utils");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var componentName = 'popup';
+var Popup = /*#__PURE__*/function () {
+  function Popup(parentClass) {
+    _classCallCheck(this, Popup);
+    this.parentElSelector = ".".concat(parentClass);
+  }
+  _createClass(Popup, [{
+    key: "template",
+    get: function get() {
+      return "<div class=\"popup hidden\">\n              <div class=\"popup__inner\">\n                <div class=\"popup__content\">\n                  <div class=\"popup__close-wrapper\">\n                    <img src=\"./images/icons/close.svg\" alt=\"\" class=\"popup__close\" tabindex=\"0\">\n                  </div>\n                  <div class=\"popup__text\">\n                    Thank you! We'll call you back soon\n                  </div>\n                </div>\n              </div>\n            </div>";
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this = this;
+      (0, _utils.replace)(componentName, this.parentElSelector, this.template);
+      setTimeout(function () {
+        var $callMeBack = document.querySelector('.form__btn');
+        $callMeBack.addEventListener('click', function (event) {
+          var $username = document.getElementById('username');
+          var $userphone = document.getElementById('userphone');
+          if ($username.checkValidity() == true && $userphone.checkValidity() == true) {
+            event.preventDefault();
+            _this.togglePopup();
+          }
+        });
+        var $closeIcon = document.querySelector('.popup__close');
+        $closeIcon.addEventListener('click', function () {
+          _this.togglePopup();
+        });
+        $closeIcon.addEventListener('keydown', function (e) {
+          e.preventDefault();
+          if (e.keyCode === 13) {
+            $closeIcon.click();
+          }
+        });
+      }, 0);
+    }
+  }, {
+    key: "togglePopup",
+    value: function togglePopup() {
+      document.querySelector('.popup').classList.toggle('hidden');
+      document.body.classList.toggle('no-overflow-js');
+    }
+  }]);
+  return Popup;
+}();
+exports["default"] = Popup;
+
+},{"../utils":13}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4066,7 +4129,7 @@ var Socials = /*#__PURE__*/function () {
 }();
 exports["default"] = Socials;
 
-},{"../utils":12}],9:[function(require,module,exports){
+},{"../utils":13}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4112,7 +4175,7 @@ var TeamSlider = /*#__PURE__*/function () {
 }();
 exports["default"] = TeamSlider;
 
-},{"../utils":12,"@splidejs/splide":1}],10:[function(require,module,exports){
+},{"../utils":13,"@splidejs/splide":1}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4124,7 +4187,7 @@ exports.UNIVERSAL_PAGE_TITLE_KEY = UNIVERSAL_PAGE_TITLE_KEY;
 var DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE = ".universal-page-link-js";
 exports.DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE = DEFAULT_CSS_SELECTOR_FOR_LINK_TO_UNIVERSAL_PAGE;
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 var _header = _interopRequireDefault(require("../blocks/header"));
@@ -4132,16 +4195,18 @@ var _footer = _interopRequireDefault(require("../blocks/footer"));
 var _feedbacksSlider = _interopRequireDefault(require("../components/feedbacks-slider"));
 var _teamSlider = _interopRequireDefault(require("../components/team-slider"));
 var _socials = _interopRequireDefault(require("../components/socials"));
+var _popup = _interopRequireDefault(require("../components/popup"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 document.addEventListener('DOMContentLoaded', function () {
   new _header["default"]('body').render();
   new _footer["default"]('body').render();
   new _socials["default"]('top').render();
+  new _popup["default"]('body').render();
   new _teamSlider["default"]('team__slider').render();
   new _feedbacksSlider["default"]('feedbacks__slider').render();
 });
 
-},{"../blocks/footer":2,"../blocks/header":3,"../components/feedbacks-slider":4,"../components/socials":8,"../components/team-slider":9}],12:[function(require,module,exports){
+},{"../blocks/footer":2,"../blocks/header":3,"../components/feedbacks-slider":4,"../components/popup":8,"../components/socials":9,"../components/team-slider":10}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4170,4 +4235,4 @@ function initListenersToSetUniversalPageTitle() {
   });
 }
 
-},{"./constants":10}]},{},[11]);
+},{"./constants":11}]},{},[12]);

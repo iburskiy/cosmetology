@@ -18,6 +18,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
@@ -104,7 +105,7 @@ html {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .no-overflow-js {
@@ -1386,6 +1387,58 @@ html {
   .request__form {
     padding-top: 0;
     padding-bottom: 0;
+  }
+}
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup__inner {
+  background-color: white;
+  width: 400px;
+  height: 200px;
+  border-radius: 15px;
+}
+.popup__content {
+  padding: 16px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.popup__close-wrapper {
+  display: flex;
+  justify-content: right;
+}
+@media (hover: hover) and (pointer: fine) {
+  .popup__close:hover {
+    cursor: pointer;
+  }
+}
+.popup__text {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #373737;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+}
+@media (max-width: 500px) {
+  .popup__inner {
+    width: 300px;
   }
 }
 

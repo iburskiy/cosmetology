@@ -1,8 +1,6 @@
 @import "../mixins/fontLora";
 @import "../mixins/button";
 
-$breakpoint-request-form-mobile: 500px;
-
 .form {
   padding-top: 20px;
   padding-bottom: 40px;
@@ -43,7 +41,7 @@ $breakpoint-request-form-mobile: 500px;
       margin-right: auto;
     }
   }
-  @media (max-width: $breakpoint-request-form-mobile) {
+  @media (max-width: $breakpoint-mobile-middle) {
     width: 100%;
     box-shadow: none;
   }

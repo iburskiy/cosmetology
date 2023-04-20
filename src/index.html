@@ -145,16 +145,16 @@
           </div>
           <div class="form__name field">
             <div class="field__name-wrapper">
-              <input type="text" id="username" name="username" class="field__input" placeholder="Enter your name"/>
+              <input type="text" id="username" name="username" class="field__input" placeholder="Enter your name" pattern="[а-яёА-Я]+|[a-zA-Z]+" title="Please enter a valid name" required>
             </div>
           </div>
           <div class="form__phone field">
             <div class="field__phone-wrapper">
-              <input type="tel" class="field__input" placeholder="Enter your phone">
+              <input type="tel" id="userphone" class="field__input" placeholder="Enter your phone" pattern="[\+]?[0-9\-\(\)]{10,15}" title="Please enter a valid phone number" required>
             </div>
           </div>
           <div class="form__btn-wrapper">
-            <button class="form__btn">CALL ME BACK</button>
+            <button type="submit" class="form__btn">CALL ME BACK</button>
           </div>
           <div class="form__chkbox checkbox">
             <input id="agreement" type="checkbox" class="checkbox__field"/>
@@ -187,6 +187,7 @@
       </div>
     </div>
   </section>
+  <!--popup-->
   <section class="feedbacks container_indent-top container" id="feedbacks">
     <div class="title">
       <h2 class="title__text1">Feedbacks</h2>

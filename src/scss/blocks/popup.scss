@@ -1,0 +1,52 @@
+@import "../mixins/fontMerriweather";
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__inner {
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    border-radius: 15px;
+  }
+  &__content {
+    padding: 16px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  &__close-wrapper {
+    display: flex;
+    justify-content: right;
+  }
+  &__close {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &__text {
+    @include fontMerriweather(400, 20px);
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+  }
+
+  @media (max-width: $breakpoint-mobile-middle) {
+    &__inner {
+      width: 300px;
+    }
+  }
+}

@@ -48,7 +48,7 @@
       flex-basis: 100%;
     }
   }
-  @media (max-width: $breakpoint-request-form-mobile) {
+  @media (max-width: $breakpoint-mobile-middle) {
     &__form {
       padding-top: 0;
       padding-bottom: 0;
