@@ -1,13 +1,12 @@
 @import "../mixins/fontLora";
 @import "../mixins/fontMerriweather";
+@import "../components/page-title";
+@import "../components/list";
+@import "../components/our-services";
 
 $service-indent-between-blocks: 50px;
 
 .service {
-  &__title {
-    margin-top: 80px;
-    @include fontLora(600, 48px);
-  }
   &__image {
     margin-top: $service-indent-between-blocks;
     display: block;
@@ -36,19 +35,11 @@ $service-indent-between-blocks: 50px;
   }
 
   @media (max-width: $breakpoint-tablet-max) {
-    &__title {
-      margin-top: 60px;
-      font-size: 30px;
-    }
     &__subtitle {
       font-size: 30px;
     }
   }
   @media (max-width: $breakpoint-mobile-max) {
-    &__title {
-      margin-top: $indent-between-blocks-mobile;
-      padding: 0 $indent-container-mobile;
-    }
     &__image {
       margin-top: $indent-between-blocks-mobile;
     }

@@ -29,7 +29,7 @@ export default class Footer {
                   </ul>
                   <ul class="footer__menu-col">
                     <li class="footer__menu-item">
-                      <a class="universal-page-link-js link" href="universal.html" data-text="Privacy Policy">Privacy Policy</a>
+                      <a class="universal-page-link-js link" href="privacy-policy.html" data-text="Privacy Policy">Privacy Policy</a>
                     </li>
                     <li class="footer__menu-item">
                       <a class="universal-page-link-js link" href="universal.html" data-text="Personal data processing agreement">Personal data processing agreement</a>
@@ -37,7 +37,7 @@ export default class Footer {
                   </ul>
                   <ul class="footer__menu-col footer__contact-wrapper">
                     <li class="footer__menu-item">
-                      <a class="footer__contact" href="tel:+17186149511">+1 718-614-9511</a>
+                      <a class="footer__contact" href="tel:+17181234567">+1 718-123-4567</a>
                     </li>
                     <li class="footer__menu-item">
                       <a class="footer__contact" href="mailto:hello@beautymed.com">hello@beautymed.com</a>

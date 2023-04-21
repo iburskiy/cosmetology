@@ -1,0 +1,24 @@
+// common scss
+@import "../vars";
+@import "../container";
+// scss blocks
+@import "../blocks/header";
+@import "../blocks/privacy-policy";
+@import "../blocks/footer";
+
+.body {
+  &__privacy-policy {
+    padding-bottom: $indent-between-blocks-desktop;
+  }
+
+  @media (max-width: $breakpoint-tablet-max) {
+    &__privacy-policy {
+      padding-bottom: $indent-between-blocks-tablet;
+    }
+  }
+  @media (max-width: $breakpoint-mobile-max) {
+    &__privacy-policy {
+      padding-bottom: $indent-between-blocks-mobile;
+    }
+  }
+}

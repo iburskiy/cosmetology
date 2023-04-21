@@ -1,0 +1,15 @@
+@import "../mixins/fontLora";
+
+.page-title {
+  margin-top: 80px;
+  @include fontLora(600, 48px);
+
+  @media (max-width: $breakpoint-tablet-max) {
+    margin-top: 60px;
+    font-size: 30px;
+  }
+  @media (max-width: $breakpoint-mobile-max) {
+    margin-top: $indent-between-blocks-mobile;
+    padding: 0 $indent-container-mobile;
+  }
+}

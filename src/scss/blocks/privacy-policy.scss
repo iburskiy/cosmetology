@@ -1,0 +1,14 @@
+@import "../mixins/fontMerriweather";
+@import "../components/page-title";
+
+.privacy-policy {
+  &__content {
+    @include fontMerriweather(400, 18px);
+  }
+
+  @media (max-width: $breakpoint-mobile-max) {
+    &__content {
+      padding: 0 $indent-container-mobile;
+    }
+  }
+}
