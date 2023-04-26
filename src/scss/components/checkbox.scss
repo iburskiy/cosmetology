@@ -12,5 +12,11 @@
     @include fontMerriweather(400, 12px);
     line-height: 15px;
     margin-left: 7px;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }

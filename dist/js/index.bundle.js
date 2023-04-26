@@ -4062,15 +4062,7 @@ var Popup = /*#__PURE__*/function () {
       var _this = this;
       (0, _utils.replace)(componentName, this.parentElSelector, this.template);
       setTimeout(function () {
-        var $callMeBack = document.querySelector('.form__btn');
-        $callMeBack.addEventListener('click', function (event) {
-          var $username = document.getElementById('username');
-          var $userphone = document.getElementById('userphone');
-          if ($username.checkValidity() == true && $userphone.checkValidity() == true) {
-            event.preventDefault();
-            _this.togglePopup();
-          }
-        });
+        _this.validateForm();
         var $closeIcon = document.querySelector('.popup__close');
         $closeIcon.addEventListener('click', function () {
           _this.togglePopup();
@@ -4088,6 +4080,36 @@ var Popup = /*#__PURE__*/function () {
     value: function togglePopup() {
       document.querySelector('.popup').classList.toggle('hidden');
       document.body.classList.toggle('no-overflow-js');
+    }
+  }, {
+    key: "validateForm",
+    value: function validateForm() {
+      var _this2 = this;
+      var $callMeBack = document.querySelector('.form__btn');
+      $callMeBack.addEventListener('click', function (event) {
+        var $username = document.getElementById('username');
+        var $userphone = document.getElementById('userphone');
+        var $agreement = document.getElementById('agreement');
+        var usernameRegexp = /^[а-яёА-Я]+|[a-zA-Z]+$/;
+        var userPhoneRegexp = /^[\+]?[0-9\-\(\)]{10,15}$/;
+        $username.setCustomValidity('');
+        $userphone.setCustomValidity('');
+        $agreement.setCustomValidity('');
+        if (usernameRegexp.test($username.value) && userPhoneRegexp.test($userphone.value) && $agreement.checked) {
+          event.preventDefault();
+          _this2.togglePopup();
+        } else {
+          if (!usernameRegexp.test($username.value)) {
+            $username.setCustomValidity("Please enter a valid name");
+          }
+          if (!userPhoneRegexp.test($userphone.value)) {
+            $userphone.setCustomValidity("Please enter a valid phone number");
+          }
+          if (!$agreement.checked) {
+            $agreement.setCustomValidity("Please indicate that you accept the Terms and Conditions");
+          }
+        }
+      });
     }
   }]);
   return Popup;

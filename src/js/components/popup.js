@@ -24,15 +24,7 @@ export default class Popup {
     replace(componentName, this.parentElSelector, this.template);
 
     setTimeout(() => {
-      const $callMeBack = document.querySelector('.form__btn');
-      $callMeBack.addEventListener('click', (event) => {
-        const $username = document.getElementById('username');
-        const $userphone = document.getElementById('userphone');
-        if ($username.checkValidity() == true && $userphone.checkValidity() == true) {
-          event.preventDefault();
-          this.togglePopup();
-        }
-      });
+      this.validateForm();
 
       const $closeIcon = document.querySelector('.popup__close');
       $closeIcon.addEventListener('click', () => {
@@ -50,5 +42,36 @@ export default class Popup {
   togglePopup() {
     document.querySelector('.popup').classList.toggle('hidden');
     document.body.classList.toggle('no-overflow-js');
+  }
+
+  validateForm() {
+    const $callMeBack = document.querySelector('.form__btn');
+    $callMeBack.addEventListener('click', (event) => {
+      const $username = document.getElementById('username');
+      const $userphone = document.getElementById('userphone');
+      const $agreement = document.getElementById('agreement');
+
+      const usernameRegexp = /^[а-яёА-Я]+|[a-zA-Z]+$/;
+      const userPhoneRegexp = /^[\+]?[0-9\-\(\)]{10,15}$/;
+
+      $username.setCustomValidity('');
+      $userphone.setCustomValidity('');
+      $agreement.setCustomValidity('');
+
+      if (usernameRegexp.test($username.value) && userPhoneRegexp.test($userphone.value) && $agreement.checked) {
+        event.preventDefault();
+        this.togglePopup();
+      } else {
+        if (!usernameRegexp.test($username.value)) {
+          $username.setCustomValidity("Please enter a valid name");
+        }
+        if (!userPhoneRegexp.test($userphone.value)) {
+          $userphone.setCustomValidity("Please enter a valid phone number");
+        }
+        if (!$agreement.checked) {
+          $agreement.setCustomValidity("Please indicate that you accept the Terms and Conditions");
+        }
+      }
+    });
   }
 }

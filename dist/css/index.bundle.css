@@ -1252,6 +1252,11 @@ html {
   line-height: 15px;
   margin-left: 7px;
 }
+@media (hover: hover) and (pointer: fine) {
+  .checkbox__label:hover {
+    cursor: pointer;
+  }
+}
 
 .info {
   padding-left: 20px;
